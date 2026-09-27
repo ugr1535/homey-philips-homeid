@@ -1,0 +1,83 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Set roast level",
+    "tr": "Kavurma düzeyini ayarla",
+    "nl": "Roosterniveau instellen",
+    "de": "Bratstufe einstellen",
+    "fr": "Définir le niveau de torréfaction",
+    "it": "Imposta il livello di tostatura",
+    "sv": "Ställ in steknivå",
+    "no": "Angi brenningsgrad",
+    "es": "Establecer nivel de tostado",
+    "da": "Indstil ristningsgrad",
+    "ru": "Установить уровень обжарки",
+    "pl": "Ustaw poziom palenia",
+    "ko": "로스트 레벨 설정",
+    "ar": "تعيين مستوى التحميص"
+  },
+  "icon": "/assets/icons/bean.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Light",
+        "tr": "Açık",
+        "nl": "Licht",
+        "de": "Licht",
+        "fr": "Lumière",
+        "it": "Luce",
+        "sv": "Ljus",
+        "no": "Belysning",
+        "es": "Luz",
+        "da": "Let",
+        "ru": "Светлый",
+        "pl": "Światło",
+        "ko": "밝은",
+        "ar": "الضوء"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Medium",
+        "tr": "Orta",
+        "nl": "Gemiddeld",
+        "de": "Mittel",
+        "fr": "Moyen",
+        "it": "Media",
+        "sv": "Medium",
+        "no": "Medium",
+        "es": "Media",
+        "da": "Medium",
+        "ru": "Средний",
+        "pl": "Średni",
+        "ko": "중간",
+        "ar": "متوسط"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Dark",
+        "tr": "Koyu",
+        "nl": "Donker",
+        "de": "Dunkel",
+        "fr": "Sombre",
+        "it": "Scuro",
+        "sv": "Mörk",
+        "no": "Mørkt",
+        "es": "Oscuro",
+        "da": "Mørk",
+        "ru": "Темный",
+        "pl": "Ciemny",
+        "ko": "어두운",
+        "ar": "داكن"
+      }
+    }
+  ]
+}

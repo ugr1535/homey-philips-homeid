@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Recipe name",
+    "tr": "Tarif adı",
+    "nl": "Receptnaam",
+    "de": "Rezeptname",
+    "fr": "Nom de la recette",
+    "it": "Nome ricetta",
+    "sv": "Receptnamn",
+    "no": "Oppskriftsnavn",
+    "es": "Nombre de la receta",
+    "da": "Opskriftsnavn",
+    "ru": "Название рецепта",
+    "pl": "Nazwa receptury",
+    "ko": "레시피 이름",
+    "ar": "اسم الوصفة"
+  },
+  "icon": "/assets/icons/recipe-book.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Purifier error",
+    "tr": "Hava temizleyici hatası",
+    "nl": "Fout in zuiveraar",
+    "de": "Reinigerfehler",
+    "fr": "Erreur du purificateur",
+    "it": "Errore purificatore",
+    "sv": "Reningsfel",
+    "no": "Feil i renseanlegget",
+    "es": "Error del purificador",
+    "da": "Renserfejl",
+    "ru": "Ошибка очистителя",
+    "pl": "Błąd oczyszczacza",
+    "ko": "퓨리파이어 에러",
+    "ar": "خطأ في جهاز التنقية"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

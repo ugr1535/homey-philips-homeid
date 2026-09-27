@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Skip brew step",
+    "tr": "Demleme adımını atla",
+    "nl": "Brouwstap overslaan",
+    "de": "Brühschritt überspringen",
+    "fr": "Ignorer l'étape d'infusion",
+    "it": "Salta la fase di preparazione",
+    "sv": "Hoppa över bryggningssteget",
+    "no": "Hopp over bryggetrinnet",
+    "es": "Omitir el paso de preparación",
+    "da": "Spring bryggetrin over",
+    "ru": "Пропустить этап заваривания",
+    "pl": "Pomiń etap parzenia",
+    "ko": "추출 단계 건너뛰기",
+    "ar": "تخطي خطوة التحضير"
+  },
+  "icon": "/assets/icons/skip-step.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

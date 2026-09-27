@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Reported mode",
+    "tr": "Bildirilen mod",
+    "nl": "Gerapporteerde modus",
+    "de": "Gemeldeter Modus",
+    "fr": "Mode signalé",
+    "it": "Modalità segnalata",
+    "sv": "Rapporterat läge",
+    "no": "Rapportert modus",
+    "es": "Modo informado",
+    "da": "Rapporteret tilstand",
+    "ru": "Пожаловаться на режим",
+    "pl": "Tryb zgłoszony",
+    "ko": "보고된 모드",
+    "ar": "وضع الإبلاغ"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

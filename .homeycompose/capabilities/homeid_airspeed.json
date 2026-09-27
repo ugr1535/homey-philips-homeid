@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Air speed",
+    "tr": "Hava hızı",
+    "nl": "Luchtsnelheid",
+    "de": "Luftgeschwindigkeit",
+    "fr": "Vitesse de l'air",
+    "it": "Velocità dell'aria",
+    "sv": "Lufthastighet",
+    "no": "Luftfart",
+    "es": "Velocidad del aire",
+    "da": "Lufthastighed",
+    "ru": "Скорость воздуха",
+    "pl": "Prędkość powietrza",
+    "ko": "공기 속도",
+    "ar": "سرعة الهواء"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 1,
+  "max": 2,
+  "step": 1
+}

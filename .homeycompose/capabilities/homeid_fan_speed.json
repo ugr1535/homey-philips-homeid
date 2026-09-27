@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Fan speed",
+    "tr": "Fan hızı",
+    "nl": "Ventilatorsnelheid",
+    "de": "Lüfterdrehzahl",
+    "fr": "Vitesse du ventilateur",
+    "it": "Velocità ventilatore",
+    "sv": "Fläkthastighet",
+    "no": "Viftehastighet",
+    "es": "Velocidad del ventilador",
+    "da": "Ventilatorhastighed",
+    "ru": "Скорость вентилятора",
+    "pl": "Prędkość wentylatora",
+    "ko": "팬 속도",
+    "ar": "سرعة المروحة"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

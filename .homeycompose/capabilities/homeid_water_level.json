@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Water level",
+    "tr": "Su seviyesi",
+    "nl": "Waterniveau",
+    "de": "Wasserstand",
+    "fr": "Niveau d'eau",
+    "it": "Livello dell'acqua",
+    "sv": "Vattennivå",
+    "no": "Vasspeil",
+    "es": "Nivel de agua",
+    "da": "Vandstand",
+    "ru": "Уровень воды",
+    "pl": "Poziom wody",
+    "ko": "수위",
+    "ar": "منسوب المياه"
+  },
+  "icon": "/assets/icons/water.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0
+}

@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Preheat",
+    "tr": "Ön ısıtma",
+    "nl": "Voorverwarmen",
+    "de": "Vorheizen",
+    "fr": "Préchauffage",
+    "it": "Preriscaldare",
+    "sv": "Förvärm",
+    "no": "Forvarm",
+    "es": "Precalentamiento",
+    "da": "Forvarm",
+    "ru": "Предварительный нагрев",
+    "pl": "Podgrzewanie",
+    "ko": "예열",
+    "ar": "التسخين المسبق"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "icon": "/assets/icons/preheat.svg",
+  "uiComponent": "button"
+}

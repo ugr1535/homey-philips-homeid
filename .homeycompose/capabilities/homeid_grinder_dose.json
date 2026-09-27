@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Grinder dose",
+    "tr": "Öğütücü dozu",
+    "nl": "Dosis molen",
+    "de": "Zerkleinerungsdosis",
+    "fr": "Dose broyeur",
+    "it": "Dose macinino",
+    "sv": "Kvarndos",
+    "no": "Kverndose",
+    "es": "Dosis del molinillo",
+    "da": "Kværndosis",
+    "ru": "Доза измельчителя",
+    "pl": "Dawka młynka",
+    "ko": "그라인더 용량",
+    "ar": "جرعة المطحنة"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 100,
+  "step": 1
+}

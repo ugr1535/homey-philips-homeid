@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { box-sizing: border-box; margin: 0; padding: 1rem; }
+    .pair-page { max-width: 32rem; margin: 0 auto; }
+    .pair-error { display: none; color: #c62828; margin-top: 1rem; white-space: pre-wrap; }
+    .pair-gap { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="homey-form pair-page">
+    <h1 id="title" class="homey-title">Sign in with Philips account</h1>
+    <div class="homey-form-group">
+      <label id="email-label" class="homey-form-label" for="email">Philips HomeID email address</label>
+      <input class="homey-form-input" id="email" type="email" autocomplete="email">
+    </div>
+    <div class="homey-form-group">
+      <label id="host-label" class="homey-form-label" for="host">IP address (optional)</label>
+      <input class="homey-form-input" id="host" type="text" inputmode="url" placeholder="192.168.1.50">
+    </div>
+    <p id="host-hint" class="homey-subtitle">Leave empty for cloud-only devices.</p>
+    <button id="submit" class="homey-button-primary-full">Send verification code</button>
+    <p id="error" class="pair-error"></p>
+  </main>
+  <script>
+    'use strict';
+
+    function showError(error) {
+      const node = document.getElementById('error');
+      node.textContent = error && error.message ? error.message : String(error);
+      node.style.display = 'block';
+    }
+
+    function translate(key, fallback) {
+      try {
+        const value = typeof Homey.__ === 'function' ? Homey.__(key) : '';
+        return value && value !== key ? value : fallback;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    function setBusy(button, value) {
+      button.disabled = value;
+      button.classList.toggle('is-loading', value);
+    }
+
+    const button = document.getElementById('submit');
+    document.getElementById('title').textContent = translate('pair.cloud', 'Sign in with Philips account');
+    document.getElementById('email-label').textContent = translate('pair.email', 'Philips HomeID email address');
+    document.getElementById('host-label').textContent = translate('pair.host', 'IP address (optional)');
+    document.getElementById('host-hint').textContent = translate('pair.host_hint', 'Leave empty for cloud-only devices.');
+    button.textContent = translate('pair.send_code', 'Send verification code');
+
+    button.addEventListener('click', async () => {
+      try {
+        setBusy(button, true);
+        await Homey.emit('send_otp', {
+          email: document.getElementById('email').value.trim(),
+          host: document.getElementById('host').value.trim(),
+        });
+        Homey.showView('pincode');
+      } catch (error) {
+        showError(error);
+        setBusy(button, false);
+      }
+    });
+
+    Homey.ready();
+  </script>
+</body>
+</html>

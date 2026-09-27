@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "TVOC",
+    "tr": "TVOC",
+    "nl": "TVOC",
+    "de": "TVOC",
+    "fr": "TVOC",
+    "it": "TVOC",
+    "sv": "TVOC",
+    "no": "TVOC",
+    "es": "TVOC",
+    "da": "TVOC",
+    "ru": "TVOC",
+    "pl": "TVOC",
+    "ko": "TVOC",
+    "ar": "TVOC"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "ppb",
+    "tr": "ppb",
+    "nl": "ppb",
+    "de": "ppb",
+    "fr": "ppb",
+    "it": "ppb",
+    "sv": "ppb",
+    "no": "ppb",
+    "es": "ppb",
+    "da": "ppb",
+    "ru": "ppb",
+    "pl": "ppb",
+    "ko": "ppb",
+    "ar": "ppb"
+  },
+  "decimals": 0
+}

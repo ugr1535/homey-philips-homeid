@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "AutoCook weight",
+    "tr": "AutoCook ağırlığı",
+    "nl": "Gewicht AutoCook",
+    "de": "AutoCook-Gewicht",
+    "fr": "Poids AutoCook",
+    "it": "Peso AutoCook",
+    "sv": "AutoCook-vikt",
+    "no": "AutoCook-vekt",
+    "es": "Peso de AutoCook",
+    "da": "AutoCook vægt",
+    "ru": "Вес AutoCook",
+    "pl": "Waga auto-gotowania",
+    "ko": "자동 조리 중량",
+    "ar": "وزن الطهي التلقائي"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

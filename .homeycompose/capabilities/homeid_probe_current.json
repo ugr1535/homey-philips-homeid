@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Current probe temperature",
+    "tr": "Prob sıcaklığı",
+    "nl": "Huidige temperatuur van de sonde",
+    "de": "Aktuelle Sondentemperatur",
+    "fr": "Température actuelle de la sonde",
+    "it": "Temperatura attuale della sonda",
+    "sv": "Aktuell sondtemperatur",
+    "no": "Gjeldende sondetemperatur",
+    "es": "Temperatura actual de la sonda",
+    "da": "Aktuel sondetemperatur",
+    "ru": "Текущая температура зонда",
+    "pl": "Aktualna temperatura sondy",
+    "ko": "현재 프로브 온도",
+    "ar": "درجة حرارة المجس الحالية"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "°C",
+    "tr": "°C",
+    "nl": "°C",
+    "de": "°C",
+    "fr": "°C",
+    "it": "°C",
+    "sv": "°C",
+    "no": "°C",
+    "es": "°C",
+    "da": "°C",
+    "ru": "°C",
+    "pl": "°C",
+    "ko": "°C",
+    "ar": "درجة مئوية"
+  },
+  "decimals": 0
+}

@@ -1,0 +1,178 @@
+{
+  "id": "com.philips.homeid",
+  "version": "1.0.4",
+  "compatibility": ">=12.3.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#0B5ED7",
+  "name": {
+    "en": "Philips HomeID",
+    "tr": "Philips HomeID",
+    "nl": "Philips HomeID",
+    "de": "Philips HomeID",
+    "fr": "Philips HomeID",
+    "it": "Philips HomeID",
+    "sv": "Philips HomeID",
+    "no": "Philips HomeID",
+    "es": "Philips HomeID",
+    "da": "Philips HomeID",
+    "ru": "Philips HomeID",
+    "pl": "Philips HomeID",
+    "ko": "Philips HomeID",
+    "ar": "Philips HomeID"
+  },
+  "description": {
+    "en": "From morning coffee to cleaner air, keep everyday routines in sync.",
+    "tr": "Sabah kahvesinden temiz havaya, günlük rutinlerinizi uyum içinde tutun.",
+    "nl": "Van ochtendkoffie tot schonere lucht, houd de dagelijkse routines synchroon.",
+    "de": "Vom Morgenkaffee bis hin zu sauberer Luft, halten Sie Ihre Alltagsroutinen auf dem Laufenden.",
+    "fr": "Du café du matin à un air plus pur, synchronisez vos routines quotidiennes.",
+    "it": "Dal caffè mattutino all'aria più pulita, mantieni sincronizzate le routine quotidiane.",
+    "sv": "Håll vardagliga rutiner synkroniserade, från morgonkaffe till renare luft.",
+    "no": "Fra morgenkaffe til renere luft, hold hverdagsrutinene synkronisert.",
+    "es": "Desde el café de la mañana hasta un aire más limpio, mantenga sincronizadas las rutinas diarias.",
+    "da": "Hold hverdagens rutiner synkroniseret fra morgenkaffe til renere luft.",
+    "ru": "Начиная с утреннего кофе и заканчивая чистым воздухом, синхронизируйте повседневные процедуры.",
+    "pl": "Od porannej kawy po czystsze powietrze - zsynchronizuj codzienne czynności.",
+    "ko": "모닝 커피부터 깨끗한 공기까지, 매일의 일상을 동기화하세요.",
+    "ar": "من القهوة الصباحية إلى الهواء النظيف، حافظ على تزامن الروتين اليومي."
+  },
+  "tags": {
+    "en": [
+      "Philips",
+      "HomeID",
+      "air fryer",
+      "multicooker",
+      "air purifier",
+      "espresso"
+    ],
+    "tr": [
+      "Philips",
+      "HomeID",
+      "airfryer",
+      "multicooker",
+      "hava temizleyici",
+      "espresso"
+    ],
+    "nl": [
+      "Philips",
+      "HomeID",
+      "airfryer",
+      "multikoker",
+      "luchtreiniger",
+      "espresso"
+    ],
+    "de": [
+      "Philips",
+      "HomeID",
+      "heißluftfritteuse",
+      "multikocher",
+      "luftreiniger",
+      "espresso"
+    ],
+    "fr": [
+      "Philips",
+      "HomeID",
+      "friteuse à air",
+      "multicuiseur",
+      "purificateur d'air",
+      "expresso"
+    ],
+    "it": [
+      "Philips",
+      "HomeID",
+      "friggitrice ad aria",
+      "multicooker",
+      "purificatore d'aria",
+      "espresso"
+    ],
+    "sv": [
+      "Philips",
+      "HomeID",
+      "frityrgryta",
+      "multicooker",
+      "luftrenare",
+      "espresso"
+    ],
+    "no": [
+      "Philips",
+      "HjemID",
+      "Airfryer",
+      "multikoker",
+      "Luftrenser",
+      "Espresso"
+    ],
+    "es": [
+      "Philips",
+      "HomeID",
+      "freidora de aire",
+      "multicooker",
+      "purificador de aire",
+      "espresso"
+    ],
+    "da": [
+      "Philips",
+      "HomeID",
+      "frituregryde",
+      "multikooker",
+      "luftrenser",
+      "espresso"
+    ],
+    "ru": [
+      "Philips",
+      "HomeID",
+      "фритюрница",
+      "мультиварка",
+      "воздухоочиститель",
+      "эспрессо"
+    ],
+    "pl": [
+      "Philips",
+      "HomeID",
+      "frytkownica beztłuszczowa",
+      "multicooker",
+      "oczyszczacz powietrza",
+      "espresso"
+    ],
+    "ko": [
+      "필립스",
+      "HomeID",
+      "에어프라이어",
+      "멀티쿠커",
+      "공기청정기",
+      "에스프레소"
+    ],
+    "ar": [
+      "فيليبس",
+      "معرف_الصفحة_",
+      "مقلاة هوائية",
+      "طباخ متعدد",
+      "منقي هواء",
+      "إسبريسو"
+    ]
+  },
+  "category": [
+    "appliances",
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Uğur BENEK",
+    "email": "ugrbnk@me.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Renaud Allard (upstream integration)"
+      }
+    ]
+  },
+  "support": "mailto:ugrbnk@me.com"
+}

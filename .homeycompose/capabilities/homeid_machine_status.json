@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Machine status",
+    "tr": "Makine çalışma durumu",
+    "nl": "Machinestatus",
+    "de": "Maschinenzustand",
+    "fr": "État de la machine",
+    "it": "Stato della macchina",
+    "sv": "Maskinstatus",
+    "no": "Maskinstatus",
+    "es": "Estado de la máquina",
+    "da": "Maskinstatus",
+    "ru": "Состояние машины",
+    "pl": "Status maszyny",
+    "ko": "기계 상태",
+    "ar": "حالة الجهاز"
+  },
+  "icon": "/assets/icons/coffee-cup.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

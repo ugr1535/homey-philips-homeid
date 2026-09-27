@@ -1,0 +1,5 @@
+{
+  "type": "mdns-sd",
+  "mdns-sd": { "name": "philipscondor", "protocol": "tcp" },
+  "id": "{{txt.id}}"
+}

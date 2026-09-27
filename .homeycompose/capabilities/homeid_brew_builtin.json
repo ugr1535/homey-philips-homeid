@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Brew built-in drink",
+    "tr": "Hazır içeceği hazırla",
+    "nl": "Ingebouwde drank brouwen",
+    "de": "Einbaudrink brauen",
+    "fr": "Préparer une boisson intégrée",
+    "it": "Prepara la bevanda incorporata",
+    "sv": "Brygg inbyggd dryck",
+    "no": "Brygg innebygd drikke",
+    "es": "Preparar bebida incorporada",
+    "da": "Bryg indbygget drik",
+    "ru": "Приготовить напиток из меню",
+    "pl": "Wbudowany napój do zaparzania",
+    "ko": "기본 음료 추출",
+    "ar": "تحضير مشروب من قائمة الماكينة"
+  },
+  "icon": "/assets/icons/coffee-cup.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

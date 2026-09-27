@@ -1,0 +1,42 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Time remaining",
+    "tr": "Kalan süre",
+    "nl": "Resterende tijd",
+    "de": "Verbleibende Zeit",
+    "fr": "Temps restant",
+    "it": "Tempo rimanente",
+    "sv": "Återstående tid",
+    "no": "Tid som gjenstår",
+    "es": "Tiempo restante",
+    "da": "Resterende tid",
+    "ru": "Оставшееся время",
+    "pl": "Pozostały czas",
+    "ko": "남은 시간",
+    "ar": "الوقت المتبقي"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "min",
+    "tr": "dk",
+    "nl": "min",
+    "de": "min",
+    "fr": "min",
+    "it": "min",
+    "sv": "min",
+    "no": "min",
+    "es": "min",
+    "da": "min",
+    "ru": "min",
+    "pl": "min",
+    "ko": "min",
+    "ar": "min"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 1440
+}

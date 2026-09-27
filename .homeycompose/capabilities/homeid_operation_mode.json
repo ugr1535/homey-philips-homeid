@@ -1,0 +1,139 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Operation mode",
+    "tr": "Çalışma modu",
+    "nl": "Bedrijfsmodus",
+    "de": "Betriebsmodus",
+    "fr": "Mode de fonctionnement",
+    "it": "Modalità di funzionamento",
+    "sv": "Driftläge",
+    "no": "Driftsmodus",
+    "es": "Modo de funcionamiento",
+    "da": "Driftstilstand",
+    "ru": "Режим работы",
+    "pl": "Tryb pracy",
+    "ko": "작동 모드",
+    "ar": "وضع التشغيل"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": true,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "auto",
+      "title": {
+        "en": "Auto",
+        "tr": "Otomatik",
+        "nl": "Auto",
+        "de": "Auto",
+        "fr": "Auto",
+        "it": "Auto",
+        "sv": "Auto",
+        "no": "Auto",
+        "es": "Automático",
+        "da": "Auto",
+        "ru": "Авто",
+        "pl": "Auto",
+        "ko": "자동",
+        "ar": "تلقائي"
+      }
+    },
+    {
+      "id": "gentle",
+      "title": {
+        "en": "Gentle",
+        "tr": "Hafif",
+        "nl": "Zachtaardig",
+        "de": "Sanft",
+        "fr": "Doux",
+        "it": "Delicato",
+        "sv": "Skonsam",
+        "no": "Skånsom",
+        "es": "Suave",
+        "da": "Skånsom",
+        "ru": "Нежный",
+        "pl": "Delikatnie",
+        "ko": "부드러움",
+        "ar": "لطيف"
+      }
+    },
+    {
+      "id": "medium",
+      "title": {
+        "en": "Medium",
+        "tr": "Orta",
+        "nl": "Gemiddeld",
+        "de": "Mittel",
+        "fr": "Moyen",
+        "it": "Media",
+        "sv": "Medium",
+        "no": "Medium",
+        "es": "Media",
+        "da": "Medium",
+        "ru": "Средний",
+        "pl": "Średni",
+        "ko": "중간",
+        "ar": "متوسط"
+      }
+    },
+    {
+      "id": "fast",
+      "title": {
+        "en": "Fast",
+        "tr": "Hızlı",
+        "nl": "Snel",
+        "de": "Schnell",
+        "fr": "Rapide",
+        "it": "Veloce",
+        "sv": "Snabb",
+        "no": "Rask",
+        "es": "Rápido",
+        "da": "Hurtig",
+        "ru": "Быстро",
+        "pl": "Szybko",
+        "ko": "빠름",
+        "ar": "سريع"
+      }
+    },
+    {
+      "id": "sleep",
+      "title": {
+        "en": "Sleep",
+        "tr": "Uyku",
+        "nl": "Slaap",
+        "de": "Schlaf",
+        "fr": "Sommeil",
+        "it": "Sonno",
+        "sv": "Sömn",
+        "no": "Søvn",
+        "es": "Dormir",
+        "da": "Søvn",
+        "ru": "Сон",
+        "pl": "Sen",
+        "ko": "수면",
+        "ar": "النوم"
+      }
+    },
+    {
+      "id": "turbo",
+      "title": {
+        "en": "Turbo",
+        "tr": "Turbo",
+        "nl": "Turbo",
+        "de": "Turbo",
+        "fr": "Turbo",
+        "it": "Turbo",
+        "sv": "Turbo",
+        "no": "Turbo",
+        "es": "Turbo",
+        "da": "Turbo",
+        "ru": "Турбо",
+        "pl": "Turbo",
+        "ko": "터보",
+        "ar": "توربو"
+      }
+    }
+  ]
+}

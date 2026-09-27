@@ -1,0 +1,23 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Drawer open",
+    "tr": "Hazne açık",
+    "nl": "Lade open",
+    "de": "Schublade offen",
+    "fr": "Tiroir ouvert",
+    "it": "Cassetto aperto",
+    "sv": "Låda öppen",
+    "no": "Skuff åpen",
+    "es": "Cajón abierto",
+    "da": "Skuffe åben",
+    "ru": "Ящик открыт",
+    "pl": "Szuflada otwarta",
+    "ko": "서랍 열림",
+    "ar": "فتح الدرج"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "title": {
+    "en": "AquaClean remaining",
+    "tr": "AquaClean kalan",
+    "nl": "AquaClean resterend",
+    "de": "AquaClean verbleibend",
+    "fr": "AquaClean restant",
+    "it": "AquaClean rimanente",
+    "sv": "AquaClean återstår",
+    "no": "AquaClean gjenværende",
+    "es": "AquaClean restante",
+    "da": "AquaClean tilbage",
+    "ru": "Осталось AquaClean",
+    "pl": "Pozostało AquaClean",
+    "ko": "AquaClean 잔여",
+    "ar": "متبقي AquaClean"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

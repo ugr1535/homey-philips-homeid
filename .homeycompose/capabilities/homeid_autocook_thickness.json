@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "AutoCook thickness",
+    "tr": "AutoCook kalınlığı",
+    "nl": "AutoCook-dikte",
+    "de": "AutoCook Dicke",
+    "fr": "Épaisseur AutoCook",
+    "it": "Spessore AutoCook",
+    "sv": "AutoCook tjocklek",
+    "no": "AutoCook-tykkelse",
+    "es": "Espesor AutoCook",
+    "da": "AutoCook tykkelse",
+    "ru": "Толщина AutoCook",
+    "pl": "Grubość automatycznego gotowania",
+    "ko": "자동 조리 두께",
+    "ar": "سمك الطهي التلقائي"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

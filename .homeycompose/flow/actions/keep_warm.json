@@ -1,0 +1,64 @@
+{
+  "title": {
+    "en": "Keep warm",
+    "tr": "Sıcak tut",
+    "nl": "Warmhouden",
+    "de": "Warmhalten",
+    "fr": "Garder au chaud",
+    "it": "Tenere in caldo",
+    "sv": "Håll dig varm",
+    "no": "Hold deg varm!",
+    "es": "Mantener caliente",
+    "da": "Hold varmen",
+    "ru": "Хранить в тепле",
+    "pl": "Utrzymywanie ciepła",
+    "ko": "보온",
+    "ar": "الحفاظ على الدفء"
+  },
+  "titleFormatted": {
+    "en": "Keep warm for [[duration]] min",
+    "tr": "[[duration]] dk sıcak tut",
+    "nl": "Warmhouden gedurende [[duration]] min",
+    "de": "Warmhalten für [[duration]] min",
+    "fr": "Garder au chaud pendant [[duration]] min",
+    "it": "Tenere in caldo per [[duration]] min",
+    "sv": "Håll dig varm i [[duration]] min",
+    "no": "Hold varm i [[duration]] min",
+    "es": "Mantener caliente durante [[duration]] min",
+    "da": "Hold varmen i [[duration]] min",
+    "ru": "Хранить в тепле в течение [[duration]] мин",
+    "pl": "Przechowywać w cieple przez [[duration]] min",
+    "ko": "[[duration]] 분 동안 따뜻하게 유지",
+    "ar": "حافظ على الدفء لمدة [[duration]] دقيقة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    },
+    {
+      "type": "number",
+      "name": "duration",
+      "min": 1,
+      "max": 720,
+      "step": 1,
+      "title": {
+        "en": "Minutes",
+        "tr": "Dakika",
+        "nl": "Minuten",
+        "de": "Minuten",
+        "fr": "Minutes",
+        "it": "Minuti",
+        "sv": "Minuter",
+        "no": "Minutter",
+        "es": "Minutos",
+        "da": "Minutter",
+        "ru": "Протокол",
+        "pl": "Minuty",
+        "ko": "분",
+        "ar": "دقائق"
+      }
+    }
+  ]
+}

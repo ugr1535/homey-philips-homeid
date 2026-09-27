@@ -1,0 +1,3 @@
+Integrieren Sie kompatible Kaffeemaschinen, Heißluftfritteusen, Multikocher und Luftreiniger in Ihren Alltag. Sehen Sie den Gerätestatus, nutzen Sie unterstützte Steuerelemente und automatisieren Sie Aktionen mit Flows. Das Espresso-Dashboard-Widget zeigt den Zubereitungsfortschritt, Wartungsinformationen und eine Taste zum Ein- und Ausschalten der Maschine an.
+
+Richten Sie jedes Gerät zuerst in der offiziellen Philips HomeID-App ein. Melden Sie sich mit Ihrem Philips-Konto für Cloud-verbundene Modelle an; unterstützte lokale Modelle können über Ihr Heimnetzwerk kommunizieren. Verfügbare Funktionen hängen vom Modell ab, und Geräte mit Cloud-Verbindung benötigen Internetzugang. Diese unabhängige App ist nicht mit Philips oder Versuni verbunden.

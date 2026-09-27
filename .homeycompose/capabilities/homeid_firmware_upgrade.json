@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Firmware update available",
+    "tr": "Yazılım güncellemesi var",
+    "nl": "Firmware-update beschikbaar",
+    "de": "Firmware-Update verfügbar",
+    "fr": "Mise à jour du micrologiciel disponible",
+    "it": "Aggiornamento firmware disponibile",
+    "sv": "Uppdatering av inbyggd programvara tillgänglig",
+    "no": "Fastvareoppdatering tilgjengelig",
+    "es": "Actualización de firmware disponible",
+    "da": "Firmwareopdatering tilgængelig",
+    "ru": "Доступно обновление прошивки",
+    "pl": "Dostępna aktualizacja oprogramowania sprzętowego",
+    "ko": "펌웨어 업데이트 사용 가능",
+    "ar": "تحديث البرنامج الثابت متاح"
+  },
+  "icon": "/assets/icons/firmware.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

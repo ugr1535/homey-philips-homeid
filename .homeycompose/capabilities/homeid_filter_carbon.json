@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Carbon filter remaining",
+    "tr": "Karbon filtre kalan",
+    "nl": "Resterende koolstoffilter",
+    "de": "Kohlefilter verbleibend",
+    "fr": "Filtre à charbon restant",
+    "it": "Filtro a carbone rimanente",
+    "sv": "Kolfiltret återstår",
+    "no": "Gjenværende karbonfilter",
+    "es": "Filtro de carbón restante",
+    "da": "Kulfilter tilbage",
+    "ru": "Оставшийся угольный фильтр",
+    "pl": "Pozostało z filtra węglowego",
+    "ko": "남은 탄소 필터",
+    "ar": "فلتر الكربون المتبقي"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0
+}

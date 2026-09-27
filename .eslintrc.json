@@ -1,0 +1,20 @@
+{
+  "extends": ["standard", "plugin:homey-app/recommended"],
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "parserOptions": { "ecmaVersion": 2022 },
+  "rules": {
+    "semi": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "object-property-newline": "off",
+    "operator-linebreak": ["error", "before"],
+    "no-continue": "off"
+  },
+  "ignorePatterns": [
+    ".homeybuild/",
+    "node_modules/"
+  ]
+}

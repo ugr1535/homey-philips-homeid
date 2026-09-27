@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Recipe step",
+    "tr": "Tarif adımı",
+    "nl": "Receptstap",
+    "de": "Rezeptschritt",
+    "fr": "Étape de la recette",
+    "it": "Passaggio ricetta",
+    "sv": "Receptsteg",
+    "no": "Oppskriftstrinn",
+    "es": "Paso de receta",
+    "da": "Opskriftstrin",
+    "ru": "Этап рецепта",
+    "pl": "Krok receptury",
+    "ko": "레시피 단계",
+    "ar": "خطوة الوصفة"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

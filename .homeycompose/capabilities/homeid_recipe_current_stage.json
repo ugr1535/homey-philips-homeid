@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Recipe current stage",
+    "tr": "Tarifin geçerli aşaması",
+    "nl": "Recept huidige fase",
+    "de": "Aktuelle Phase der Rezeptur",
+    "fr": "Étape actuelle de la recette",
+    "it": "Ricetta fase corrente",
+    "sv": "Recept nuvarande stadium",
+    "no": "Oppskriftens nåværende stadium",
+    "es": "Etapa actual de la receta",
+    "da": "Opskrift nuværende fase",
+    "ru": "Рецепт текущего этапа",
+    "pl": "Bieżący etap receptury",
+    "ko": "레시피 현재 단계",
+    "ar": "المرحلة الحالية للوصفة"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

@@ -1,0 +1,8 @@
+{
+  "1.0.1": {
+    "en": "First version!"
+  },
+  "1.0.4": {
+    "en": "Improved the espresso widget: after starting a saved coffee, it now returns to the main view automatically. The selected coffee image appears while the request is being processed and remains visible when brewing is confirmed, including for renamed recipes. Status refreshes more quickly after a brew request."
+  }
+}

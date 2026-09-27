@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "AquaClean filter number",
+    "tr": "AquaClean filtre numarası",
+    "nl": "AquaClean-filternummer",
+    "de": "AquaClean-Filternummer",
+    "fr": "Numéro de filtre AquaClean",
+    "it": "Numero filtro AquaClean",
+    "sv": "AquaClean-filternummer",
+    "no": "AquaClean-filternummer",
+    "es": "Número de filtro AquaClean",
+    "da": "AquaClean filternummer",
+    "ru": "Номер фильтра AquaClean",
+    "pl": "Numer filtra AquaClean",
+    "ko": "AquaClean 필터 번호",
+    "ar": "رقم مرشح AquaClean"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

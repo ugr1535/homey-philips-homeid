@@ -1,0 +1,83 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Set bean type",
+    "tr": "Çekirdek türünü ayarla",
+    "nl": "Type boon instellen",
+    "de": "Bohnentyp einstellen",
+    "fr": "Définir le type de haricot",
+    "it": "Imposta tipo di fagiolo",
+    "sv": "Ställ in böntyp",
+    "no": "Angi bønnetype",
+    "es": "Establecer tipo de grano",
+    "da": "Indstil bønnetype",
+    "ru": "Выбрать тип кофейных зёрен",
+    "pl": "Ustaw typ ziarna",
+    "ko": "콩 유형 설정",
+    "ar": "تعيين نوع حبوب القهوة"
+  },
+  "icon": "/assets/icons/bean.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Arabica",
+        "tr": "Arabica",
+        "nl": "Arabica",
+        "de": "Arabica",
+        "fr": "Arabica",
+        "it": "Arabica",
+        "sv": "Arabica",
+        "no": "Arabica",
+        "es": "Arabica",
+        "da": "Arabica",
+        "ru": "Arabica",
+        "pl": "Arabica",
+        "ko": "Arabica",
+        "ar": "Arabica"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Mix",
+        "tr": "Karışım",
+        "nl": "Mix",
+        "de": "Mix",
+        "fr": "Mélange",
+        "it": "Mix",
+        "sv": "Mix",
+        "no": "Blanding",
+        "es": "Mezcla",
+        "da": "Mix",
+        "ru": "Смесь",
+        "pl": "Mieszanka",
+        "ko": "혼합",
+        "ar": "مزيج"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Other",
+        "tr": "Diğer",
+        "nl": "Anders",
+        "de": "Sonstiges",
+        "fr": "Autre",
+        "it": "Altro",
+        "sv": "Annat",
+        "no": "Andre",
+        "es": "Otros",
+        "da": "Andet",
+        "ru": "Другое",
+        "pl": "Inne",
+        "ko": "기타",
+        "ar": "أخرى"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Child lock",
+    "tr": "Çocuk kilidi",
+    "nl": "Kinderslot",
+    "de": "Kindersicherung",
+    "fr": "Verrouillage enfant",
+    "it": "Blocco bambini",
+    "sv": "Barnlås",
+    "no": "Barnesikring",
+    "es": "Bloqueo para niños",
+    "da": "Børnesikring",
+    "ru": "Блокировка от детей",
+    "pl": "Blokada uruchomienia",
+    "ko": "어린이 잠금장치",
+    "ar": "قفل للأطفال"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "toggle"
+}

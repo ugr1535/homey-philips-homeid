@@ -1,0 +1,23 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "No water",
+    "tr": "Su yok",
+    "nl": "Geen water",
+    "de": "Kein Wasser",
+    "fr": "Pas d'eau",
+    "it": "Senza acqua",
+    "sv": "Inget vatten",
+    "no": "INGEN VANN",
+    "es": "Sin agua",
+    "da": "Intet vand",
+    "ru": "Нет воды",
+    "pl": "Brak wody",
+    "ko": "물 없음",
+    "ar": "لا يوجد ماء"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

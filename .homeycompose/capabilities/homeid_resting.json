@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Resting",
+    "tr": "Dinlenme",
+    "nl": "Rustend",
+    "de": "Ausruhen",
+    "fr": "Repos",
+    "it": "Riposo",
+    "sv": "Vila",
+    "no": "Hviler",
+    "es": "Descanso",
+    "da": "Hvile",
+    "ru": "Отдых",
+    "pl": "Odpoczynek",
+    "ko": "휴식",
+    "ar": "يستريح"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

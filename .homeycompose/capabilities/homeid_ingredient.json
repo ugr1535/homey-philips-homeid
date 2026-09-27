@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Ingredient",
+    "tr": "Malzeme",
+    "nl": "Ingrediënt",
+    "de": "Zutat",
+    "fr": "Ingrédient",
+    "it": "Ingrediente",
+    "sv": "Ingrediens",
+    "no": "Ingrediens",
+    "es": "Ingrediente",
+    "da": "Ingrediens",
+    "ru": "Ингредиент",
+    "pl": "Składnik",
+    "ko": "성분",
+    "ar": "المكون"
+  },
+  "icon": "/assets/icons/recipe-book.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

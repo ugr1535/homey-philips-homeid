@@ -1,0 +1,107 @@
+{
+  "title": {
+    "en": "Start cooking",
+    "tr": "Pişirmeyi başlat",
+    "nl": "Begin met koken",
+    "de": "Beginnen Sie mit dem Kochen",
+    "fr": "Commencer à cuisiner",
+    "it": "Inizia a cucinare",
+    "sv": "Börja laga mat",
+    "no": "Begynn å lage mat",
+    "es": "Empieza a cocinar",
+    "da": "Begynd at lave mad",
+    "ru": "Начать готовить",
+    "pl": "Rozpocznij gotowanie",
+    "ko": "요리 시작하기",
+    "ar": "ابدأ الطهي"
+  },
+  "titleFormatted": {
+    "en": "Start cooking at [[temperature]]°C for [[duration]] min (preheat: [[preheat]])",
+    "tr": "[[temperature]]°C sıcaklıkta [[duration]] dk pişirmeyi başlat (ön ısıtma: [[preheat]])",
+    "nl": "Start het koken op [[temperature]]°C gedurende [[duration]] min (voorverwarmen: [[preheat]])",
+    "de": "Beginnen Sie mit dem Kochen bei [[temperature]] °C für [[duration]] min (Vorheizen: [[preheat]])",
+    "fr": "Démarrer la cuisson à[[temperature]] °C pendant [[duration]] min (préchauffage : [[preheat]])",
+    "it": "Iniziare la cottura a[[temperature]] °C per [[duration]] min (preriscaldamento: [[preheat]])",
+    "sv": "Börja laga mat vid[[temperature]] °C i [[duration]] min (förvärm: [[preheat]])",
+    "no": "Start kokingen ved [[temperature]] °C i [[duration]] minutter (forvarm: [[preheat]])",
+    "es": "Comience a cocinar a[[temperature]] °C durante [[duration]] min (precalentamiento: [[preheat]])",
+    "da": "Begynd at tilberede ved[[temperature]] °C i [[duration]] min (forvarm: [[preheat]])",
+    "ru": "Начать приготовление при [[temperature]] °C в течение [[duration]] мин (предварительный нагрев: [[preheat]])",
+    "pl": "Rozpocznij gotowanie w temperaturze[[temperature]] °C przez [[duration]] min (podgrzewanie: [[preheat]])",
+    "ko": "[[temperature]] °C에서 [[duration]] 분 동안 조리 시작 (예열: [[preheat]])",
+    "ar": "ابدأ الطهي عند [[temperature]] درجةمئوية لمدة [[duration]] دقيقة (التسخين المسبق: [[preheat]])"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    },
+    {
+      "type": "number",
+      "name": "temperature",
+      "min": 30,
+      "max": 230,
+      "step": 1,
+      "title": {
+        "en": "Temperature",
+        "tr": "Sıcaklık",
+        "nl": "Temperatuur",
+        "de": "Temperatur",
+        "fr": "Température",
+        "it": "Temperatura",
+        "sv": "Temperatur",
+        "no": "Temperatur",
+        "es": "Temperatura",
+        "da": "Temperatur",
+        "ru": "Температура",
+        "pl": "Temperatura",
+        "ko": "온도",
+        "ar": "درجة الحرارة"
+      }
+    },
+    {
+      "type": "number",
+      "name": "duration",
+      "min": 1,
+      "max": 1440,
+      "step": 1,
+      "title": {
+        "en": "Minutes",
+        "tr": "Dakika",
+        "nl": "Minuten",
+        "de": "Minuten",
+        "fr": "Minutes",
+        "it": "Minuti",
+        "sv": "Minuter",
+        "no": "Minutter",
+        "es": "Minutos",
+        "da": "Minutter",
+        "ru": "Протокол",
+        "pl": "Minuty",
+        "ko": "분",
+        "ar": "دقائق"
+      }
+    },
+    {
+      "type": "checkbox",
+      "name": "preheat",
+      "title": {
+        "en": "Preheat",
+        "tr": "Ön ısıtma",
+        "nl": "Voorverwarmen",
+        "de": "Vorheizen",
+        "fr": "Préchauffage",
+        "it": "Preriscaldare",
+        "sv": "Förvärm",
+        "no": "Forvarm",
+        "es": "Precalentamiento",
+        "da": "Forvarm",
+        "ru": "Предварительный нагрев",
+        "pl": "Podgrzewanie",
+        "ko": "예열",
+        "ar": "التسخين المسبق"
+      }
+    }
+  ]
+}

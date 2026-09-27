@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Brew saved recipe",
+    "tr": "Kayıtlı tarifi hazırla",
+    "nl": "Opgeslagen recept brouwen",
+    "de": "Gespeichertes Rezept brauen",
+    "fr": "Brasser la recette sauvegardée",
+    "it": "Prepara ricetta salvata",
+    "sv": "Brygg sparat recept",
+    "no": "Brygg lagret oppskrift",
+    "es": "Preparar receta guardada",
+    "da": "Bryg gemt opskrift",
+    "ru": "Приготовить сохранённый рецепт",
+    "pl": "Zapisana receptura naparu",
+    "ko": "저장된 레시피 추출",
+    "ar": "تحضير وصفة محفوظة"
+  },
+  "icon": "/assets/icons/recipe-book.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

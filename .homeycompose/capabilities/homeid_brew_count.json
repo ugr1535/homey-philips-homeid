@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Brew count",
+    "tr": "Demleme sayısı",
+    "nl": "Aantal brouwsels",
+    "de": "Anzahl der Zubereitungen",
+    "fr": "Nombre d'infusions",
+    "it": "Numero di preparazioni",
+    "sv": "Bryggantal",
+    "no": "Bryggetall",
+    "es": "Número de preparaciones",
+    "da": "Bryggetælling",
+    "ru": "Количество заварок",
+    "pl": "Liczba przygotowanych napojów",
+    "ko": "추출 횟수",
+    "ar": "عدد مرات التحضير"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 4,
+  "step": 1
+}

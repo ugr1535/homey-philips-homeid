@@ -1,0 +1,42 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Filter remaining",
+    "tr": "Kalan filtre",
+    "nl": "Resterende filter",
+    "de": "Verbleibender Filter",
+    "fr": "Filtre restant",
+    "it": "Filtro rimanente",
+    "sv": "Återstående filter",
+    "no": "Filtrer gjenværende",
+    "es": "Filtro restante",
+    "da": "Filter tilbage",
+    "ru": "Оставшийся фильтр",
+    "pl": "Pozostało filtrów",
+    "ko": "필터 남음",
+    "ar": "يتبقى عامل التصفية"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Gas level",
+    "tr": "Gaz seviyesi",
+    "nl": "Gasniveau",
+    "de": "Gasstand",
+    "fr": "Niveau de gaz",
+    "it": "Livello gas",
+    "sv": "Gasnivå",
+    "no": "Gassnivå",
+    "es": "Nivel de gas",
+    "da": "Gasniveau",
+    "ru": "Уровень газа",
+    "pl": "Poziom gazu",
+    "ko": "가스 레벨",
+    "ar": "مستوى الغاز"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

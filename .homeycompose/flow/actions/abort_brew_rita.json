@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Abort the brew",
+    "tr": "Demlemeyi iptal et",
+    "nl": "Breek het brouwsel af",
+    "de": "Zubereitung abbrechen",
+    "fr": "Annuler la préparation",
+    "it": "Interrompere la preparazione",
+    "sv": "Avbryt bryggningen",
+    "no": "Avbryt bryggingen",
+    "es": "Cancelar la preparación",
+    "da": "Afbryd brygningen",
+    "ru": "Прервать заваривание",
+    "pl": "Przerwij parzenie",
+    "ko": "추출 중단",
+    "ar": "إلغاء تحضير القهوة"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    }
+  ]
+}

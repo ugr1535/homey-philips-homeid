@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Descale remaining",
+    "tr": "Kireç çözme kalan",
+    "nl": "Resterende ontkalking",
+    "de": "Verbleibende Entkalkung",
+    "fr": "Décalage restant",
+    "it": "Decalcificazione rimanente",
+    "sv": "Avkalkning återstår",
+    "no": "Avkalkingsrest",
+    "es": "Descalado restante",
+    "da": "Afkalkning tilbage",
+    "ru": "Осталось удалить накипь",
+    "pl": "Pozostało odkamieniania",
+    "ko": "남은 스케일 디스케일",
+    "ar": "باقي إزالة الترسبات"
+  },
+  "icon": "/assets/icons/water.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Probe required",
+    "tr": "Prob gerekli",
+    "nl": "Sonde vereist",
+    "de": "Sonde erforderlich",
+    "fr": "Sonde requise",
+    "it": "Sonda richiesta",
+    "sv": "Sond krävs",
+    "no": "Sonde kreves",
+    "es": "Sonda requerida",
+    "da": "Sonde påkrævet",
+    "ru": "Требуется датчик",
+    "pl": "Wymagana sonda",
+    "ko": "프로브 필요",
+    "ar": "المسبار مطلوب"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

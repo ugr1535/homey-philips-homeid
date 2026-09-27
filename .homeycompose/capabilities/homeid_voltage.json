@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Voltage",
+    "tr": "Gerilim",
+    "nl": "Spanning",
+    "de": "Spannung",
+    "fr": "Tension",
+    "it": "Tensione",
+    "sv": "Spänning",
+    "no": "Spenning",
+    "es": "Voltaje",
+    "da": "Spænding",
+    "ru": "Напряжение",
+    "pl": "Napięcie",
+    "ko": "전압",
+    "ar": "الجهد الكهربي"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "V",
+    "tr": "V",
+    "nl": "V",
+    "de": "V",
+    "fr": "V",
+    "it": "V",
+    "sv": "V",
+    "no": "V",
+    "es": "V",
+    "da": "V",
+    "ru": "V",
+    "pl": "V",
+    "ko": "V",
+    "ar": "V"
+  },
+  "decimals": 0
+}

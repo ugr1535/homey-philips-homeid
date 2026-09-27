@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Skip the current brew step",
+    "tr": "Geçerli demleme adımını atla",
+    "nl": "Sla de huidige zetstap over",
+    "de": "Den aktuellen Aufbrutschritt überspringen",
+    "fr": "Ignorer l'étape d'infusion actuelle",
+    "it": "Salta la fase di preparazione corrente",
+    "sv": "Hoppa över det aktuella bryggsteget",
+    "no": "Hopp over gjeldende bryggetrinn",
+    "es": "Omitir el paso de preparación actual",
+    "da": "Spring det aktuelle bryggetrin over",
+    "ru": "Пропустить текущий этап заваривания",
+    "pl": "Pomiń bieżący etap parzenia",
+    "ko": "현재 추출 단계 건너뛰기",
+    "ar": "تخطي خطوة التخمير الحالية"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    }
+  ]
+}

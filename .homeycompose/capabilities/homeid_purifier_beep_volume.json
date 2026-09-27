@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Beep volume",
+    "tr": "Uyarı sesi seviyesi",
+    "nl": "Piepvolume",
+    "de": "Signalton-Lautstärke",
+    "fr": "Volume du bip",
+    "it": "Volume del segnale acustico",
+    "sv": "Pipvolym",
+    "no": "Pipvolum",
+    "es": "Volumen del pitido",
+    "da": "Bipvolumen",
+    "ru": "Громкость звукового сигнала",
+    "pl": "Głośność sygnału dźwiękowego",
+    "ko": "비프음 볼륨",
+    "ar": "مستوى صوت الصفير"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 3,
+  "step": 1
+}

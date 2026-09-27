@@ -1,0 +1,81 @@
+{
+  "title": {
+    "en": "Brew a saved espresso recipe",
+    "tr": "Kayıtlı espresso tarifi hazırla",
+    "nl": "Brouw een opgeslagen espressorecept",
+    "de": "Ein gespeichertes Espresso-Rezept brauen",
+    "fr": "Préparez une recette d'espresso enregistré",
+    "it": "Prepara una ricetta per l'espresso salvata",
+    "sv": "Brygg ett sparat espressorecept",
+    "no": "Brygg en lagret espressooppskrift",
+    "es": "Prepara una receta de espresso guardada",
+    "da": "Bryg en gemt espresso-opskrift",
+    "ru": "Приготовьте сохраненный рецепт эспрессо",
+    "pl": "Zaparz zapisany przepis na espresso",
+    "ko": "저장된 에스프레소 레시피 만들기",
+    "ar": "تحضير وصفة إسبريسو محفوظة"
+  },
+  "titleFormatted": {
+    "en": "Brew [[recipe]] with [[profile]]",
+    "tr": "[[profile]] ile [[recipe]] hazırla",
+    "nl": "Brouw [[recipe]] met [[profile]]",
+    "de": "[[recipe]] mit [[profile]] brauen",
+    "fr": "Brasser [[recipe]] avec [[profile]]",
+    "it": "Prepara [[recipe]] con [[profile]]",
+    "sv": "Brygg [[recipe]] med [[profile]]",
+    "no": "Brygg [[recipe]] med [[profile]]",
+    "es": "Prepara [[recipe]] con [[profile]]",
+    "da": "Bryg [[recipe]] med [[profile]]",
+    "ru": "Заварить [[recipe]] с [[profile]]",
+    "pl": "Parzenie [[recipe]] Z [[profile]]",
+    "ko": "[[profile]]로 [[recipe]] 추출",
+    "ar": "مشروب [[recipe]] مع [[profile]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    },
+    {
+      "type": "autocomplete",
+      "name": "profile",
+      "title": {
+        "en": "Profile",
+        "tr": "Profil",
+        "nl": "Profiel",
+        "de": "Profil",
+        "fr": "Profil",
+        "it": "Profilo",
+        "sv": "Profil",
+        "no": "Profil",
+        "es": "Perfil",
+        "da": "Profil",
+        "ru": "Профиль",
+        "pl": "Profil",
+        "ko": "프로필",
+        "ar": "الملف الشخصي"
+      }
+    },
+    {
+      "type": "autocomplete",
+      "name": "recipe",
+      "title": {
+        "en": "Saved recipe",
+        "tr": "Kayıtlı tarif",
+        "nl": "Opgeslagen recept",
+        "de": "Gespeichertes Rezept",
+        "fr": "Recette enregistrée",
+        "it": "Ricetta salvata",
+        "sv": "Sparat recept",
+        "no": "Lagret oppskrift",
+        "es": "Receta guardada",
+        "da": "Gemt opskrift",
+        "ru": "Сохраненный рецепт",
+        "pl": "Zapisana receptura",
+        "ko": "저장된 레시피",
+        "ar": "الوصفة المحفوظة"
+      }
+    }
+  ]
+}

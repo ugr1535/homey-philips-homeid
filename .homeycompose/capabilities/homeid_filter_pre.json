@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Pre-filter remaining",
+    "tr": "Ön filtre kalan",
+    "nl": "Resterend voorfilter",
+    "de": "Vorfilter verbleibend",
+    "fr": "Pré-filtre restant",
+    "it": "Prefiltro rimanente",
+    "sv": "Återstående förfilter",
+    "no": "Forfilter gjenværende",
+    "es": "Prefiltro restante",
+    "da": "Forfilter tilbage",
+    "ru": "Оставшийся фильтр предварительной очистки",
+    "pl": "Pozostało filtrów wstępnych",
+    "ko": "프리 필터 남음",
+    "ar": "يتبقى فلتر مسبق"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0
+}

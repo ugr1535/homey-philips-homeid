@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Recipe ID",
+    "tr": "Tarif kimliği",
+    "nl": "Recept-ID",
+    "de": "Rezept-ID",
+    "fr": "ID recette",
+    "it": "ID ricetta",
+    "sv": "Recept-ID",
+    "no": "Oppskrifts-ID",
+    "es": "ID de receta",
+    "da": "Opskrifts-ID",
+    "ru": "Идентификатор рецепта",
+    "pl": "Identyfikator receptury",
+    "ko": "레시피 ID",
+    "ar": "معرّف الوصفة"
+  },
+  "icon": "/assets/icons/recipe-book.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

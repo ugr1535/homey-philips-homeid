@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Filter 1 lifetime",
+    "tr": "Filtre 1 ömrü",
+    "nl": "Levensduur filter 1",
+    "de": "Filter 1 Lebensdauer",
+    "fr": "Filtre 1 durée DE vie",
+    "it": "Filtro 1 durata",
+    "sv": "Filter 1 livstid",
+    "no": "Filter 1 levetid",
+    "es": "Vida útil del filtro 1",
+    "da": "Filtrer 1 levetid",
+    "ru": "Срок службы фильтра 1",
+    "pl": "Żywotność filtra 1",
+    "ko": "필터 1 수명",
+    "ar": "عامل التصفية 1 مدى الحياة"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "h",
+    "tr": "h",
+    "nl": "h",
+    "de": "h",
+    "fr": "h",
+    "it": "h",
+    "sv": "h",
+    "no": "h",
+    "es": "h",
+    "da": "h",
+    "ru": "h",
+    "pl": "h",
+    "ko": "h",
+    "ar": "h"
+  },
+  "decimals": 0
+}

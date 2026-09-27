@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Right basket temperature",
+    "tr": "Sağ hazne sıcaklığı",
+    "nl": "Rechter korf temperatuur",
+    "de": "Korbtemperatur rechts",
+    "fr": "Température du panier droit",
+    "it": "Temperatura cestello destro",
+    "sv": "Höger korgtemperatur",
+    "no": "Temperatur i høyre kurv",
+    "es": "Temperatura de la cesta derecha",
+    "da": "Højre kurvetemperatur",
+    "ru": "Температура правой корзины",
+    "pl": "Temperatura prawego kosza",
+    "ko": "오른쪽 바구니 온도",
+    "ar": "درجة حرارة السلة اليمنى"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "°C",
+    "tr": "°C",
+    "nl": "°C",
+    "de": "°C",
+    "fr": "°C",
+    "it": "°C",
+    "sv": "°C",
+    "no": "°C",
+    "es": "°C",
+    "da": "°C",
+    "ru": "°C",
+    "pl": "°C",
+    "ko": "°C",
+    "ar": "درجة مئوية"
+  },
+  "decimals": 0
+}

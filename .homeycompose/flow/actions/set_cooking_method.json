@@ -1,0 +1,291 @@
+{
+  "title": {
+    "en": "Set cooking method",
+    "tr": "Pişirme yöntemini ayarla",
+    "nl": "Kookmethode instellen",
+    "de": "Kochmethode einstellen",
+    "fr": "Définir le mode de cuisson",
+    "it": "Imposta metodo di cottura",
+    "sv": "Ställ in tillagningsmetod",
+    "no": "Tilberedningsmetode",
+    "es": "Establecer método de cocción",
+    "da": "Indstil tilberedningsmetode",
+    "ru": "Установить способ приготовления",
+    "pl": "Ustaw metodę gotowania",
+    "ko": "조리 방법 설정",
+    "ar": "تعيين طريقة الطهي"
+  },
+  "titleFormatted": {
+    "en": "Set cooking method to [[method]]",
+    "tr": "Pişirme yöntemini [[method]] yap",
+    "nl": "Stel de kookmethode in op [[method]]",
+    "de": "Kochmethode auf [[method]] einstellen",
+    "fr": "Réglez le mode de cuisson sur [[method]]",
+    "it": "Imposta il metodo di cottura su [[method]]",
+    "sv": "Ställ in tillagningsmetoden på [[method]]",
+    "no": "Sett tilberedningsmetode til [[method]]",
+    "es": "Establecer el método de cocción en [[method]]",
+    "da": "Indstil tilberedningsmetoden til [[method]]",
+    "ru": "Установите способ приготовления на [[method]]",
+    "pl": "Ustaw metodę gotowania na [[method]]",
+    "ko": "조리 방법을 [[method]]로 설정",
+    "ar": "اضبط طريقة الطهي على [[method]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    },
+    {
+      "type": "dropdown",
+      "name": "method",
+      "title": {
+        "en": "Method",
+        "tr": "Yöntem",
+        "nl": "Methode",
+        "de": "Methode",
+        "fr": "Méthode",
+        "it": "Metodo",
+        "sv": "Metod",
+        "no": "Metode",
+        "es": "Método",
+        "da": "Metode",
+        "ru": "Метод",
+        "pl": "Metoda",
+        "ko": "방법",
+        "ar": "الطريقة"
+      },
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Manual",
+            "tr": "Manuel",
+            "nl": "Handleiding",
+            "de": "Handbuch",
+            "fr": "Manuel",
+            "it": "Manuale",
+            "sv": "Manual",
+            "no": "Manuell",
+            "es": "Manual",
+            "da": "Manuel",
+            "ru": "Вручную",
+            "pl": "Instrukcja",
+            "ko": "수동",
+            "ar": "يدوي"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Air fry",
+            "tr": "Airfry",
+            "nl": "Airfry",
+            "de": "Air Fry",
+            "fr": "Air Fry",
+            "it": "Air Fry",
+            "sv": "Air fry",
+            "no": "Air fry",
+            "es": "Air Fry",
+            "da": "Air fry",
+            "ru": "Фритюрница",
+            "pl": "Smażenie beztłuszczowe",
+            "ko": "에어프라이",
+            "ar": "القلي بالهواء"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Keep warm",
+            "tr": "Sıcak tut",
+            "nl": "Warmhouden",
+            "de": "Warmhalten",
+            "fr": "Garder au chaud",
+            "it": "Tenere in caldo",
+            "sv": "Håll dig varm",
+            "no": "Hold deg varm!",
+            "es": "Mantener caliente",
+            "da": "Hold varmen",
+            "ru": "Хранить в тепле",
+            "pl": "Utrzymywanie ciepła",
+            "ko": "보온",
+            "ar": "الحفاظ على الدفء"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Bake",
+            "tr": "Fırınla",
+            "nl": "Bakken",
+            "de": "Backen",
+            "fr": "Cuire",
+            "it": "Cottura al forno",
+            "sv": "Baka",
+            "no": "Baking",
+            "es": "Bake",
+            "da": "Bag",
+            "ru": "Выпечка",
+            "pl": "Pieczenie",
+            "ko": "베이킹",
+            "ar": "خبز"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Grill",
+            "tr": "Izgara",
+            "nl": "Grill",
+            "de": "Grill",
+            "fr": "Gril",
+            "it": "Griglia",
+            "sv": "Grill",
+            "no": "Rist",
+            "es": "Parrilla",
+            "da": "Grill",
+            "ru": "Гриль",
+            "pl": "Grill",
+            "ko": "그릴",
+            "ar": "شواية"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "Roast",
+            "tr": "Kızart",
+            "nl": "Roosteren",
+            "de": "Braten",
+            "fr": "Rôti",
+            "it": "Arrosto",
+            "sv": "Stek",
+            "no": "Steking",
+            "es": "Asado",
+            "da": "Stege",
+            "ru": "Жаркое",
+            "pl": "Palenie",
+            "ko": "로스트",
+            "ar": "مشوي"
+          }
+        },
+        {
+          "id": "6",
+          "title": {
+            "en": "Reheat",
+            "tr": "Yeniden ısıt",
+            "nl": "Opnieuw verwarmen",
+            "de": "Aufwärmen",
+            "fr": "Réchauffer",
+            "it": "Riscaldare",
+            "sv": "Återuppvärmning",
+            "no": "Etterbrenner",
+            "es": "Recalentar",
+            "da": "Genopvarm",
+            "ru": "Прогрев",
+            "pl": "Podgrzewanie",
+            "ko": "재가열",
+            "ar": "إعادة التسخين"
+          }
+        },
+        {
+          "id": "7",
+          "title": {
+            "en": "Defrost",
+            "tr": "Buz çöz",
+            "nl": "Ontdooien",
+            "de": "Auftauen",
+            "fr": "Dégivrage",
+            "it": "Sbrinamento",
+            "sv": "Avfrostning",
+            "no": "Avising",
+            "es": "Descongelación",
+            "da": "Afrimning",
+            "ru": "Разморозка",
+            "pl": "Rozmrażanie",
+            "ko": "해동",
+            "ar": "إذابة الصقيع"
+          }
+        },
+        {
+          "id": "8",
+          "title": {
+            "en": "Preset 8",
+            "tr": "Program 8",
+            "nl": "Voorinstelling 8",
+            "de": "Voreinstellung 8",
+            "fr": "Préréglage 8",
+            "it": "Preimpostazione 8",
+            "sv": "Förinställning 8",
+            "no": "Forhåndsinnstilling 8",
+            "es": "Preajuste 8",
+            "da": "Forudindstilling 8",
+            "ru": "Предустановка 8",
+            "pl": "Ustawienie wstępne 8",
+            "ko": "프리셋 8",
+            "ar": "الإعداد المسبق 8"
+          }
+        },
+        {
+          "id": "9",
+          "title": {
+            "en": "Preset 9",
+            "tr": "Program 9",
+            "nl": "Voorinstelling 9",
+            "de": "Voreinstellung 9",
+            "fr": "Préréglage 9",
+            "it": "Preset 9",
+            "sv": "Förinställning 9",
+            "no": "Forhåndsinnstilling 9",
+            "es": "Preajuste 9",
+            "da": "Forudindstilling 9",
+            "ru": "Предустановка 9",
+            "pl": "Ustawienie wstępne 9",
+            "ko": "프리셋 9",
+            "ar": "الضبط المسبق 9"
+          }
+        },
+        {
+          "id": "10",
+          "title": {
+            "en": "Preset 10",
+            "tr": "Program 10",
+            "nl": "Voorinstelling 10",
+            "de": "Voreinstellung 10",
+            "fr": "Préréglage 10",
+            "it": "Preimpostazione 10",
+            "sv": "Förinställning 10",
+            "no": "Forhåndsinnstilling 10",
+            "es": "Preajuste 10",
+            "da": "Forudindstilling 10",
+            "ru": "Предустановка 10",
+            "pl": "Ustawienie wstępne 10",
+            "ko": "프리셋 10",
+            "ar": "الإعداد المسبق 10"
+          }
+        },
+        {
+          "id": "50",
+          "title": {
+            "en": "Keep warm (Hermes)",
+            "tr": "Sıcak tut (Hermes)",
+            "nl": "Warmhouden (Hermes)",
+            "de": "Warmhalten (Hermes)",
+            "fr": "Garder au chaud (Hermès)",
+            "it": "Tenere in caldo (Hermes)",
+            "sv": "Håll dig varm (Hermes)",
+            "no": "Hold deg varm (Hermes)",
+            "es": "Mantener caliente (Hermes)",
+            "da": "Hold varmen (Hermes)",
+            "ru": "Хранить в тепле (Hermes)",
+            "pl": "Utrzymuj ciepło (Hermes)",
+            "ko": "따뜻하게 (에르메스)",
+            "ar": "حافظ على الدفء (هيرميس)"
+          }
+        }
+      ]
+    }
+  ]
+}

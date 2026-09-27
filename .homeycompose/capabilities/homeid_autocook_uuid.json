@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "AutoCook program ID",
+    "tr": "AutoCook program kimliği",
+    "nl": "AutoCook-programma-ID",
+    "de": "AutoCook-Programm-ID",
+    "fr": "ID du programme AutoCook",
+    "it": "ID programma AutoCook",
+    "sv": "AutoCook-program-ID",
+    "no": "AutoCook-program-ID",
+    "es": "ID del programa AutoCook",
+    "da": "AutoCook-program-ID",
+    "ru": "Идентификатор программы AutoCook",
+    "pl": "Identyfikator programu automatycznego gotowania",
+    "ko": "자동 조리 프로그램 ID",
+    "ar": "معرّف برنامج الطهي التلقائي"
+  },
+  "icon": "/assets/icons/recipe-book.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

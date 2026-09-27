@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Coffee maintenance remaining",
+    "tr": "Kahve bakım kalan",
+    "nl": "Resterend koffieonderhoud",
+    "de": "Verbleibende Kaffeepflege",
+    "fr": "Entretien du café restant",
+    "it": "Manutenzione caffè rimanente",
+    "sv": "Kaffeunderhåll återstår",
+    "no": "Gjenværende kaffevedlikehold",
+    "es": "Mantenimiento de café restante",
+    "da": "Vedligeholdelse af kaffe tilbage",
+    "ru": "Оставшееся обслуживание кофе",
+    "pl": "Pozostała konserwacja kawy",
+    "ko": "커피 정비 잔여",
+    "ar": "تبقى صيانة القهوة"
+  },
+  "icon": "/assets/icons/coffee-cup.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

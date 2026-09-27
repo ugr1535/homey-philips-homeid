@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Cook time",
+    "tr": "Pişirme süresi",
+    "nl": "Kooktijd",
+    "de": "Kochzeit",
+    "fr": "Temps de cuisson",
+    "it": "Tempo di cottura",
+    "sv": "Tillagningstid",
+    "no": "Tilberedningstid:",
+    "es": "Tiempo de cocción",
+    "da": "Tilberedningstid",
+    "ru": "Время приготовления",
+    "pl": "Czas gotowania",
+    "ko": "요리 시간",
+    "ar": "وقت الطهي"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "units": {
+    "en": "min",
+    "tr": "dk",
+    "nl": "min",
+    "de": "min",
+    "fr": "min",
+    "it": "min",
+    "sv": "min",
+    "no": "min",
+    "es": "min",
+    "da": "min",
+    "ru": "min",
+    "pl": "min",
+    "ko": "min",
+    "ar": "min"
+  },
+  "decimals": 0,
+  "min": 1,
+  "max": 1440,
+  "step": 1
+}

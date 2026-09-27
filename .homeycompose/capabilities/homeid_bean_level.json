@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "icon": "/assets/icons/bean.svg",
+  "title": {
+    "en": "Bean level",
+    "tr": "Çekirdek seviyesi",
+    "nl": "Bonenniveau",
+    "de": "Bohnenstand",
+    "fr": "Niveau de grain",
+    "it": "Livello bean",
+    "sv": "Bönnivå",
+    "no": "Bønnenivå",
+    "es": "Nivel de granos de café",
+    "da": "Bønne niveau",
+    "ru": "Уровень кофейных зёрен",
+    "pl": "Poziom ziarna",
+    "ko": "빈 레벨",
+    "ar": "مستوى حبوب القهوة"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

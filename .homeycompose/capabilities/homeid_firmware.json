@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "icon": "/assets/icons/firmware.svg",
+  "title": {
+    "en": "Firmware",
+    "tr": "Yazılım",
+    "nl": "Firmware",
+    "de": "Firmware",
+    "fr": "Firmware",
+    "it": "Firmware",
+    "sv": "Firmware",
+    "no": "Fastvare",
+    "es": "Firmware",
+    "da": "Firmware",
+    "ru": "Прошивка",
+    "pl": "Oprogramowanie sprzętowe",
+    "ko": "펌웨어",
+    "ar": "البرنامج الثابت"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": null
+}

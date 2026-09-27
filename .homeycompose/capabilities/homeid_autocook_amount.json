@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "AutoCook amount",
+    "tr": "AutoCook miktarı",
+    "nl": "AutoCook-bedrag",
+    "de": "AutoCook-Betrag",
+    "fr": "Montant AutoCook",
+    "it": "Importo AutoCook",
+    "sv": "AutoCook-belopp",
+    "no": "AutoCook-mengde",
+    "es": "Cantidad de AutoCook",
+    "da": "AutoCook beløb",
+    "ru": "Количество AutoCook",
+    "pl": "Ilość automatycznego gotowania",
+    "ko": "자동 조리 금액",
+    "ar": "كمية الطهو التلقائي"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Abort brew",
+    "tr": "Demlemeyi iptal et",
+    "nl": "Brouwsel afbreken",
+    "de": "Zubereitung abbrechen",
+    "fr": "Annuler la préparation",
+    "it": "Interrompi infusione",
+    "sv": "Avbryt bryggning",
+    "no": "Avbryt bryggingen",
+    "es": "Cancelar preparación",
+    "da": "Afbryd brygning",
+    "ru": "Прервать заваривание",
+    "pl": "Przerwij parzenie",
+    "ko": "추출 중단",
+    "ar": "إلغاء التحضير"
+  },
+  "icon": "/assets/icons/stop.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

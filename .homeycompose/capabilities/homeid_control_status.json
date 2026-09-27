@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Control status",
+    "tr": "Komut durumu",
+    "nl": "Regelstatus",
+    "de": "Kontrollstatus",
+    "fr": "État du contrôle",
+    "it": "Stato del controllo",
+    "sv": "Kontrollstatus",
+    "no": "Kontrollstatus",
+    "es": "Estado del control",
+    "da": "Kontrolstatus",
+    "ru": "Состояние контроля",
+    "pl": "Status kontroli",
+    "ko": "제어 상태",
+    "ar": "حالة التحكم"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

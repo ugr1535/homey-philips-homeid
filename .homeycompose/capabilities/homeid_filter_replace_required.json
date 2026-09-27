@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "HEPA filter replacement required",
+    "tr": "HEPA filtre değişimi gerekli",
+    "nl": "HEPA-filtervervanging vereist",
+    "de": "Austausch des HEPA-Filters erforderlich",
+    "fr": "Remplacement du filtre HEPA requis",
+    "it": "È necessaria la sostituzione del filtro HEPA",
+    "sv": "Byte av HEPA-filter krävs",
+    "no": "HEPA-filterbytte kreves",
+    "es": "Se requiere el reemplazo del filtro HEPA",
+    "da": "Udskiftning af HEPA-filter påkrævet",
+    "ru": "Требуется замена HEPA-фильтра",
+    "pl": "Wymagana wymiana filtra HEPA",
+    "ko": "HEPA 필터 교체 필요",
+    "ar": "استبدال فلتر HEPA مطلوب"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

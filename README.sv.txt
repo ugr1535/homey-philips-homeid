@@ -1,0 +1,3 @@
+Integrera kompatibla kaffemaskiner, varmluftsfritöser, multikokare och luftrenare i dina dagliga rutiner. Se apparatens status, använd funktioner som stöds och automatisera åtgärder med Flows. Espresso-widgeten visar tillredningen, underhållsinformation och en knapp för att slå på eller stänga av maskinen.
+
+Ställ in varje apparat i den officiella Philips HomeID-appen först. Logga in med ditt Philips-konto för molnanslutna modeller; lokala modeller som stöds kan kommunicera via ditt hemnätverk. Tillgängliga funktioner beror på modell, och molnanslutna enheter behöver internetåtkomst. Denna oberoende app är inte ansluten till Philips eller Versuni.

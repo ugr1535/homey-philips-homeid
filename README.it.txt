@@ -1,0 +1,3 @@
+Porta macchine da caffè, friggitrici ad aria, multicooker e purificatori d'aria compatibili nella tua routine quotidiana. Visualizza lo stato dell'apparecchio, utilizza i controlli supportati e automatizza le azioni con i Flows. Il widget espresso mostra lo stato della preparazione, le informazioni di manutenzione e un pulsante per accendere o spegnere la macchina.
+
+Configura prima ogni elettrodomestico nell'app ufficiale Philips HomeID. Accedi con il tuo account Philips per i modelli connessi al cloud; i modelli locali supportati possono comunicare sulla tua rete domestica. Le funzionalità disponibili dipendono dal modello e i dispositivi connessi al cloud richiedono l'accesso a Internet. Questa app indipendente non è affiliata a Philips o Versuni.

@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "HEPA filter remaining",
+    "tr": "HEPA filtre kalan",
+    "nl": "HEPA-filter resterend",
+    "de": "HEPA-Filter verbleibend",
+    "fr": "Filtre HEPA restant",
+    "it": "Filtro HEPA rimanente",
+    "sv": "Återstående HEPA-filter",
+    "no": "Gjenværende HEPA-filter",
+    "es": "Filtro HEPA restante",
+    "da": "HEPA-filter tilbage",
+    "ru": "Остался HEPA-фильтр",
+    "pl": "Pozostało filtra HEPA",
+    "ko": "HEPA 필터 남음",
+    "ar": "فلتر HEPA المتبقي"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { box-sizing: border-box; margin: 0; padding: 1rem; }
+    .pair-page { max-width: 32rem; margin: 0 auto; }
+    .pair-error { display: none; color: #c62828; margin-top: 1rem; white-space: pre-wrap; }
+    .pair-gap { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="homey-form pair-page">
+    <h1 id="title" class="homey-title">Choose setup method</h1>
+    <button id="cloud" class="homey-button-primary-full">Sign in with Philips account</button>
+    <button id="manual" class="homey-button-secondary-full pair-gap">Set up manually</button>
+    <p id="error" class="pair-error"></p>
+  </main>
+  <script>
+    'use strict';
+
+    function translate(key, fallback) {
+      try {
+        const value = typeof Homey.__ === 'function' ? Homey.__(key) : '';
+        return value && value !== key ? value : fallback;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    try {
+      document.getElementById('title').textContent = translate('pair.choose', 'Choose setup method');
+      document.getElementById('cloud').textContent = translate('pair.cloud', 'Sign in with Philips account');
+      document.getElementById('manual').textContent = translate('pair.manual', 'Set up manually');
+      document.getElementById('cloud').addEventListener('click', () => Homey.showView('cloud_login_v5'));
+      document.getElementById('manual').addEventListener('click', () => Homey.showView('manual'));
+    } catch (error) {
+      const node = document.getElementById('error');
+      node.textContent = error && error.message ? error.message : String(error);
+      node.style.display = 'block';
+    } finally {
+      Homey.ready();
+    }
+  </script>
+</body>
+</html>

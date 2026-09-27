@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Fahrenheit unit",
+    "tr": "Fahrenhayt birimi",
+    "nl": "Fahrenheit-unit",
+    "de": "Fahrenheit-Einheit",
+    "fr": "Unité Fahrenheit",
+    "it": "Unità Fahrenheit",
+    "sv": "Fahrenheit-enhet",
+    "no": "Fahrenheit-enhet",
+    "es": "Unidad Fahrenheit",
+    "da": "Fahrenheit-enhed",
+    "ru": "Единица измерения по Фаренгейту",
+    "pl": "Jednostka Fahrenheita",
+    "ko": "화씨 단위",
+    "ar": "وحدة فهرنهايت"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": null
+}

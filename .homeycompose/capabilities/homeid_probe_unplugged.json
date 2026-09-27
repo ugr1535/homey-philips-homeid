@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Probe unplugged",
+    "tr": "Prob takılı değil",
+    "nl": "Sonde losgekoppeld",
+    "de": "Sonde ausgesteckt",
+    "fr": "Sonde débranchée",
+    "it": "Sonda scollegata",
+    "sv": "Sonden är urkopplad",
+    "no": "Sonden er frakoblet",
+    "es": "Sonda desenchufada",
+    "da": "Sonde frakoblet",
+    "ru": "Зонд отсоединен от розетки",
+    "pl": "Sonda odłączona",
+    "ko": "프로브 플러그를 뽑음",
+    "ar": "المجس غير موصول"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Resume brew",
+    "tr": "Demlemeye devam et",
+    "nl": "Hervat het brouwsel",
+    "de": "Fortsetzen des Suds",
+    "fr": "Reprendre l'infusion",
+    "it": "Riprendi la preparazione",
+    "sv": "Återuppta bryggning",
+    "no": "Gjenoppta bryggingen",
+    "es": "Reanudar preparación",
+    "da": "Genoptag brygning",
+    "ru": "Возобновить заваривание",
+    "pl": "Wznów parzenie",
+    "ko": "추출 재개",
+    "ar": "استئناف التحضير"
+  },
+  "icon": "/assets/icons/play.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

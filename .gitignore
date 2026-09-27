@@ -1,0 +1,9 @@
+node_modules/
+.homeybuild/
+tools/
+userdata/
+.env
+.env.*
+.npmrc
+*.log
+.DS_Store

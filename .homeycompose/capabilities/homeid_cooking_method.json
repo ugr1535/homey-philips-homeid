@@ -1,0 +1,405 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Cooking method",
+    "tr": "Pişirme yöntemi",
+    "nl": "Kookmethode",
+    "de": "Zubereitungsmethode",
+    "fr": "Méthode de cuisson",
+    "it": "Metodo di cottura",
+    "sv": "Tillagningsmetod",
+    "no": "Tilberedningsmetode",
+    "es": "Método de cocción",
+    "da": "Tilberedningsmetode",
+    "ru": "Способ приготовления",
+    "pl": "Metoda gotowania",
+    "ko": "조리 방법",
+    "ar": "طريقة الطهي"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Method 0",
+        "tr": "Yöntem 0",
+        "nl": "Methode 0",
+        "de": "Methode 0",
+        "fr": "Méthode 0",
+        "it": "Metodo 0",
+        "sv": "Metod 0",
+        "no": "Metode",
+        "es": "Método 0",
+        "da": "Metode 0",
+        "ru": "Метод 0",
+        "pl": "Metoda 0",
+        "ko": "방법 0",
+        "ar": "الطريقة 0"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Method 1",
+        "tr": "Yöntem 1",
+        "nl": "Methode 1",
+        "de": "Methode 1",
+        "fr": "Méthode 1",
+        "it": "Metodo 1",
+        "sv": "Metod 1",
+        "no": "Metode 1",
+        "es": "Método 1",
+        "da": "Metode 1",
+        "ru": "Способ 1",
+        "pl": "Metoda 1",
+        "ko": "방법 1",
+        "ar": "الطريقة 1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Method 2",
+        "tr": "Yöntem 2",
+        "nl": "Methode 2",
+        "de": "Methode 2",
+        "fr": "Méthode 2",
+        "it": "Metodo 2",
+        "sv": "Metod 2",
+        "no": "Metode 2",
+        "es": "Método 2",
+        "da": "Metode 2",
+        "ru": "Способ 2",
+        "pl": "Metoda 2",
+        "ko": "방법 2",
+        "ar": "الطريقة 2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Method 3",
+        "tr": "Yöntem 3",
+        "nl": "Methode 3",
+        "de": "Methode 3",
+        "fr": "Méthode 3",
+        "it": "Metodo 3",
+        "sv": "Metod 3",
+        "no": "Metode 3",
+        "es": "Método 3",
+        "da": "Metode 3",
+        "ru": "Способ 3",
+        "pl": "Metoda 3",
+        "ko": "방법 3",
+        "ar": "الطريقة 3"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Method 4",
+        "tr": "Yöntem 4",
+        "nl": "Methode 4",
+        "de": "Methode 4",
+        "fr": "Méthode 4",
+        "it": "Metodo 4",
+        "sv": "Metod 4",
+        "no": "Metode 4",
+        "es": "Método 4",
+        "da": "Metode 4",
+        "ru": "Метод 4",
+        "pl": "Metoda 4",
+        "ko": "방법 4",
+        "ar": "الطريقة الرابعة"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Method 5",
+        "tr": "Yöntem 5",
+        "nl": "Methode 5",
+        "de": "Methode 5",
+        "fr": "Méthode 5",
+        "it": "Metodo 5",
+        "sv": "Metod 5",
+        "no": "Metode 5",
+        "es": "Método 5",
+        "da": "Metode 5",
+        "ru": "Метод 5",
+        "pl": "Metoda 5",
+        "ko": "방법 5",
+        "ar": "الطريقة الخامسة"
+      }
+    },
+    {
+      "id": "6",
+      "title": {
+        "en": "Method 6",
+        "tr": "Yöntem 6",
+        "nl": "Methode 6",
+        "de": "Methode 6",
+        "fr": "Méthode 6",
+        "it": "Metodo 6",
+        "sv": "Metod 6",
+        "no": "Metode 6",
+        "es": "Método 6",
+        "da": "Metode 6",
+        "ru": "Метод 6",
+        "pl": "Metoda 6",
+        "ko": "방법 6",
+        "ar": "الطريقة 6"
+      }
+    },
+    {
+      "id": "7",
+      "title": {
+        "en": "Method 7",
+        "tr": "Yöntem 7",
+        "nl": "Methode 7",
+        "de": "Methode 7",
+        "fr": "Méthode 7",
+        "it": "Metodo 7",
+        "sv": "Metod 7",
+        "no": "Metode 7",
+        "es": "Método 7",
+        "da": "Metode 7",
+        "ru": "Метод 7",
+        "pl": "Metoda 7",
+        "ko": "방법 7",
+        "ar": "الطريقة 7"
+      }
+    },
+    {
+      "id": "8",
+      "title": {
+        "en": "Method 8",
+        "tr": "Yöntem 8",
+        "nl": "Methode 8",
+        "de": "Methode 8",
+        "fr": "Méthode 8",
+        "it": "Metodo 8",
+        "sv": "Metod 8",
+        "no": "Metode 8",
+        "es": "Método 8",
+        "da": "Metode 8",
+        "ru": "Метод 8",
+        "pl": "Metoda 8",
+        "ko": "방법 8",
+        "ar": "الطريقة 8"
+      }
+    },
+    {
+      "id": "9",
+      "title": {
+        "en": "Method 9",
+        "tr": "Yöntem 9",
+        "nl": "Methode 9",
+        "de": "Methode 9",
+        "fr": "Méthode 9",
+        "it": "Metodo 9",
+        "sv": "Metod 9",
+        "no": "Metode 9",
+        "es": "Método 9",
+        "da": "Metode 9",
+        "ru": "Метод 9",
+        "pl": "Metoda 9",
+        "ko": "방법 9",
+        "ar": "الطريقة 9"
+      }
+    },
+    {
+      "id": "10",
+      "title": {
+        "en": "Method 10",
+        "tr": "Yöntem 10",
+        "nl": "Methode 10",
+        "de": "Methode 10",
+        "fr": "Méthode 10",
+        "it": "Metodo 10",
+        "sv": "Metod 10",
+        "no": "Metode 10",
+        "es": "Método 10",
+        "da": "Metode 10",
+        "ru": "Метод 10",
+        "pl": "Metoda 10",
+        "ko": "방법 10",
+        "ar": "الطريقة 10"
+      }
+    },
+    {
+      "id": "11",
+      "title": {
+        "en": "Method 11",
+        "tr": "Yöntem 11",
+        "nl": "Methode 11",
+        "de": "Methode 11",
+        "fr": "Méthode 11",
+        "it": "Metodo 11",
+        "sv": "Metod 11",
+        "no": "Metode 11",
+        "es": "Método 11",
+        "da": "Metode 11",
+        "ru": "Метод 11",
+        "pl": "Metoda 11",
+        "ko": "방법 11",
+        "ar": "الطريقة 11"
+      }
+    },
+    {
+      "id": "12",
+      "title": {
+        "en": "Method 12",
+        "tr": "Yöntem 12",
+        "nl": "Methode 12",
+        "de": "Methode 12",
+        "fr": "Méthode 12",
+        "it": "Metodo 12",
+        "sv": "Metod 12",
+        "no": "Metode 12",
+        "es": "Método 12",
+        "da": "Metode 12",
+        "ru": "Метод 12",
+        "pl": "Metoda 12",
+        "ko": "방법 12",
+        "ar": "الطريقة 12"
+      }
+    },
+    {
+      "id": "13",
+      "title": {
+        "en": "Method 13",
+        "tr": "Yöntem 13",
+        "nl": "Methode 13",
+        "de": "Methode 13",
+        "fr": "Méthode 13",
+        "it": "Metodo 13",
+        "sv": "Metod 13",
+        "no": "Metode 13",
+        "es": "Método 13",
+        "da": "Metode 13",
+        "ru": "Метод 13",
+        "pl": "Metoda 13",
+        "ko": "방법 13",
+        "ar": "الطريقة 13"
+      }
+    },
+    {
+      "id": "14",
+      "title": {
+        "en": "Method 14",
+        "tr": "Yöntem 14",
+        "nl": "Methode 14",
+        "de": "Methode 14",
+        "fr": "Méthode 14",
+        "it": "Metodo 14",
+        "sv": "Metod 14",
+        "no": "Metode 14",
+        "es": "Método 14",
+        "da": "Metode 14",
+        "ru": "Метод 14",
+        "pl": "Metoda 14",
+        "ko": "방법 14",
+        "ar": "الطريقة 14"
+      }
+    },
+    {
+      "id": "15",
+      "title": {
+        "en": "Method 15",
+        "tr": "Yöntem 15",
+        "nl": "Methode 15",
+        "de": "Methode 15",
+        "fr": "Méthode 15",
+        "it": "Metodo 15",
+        "sv": "Metod 15",
+        "no": "Metode 15",
+        "es": "Método 15",
+        "da": "Metode 15",
+        "ru": "Метод 15",
+        "pl": "Metoda 15",
+        "ko": "방법 15",
+        "ar": "الطريقة 15"
+      }
+    },
+    {
+      "id": "30",
+      "title": {
+        "en": "Method 30",
+        "tr": "Yöntem 30",
+        "nl": "Methode 30",
+        "de": "Methode 30",
+        "fr": "Méthode 30",
+        "it": "Metodo 30",
+        "sv": "Metod 30",
+        "no": "Metode 30",
+        "es": "Método 30",
+        "da": "Metode 30",
+        "ru": "Метод 30",
+        "pl": "Metoda 30",
+        "ko": "방법 30",
+        "ar": "الطريقة 30"
+      }
+    },
+    {
+      "id": "40",
+      "title": {
+        "en": "Method 40",
+        "tr": "Yöntem 40",
+        "nl": "Methode 40",
+        "de": "Methode 40",
+        "fr": "Méthode 40",
+        "it": "Metodo 40",
+        "sv": "Metod 40",
+        "no": "Metode 40",
+        "es": "Método 40",
+        "da": "Metode 40",
+        "ru": "Метод 40",
+        "pl": "Metoda 40",
+        "ko": "방법 40",
+        "ar": "الطريقة 40"
+      }
+    },
+    {
+      "id": "50",
+      "title": {
+        "en": "Method 50",
+        "tr": "Yöntem 50",
+        "nl": "Methode 50",
+        "de": "Methode 50",
+        "fr": "Méthode 50",
+        "it": "Metodo 50",
+        "sv": "Metod 50",
+        "no": "Metode 50",
+        "es": "Método 50",
+        "da": "Metode 50",
+        "ru": "Метод 50",
+        "pl": "Metoda 50",
+        "ko": "방법 50",
+        "ar": "الطريقة 50"
+      }
+    },
+    {
+      "id": "60",
+      "title": {
+        "en": "Method 60",
+        "tr": "Yöntem 60",
+        "nl": "Methode 60",
+        "de": "Methode 60",
+        "fr": "Méthode 60",
+        "it": "Metodo 60",
+        "sv": "Metod 60",
+        "no": "Metode 60",
+        "es": "Método 60",
+        "da": "Metode 60",
+        "ru": "Метод 60",
+        "pl": "Metoda 60",
+        "ko": "방법 60",
+        "ar": "الطريقة 60"
+      }
+    }
+  ]
+}

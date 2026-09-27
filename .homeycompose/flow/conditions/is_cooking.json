@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Is cooking",
+    "tr": "Pişiriyor",
+    "nl": "Is koken",
+    "de": "Ist Kochen",
+    "fr": "Est en train de cuisiner",
+    "it": "Sta cucinando",
+    "sv": "Är matlagning",
+    "no": "Lager mat",
+    "es": "Está cocinando",
+    "da": "Er madlavning",
+    "ru": "Готовит",
+    "pl": "Gotuje",
+    "ko": "요리 중",
+    "ar": "هل تطبخ"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    }
+  ]
+}

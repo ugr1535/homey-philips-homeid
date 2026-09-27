@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Flip reminder",
+    "tr": "Çevirme uyarısı",
+    "nl": "Herinnering spiegelen",
+    "de": "Erinnerung umdrehen",
+    "fr": "Retourner le rappel",
+    "it": "Promemoria capovolgi",
+    "sv": "Vänd påminnelse",
+    "no": "Vend påminnelse",
+    "es": "Voltear recordatorio",
+    "da": "Vend påmindelse",
+    "ru": "Напоминание о переворачивании",
+    "pl": "Odwróć przypomnienie",
+    "ko": "알림 전환",
+    "ar": "اقلب التذكير"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

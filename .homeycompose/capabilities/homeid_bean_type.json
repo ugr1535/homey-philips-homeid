@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Bean type",
+    "tr": "Çekirdek türü",
+    "nl": "Boontype",
+    "de": "Bohnentyp",
+    "fr": "Type de haricot",
+    "it": "Tipo di fagiolo",
+    "sv": "Typ av bönor",
+    "no": "Bønnetype",
+    "es": "Tipo de grano",
+    "da": "Bønnetype",
+    "ru": "Тип кофейных зёрен",
+    "pl": "Rodzaj ziarna",
+    "ko": "콩 종류",
+    "ar": "نوع حبوب القهوة"
+  },
+  "icon": "/assets/icons/bean.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

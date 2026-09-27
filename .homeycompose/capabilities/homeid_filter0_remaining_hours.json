@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Filter 0 remaining",
+    "tr": "Filtre 0 kalan",
+    "nl": "Filter 0 resterend",
+    "de": "Filter 0 verbleibend",
+    "fr": "Filtre 0 restant",
+    "it": "Filtro 0 rimanente",
+    "sv": "Filter 0 kvar",
+    "no": "Filtrer 0 gjenværende",
+    "es": "Filtro 0 restante",
+    "da": "Filter 0 tilbage",
+    "ru": "Оставшийся фильтр 0",
+    "pl": "Pozostało filtrów 0",
+    "ko": "필터 0개 남음",
+    "ar": "عامل التصفية 0 المتبقي"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "h",
+    "tr": "h",
+    "nl": "h",
+    "de": "h",
+    "fr": "h",
+    "it": "h",
+    "sv": "h",
+    "no": "h",
+    "es": "h",
+    "da": "h",
+    "ru": "h",
+    "pl": "h",
+    "ko": "h",
+    "ar": "h"
+  },
+  "decimals": 0
+}

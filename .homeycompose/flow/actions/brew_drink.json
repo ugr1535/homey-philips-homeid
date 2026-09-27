@@ -1,0 +1,143 @@
+{
+  "title": {
+    "en": "Brew a drink",
+    "tr": "İçecek hazırla",
+    "nl": "Brouw een drankje",
+    "de": "Brauen Sie ein Getränk",
+    "fr": "Brasser une boisson",
+    "it": "Prepara un drink",
+    "sv": "Brygg en drink",
+    "no": "Brygg en drink",
+    "es": "Prepara una bebida",
+    "da": "Bryg en drink",
+    "ru": "Приготовьте напиток",
+    "pl": "Zaparz napój",
+    "ko": "음료 추출",
+    "ar": "تحضير مشروب"
+  },
+  "titleFormatted": {
+    "en": "Brew [[drink]] ([[volume]] ml)",
+    "tr": "[[drink]] hazırla ([[volume]] ml)",
+    "nl": "Brouw [[drink]] ([[volume]] ml)",
+    "de": "[[drink]] zubereiten ([[volume]] ml)",
+    "fr": "Préparer [[drink]] ([[volume]] ml)",
+    "it": "Prepara [[drink]] ([[volume]] ml)",
+    "sv": "Brygg [[drink]] ([[volume]] ml)",
+    "no": "Brygg [[drink]] ([[volume]] ml)",
+    "es": "Elaboración [[drink]] ([[volume]] ml)",
+    "da": "Bryg [[drink]] ([[volume]] ml)",
+    "ru": "Заварка [[drink]] ([[volume]] мл)",
+    "pl": "Napar [[drink]] ([[volume]] ml)",
+    "ko": "[[drink]] 추출 ([[volume]] ml)",
+    "ar": "تحضير [[drink]] ([[volume]] مل)"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    },
+    {
+      "type": "dropdown",
+      "name": "drink",
+      "title": {
+        "en": "Drink",
+        "tr": "İçecek",
+        "nl": "Drinken",
+        "de": "Getränk",
+        "fr": "Boisson",
+        "it": "Bevi",
+        "sv": "Dryck",
+        "no": "Alkohol",
+        "es": "Bebida",
+        "da": "Drik",
+        "ru": "Напиток",
+        "pl": "Napoje",
+        "ko": "음료",
+        "ar": "مشروب"
+      },
+      "values": [
+        {
+          "id": "espresso",
+          "title": {
+            "en": "Espresso",
+            "tr": "Espresso",
+            "nl": "Espresso",
+            "de": "Espresso",
+            "fr": "Espresso",
+            "it": "Espresso",
+            "sv": "Espresso",
+            "no": "Espresso",
+            "es": "Espresso",
+            "da": "Espresso",
+            "ru": "Espresso",
+            "pl": "Espresso",
+            "ko": "Espresso",
+            "ar": "Espresso"
+          }
+        },
+        {
+          "id": "coffee",
+          "title": {
+            "en": "Coffee",
+            "tr": "Kahve",
+            "nl": "Koffie",
+            "de": "Kaffee",
+            "fr": "Café",
+            "it": "Caffè",
+            "sv": "Kaffe",
+            "no": "Kaffe",
+            "es": "Café",
+            "da": "Kaffe",
+            "ru": "Кофе",
+            "pl": "Kawa",
+            "ko": "커피",
+            "ar": "القهوة"
+          }
+        },
+        {
+          "id": "hot_water",
+          "title": {
+            "en": "Hot water",
+            "tr": "Sıcak su",
+            "nl": "Warm water",
+            "de": "Warmwasser",
+            "fr": "Eau chaude",
+            "it": "Acqua calda",
+            "sv": "Varmvatten",
+            "no": "Varmt vann",
+            "es": "Agua caliente",
+            "da": "Varmt vand",
+            "ru": "Горячая вода",
+            "pl": "Gorąca woda",
+            "ko": "온수",
+            "ar": "ماء ساخن"
+          }
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "name": "volume",
+      "min": 20,
+      "max": 250,
+      "step": 5,
+      "title": {
+        "en": "Volume",
+        "tr": "Miktar",
+        "nl": "Volume",
+        "de": "Volumen",
+        "fr": "Volume",
+        "it": "Volume",
+        "sv": "Volym",
+        "no": "Volum",
+        "es": "Volumen",
+        "da": "Volume",
+        "ru": "Объем",
+        "pl": "Głośność",
+        "ko": "볼륨",
+        "ar": "الحجم"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Roast level",
+    "tr": "Kavurma seviyesi",
+    "nl": "Roosterniveau",
+    "de": "Röststufe",
+    "fr": "Niveau de rôti",
+    "it": "Livello di tostatura",
+    "sv": "Steknivå",
+    "no": "Brenningsgrad",
+    "es": "Nivel de tostado",
+    "da": "Ristningsgrad",
+    "ru": "Уровень обжарки",
+    "pl": "Poziom palenia",
+    "ko": "로스트 레벨",
+    "ar": "مستوى التحميص"
+  },
+  "icon": "/assets/icons/bean.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

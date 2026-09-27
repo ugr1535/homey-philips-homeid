@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Stop cooking",
+    "tr": "Pişirmeyi durdur",
+    "nl": "Stoppen met koken",
+    "de": "Aufhören zu kochen",
+    "fr": "Arrêter la cuisson",
+    "it": "Interrompi cottura",
+    "sv": "Sluta laga mat",
+    "no": "Slutt å lage mat",
+    "es": "Dejar de cocinar",
+    "da": "Stop med at lave mad",
+    "ru": "Прекратить приготовление",
+    "pl": "Przestań gotować",
+    "ko": "요리 중지",
+    "ar": "توقف عن الطهي"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    }
+  ]
+}

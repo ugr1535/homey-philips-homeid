@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Brew temperature setting",
+    "tr": "Demleme sıcaklığı ayarı",
+    "nl": "Instelling brouwtemperatuur",
+    "de": "Einstellung der Brühtemperatur",
+    "fr": "Réglage de la température d'infusion",
+    "it": "Impostazione della temperatura di infusione",
+    "sv": "Bryggtemperaturinställning",
+    "no": "Temperaturinnstilling:",
+    "es": "Ajuste de la temperatura de preparación",
+    "da": "Indstilling af bryggetemperatur",
+    "ru": "Настройка температуры заваривания",
+    "pl": "Ustawienie temperatury parzenia",
+    "ko": "추출 온도 설정",
+    "ar": "ضبط درجة حرارة التحضير"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 100,
+  "step": 1
+}

@@ -1,0 +1,29 @@
+{
+  "name": "com.philips.homeid",
+  "version": "1.0.3",
+  "description": "Philips HomeID appliances for Homey",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test test/*.test.js",
+    "validate": "homey app validate",
+    "validate:publish": "homey app validate --level publish"
+  },
+  "dependencies": {
+    "mqtt": "^5.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-homey-app": "^3.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "homey": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "BSD-2-Clause"
+}

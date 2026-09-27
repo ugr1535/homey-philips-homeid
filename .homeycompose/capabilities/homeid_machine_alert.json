@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Machine alert",
+    "tr": "Makine uyarısı",
+    "nl": "Machinewaarschuwing",
+    "de": "Maschinenalarm",
+    "fr": "Alerte machine",
+    "it": "Allarme macchina",
+    "sv": "Maskinvarning",
+    "no": "Maskinvarsling",
+    "es": "Alerta de la máquina",
+    "da": "Maskinalarm",
+    "ru": "Оповещение машины",
+    "pl": "Alarm maszyny",
+    "ko": "기계 경고",
+    "ar": "تنبيه الماكينة"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

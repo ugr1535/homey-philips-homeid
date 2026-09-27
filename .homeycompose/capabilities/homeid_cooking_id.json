@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Cooking ID",
+    "tr": "Pişirme kimliği",
+    "nl": "Kook-ID",
+    "de": "Koch-ID",
+    "fr": "Cooking ID",
+    "it": "ID cottura",
+    "sv": "Matlagnings-ID",
+    "no": "Matlagings-ID",
+    "es": "ID de cocina",
+    "da": "Madlavnings-ID",
+    "ru": "Идентификатор приготовления",
+    "pl": "Identyfikator gotowania",
+    "ko": "요리 ID",
+    "ar": "معرّف الطهي"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

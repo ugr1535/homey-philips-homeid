@@ -1,0 +1,257 @@
+{
+  "name": {
+    "en": "Multicooker",
+    "tr": "Multicooker",
+    "nl": "Multicooker",
+    "de": "Multikocher",
+    "fr": "Multicooker",
+    "it": "Multicooker",
+    "sv": "Multicooker",
+    "no": "Multikoker",
+    "es": "Multicooker",
+    "da": "Multicooker",
+    "ru": "Мультиварка",
+    "pl": "Multicooker",
+    "ko": "멀티쿠커",
+    "ar": "طباخ متعدد"
+  },
+  "images": {
+    "small": "/drivers/multicooker/assets/images/small.jpg",
+    "large": "/drivers/multicooker/assets/images/large.jpg"
+  },
+  "class": "other",
+  "connectivity": [
+    "lan",
+    "cloud"
+  ],
+  "capabilities": [
+    "onoff",
+    "homeid_cooking_status",
+    "target_temperature",
+    "measure_temperature",
+    "measure_humidity",
+    "homeid_total_time",
+    "homeid_remaining_time",
+    "homeid_cooking_method",
+    "homeid_preheat",
+    "homeid_lid_open",
+    "homeid_no_water"
+  ],
+  "capabilitiesOptions": {
+    "target_temperature": {
+      "min": 30,
+      "max": 230,
+      "step": 1,
+      "decimals": 0
+    }
+  },
+  "settings": [
+    {
+      "id": "host",
+      "type": "text",
+      "label": {
+        "en": "IP address",
+        "tr": "IP adresi",
+        "nl": "IP-adres",
+        "de": "IP-Adresse",
+        "fr": "Adresse IP",
+        "it": "Indirizzo IP",
+        "sv": "IP-adress",
+        "no": "IP-adresse",
+        "es": "Dirección IP",
+        "da": "IP-adresse",
+        "ru": "IP-адрес",
+        "pl": "Adres IP",
+        "ko": "IP 주소",
+        "ar": "عنوان بروتوكول الإنترنت (IP)"
+      },
+      "value": ""
+    },
+    {
+      "id": "model",
+      "type": "label",
+      "label": {
+        "en": "Model",
+        "tr": "Model",
+        "nl": "Model",
+        "de": "Modell",
+        "fr": "Modèle",
+        "it": "Modello",
+        "sv": "Modell",
+        "no": "Modell",
+        "es": "Modelo",
+        "da": "Model",
+        "ru": "Модель",
+        "pl": "Model",
+        "ko": "모델",
+        "ar": "الطراز"
+      },
+      "value": ""
+    },
+    {
+      "id": "connection",
+      "type": "label",
+      "label": {
+        "en": "Connection",
+        "tr": "Bağlantı",
+        "nl": "Verbinding",
+        "de": "Verbindung",
+        "fr": "Connexion",
+        "it": "Connessione",
+        "sv": "Anslutning",
+        "no": "Tilkobling",
+        "es": "Conexión",
+        "da": "Forbindelse",
+        "ru": "Соединение",
+        "pl": "Połączenie",
+        "ko": "연결",
+        "ar": "الاتصال"
+      },
+      "value": "local"
+    },
+    {
+      "id": "firmware",
+      "type": "label",
+      "label": {
+        "en": "Firmware",
+        "tr": "Yazılım",
+        "nl": "Firmware",
+        "de": "Firmware",
+        "fr": "Firmware",
+        "it": "Firmware",
+        "sv": "Firmware",
+        "no": "Fastvare",
+        "es": "Firmware",
+        "da": "Firmware",
+        "ru": "Прошивка",
+        "pl": "Oprogramowanie sprzętowe",
+        "ko": "펌웨어",
+        "ar": "البرنامج الثابت"
+      },
+      "value": "-"
+    },
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Idle poll interval",
+        "tr": "Boştayken sorgulama aralığı",
+        "nl": "Inactieve poll-interval",
+        "de": "Leerlaufabfrageintervall",
+        "fr": "Intervalle d'interrogation au ralenti",
+        "it": "Intervallo di polling inattivo",
+        "sv": "Tomgångsintervall för omröstning",
+        "no": "Inaktiv avstemningsintervall",
+        "es": "Intervalo de sondeo inactivo",
+        "da": "Interval for tomgangsundersøgelse",
+        "ru": "Интервал опроса бездействия",
+        "pl": "Interwał odpytywania bezczynności",
+        "ko": "유휴 폴링 간격",
+        "ar": "الفاصل الزمني للاستطلاع الخامل"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 60,
+      "min": 15,
+      "max": 3600
+    },
+    {
+      "id": "active_poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Cooking poll interval",
+        "tr": "Pişirirken sorgulama aralığı",
+        "nl": "Kookpoll-interval",
+        "de": "Kochabfrage-Intervall",
+        "fr": "Intervalle de sondage de cuisson",
+        "it": "Intervallo di sondaggio di cottura",
+        "sv": "Intervall för matlagningsundersökning",
+        "no": "Intervall for matlagingsavstemning",
+        "es": "Intervalo de la encuesta de cocción",
+        "da": "Afstemningsinterval for madlavning",
+        "ru": "Интервал кулинарного опроса",
+        "pl": "Interwał ankiet kulinarnych",
+        "ko": "조리 여론조사 간격",
+        "ar": "الفاصل الزمني لاستطلاع الطبخ"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 10,
+      "min": 5,
+      "max": 300
+    }
+  ],
+  "pair": [
+    {
+      "id": "choose_method_v5"
+    },
+    {
+      "id": "manual"
+    },
+    {
+      "id": "cloud_login_v5"
+    },
+    {
+      "id": "pincode",
+      "template": "pincode",
+      "options": {
+        "title": {
+          "en": "Verification code",
+          "tr": "Doğrulama kodu",
+          "nl": "Verificatiecode",
+          "de": "Verifizierungscode",
+          "fr": "Code de vérification",
+          "it": "Codice di verifica",
+          "sv": "Verifieringskod",
+          "no": "Bekreftelseskode",
+          "es": "Código de verificación",
+          "da": "Bekræftelseskode",
+          "ru": "Код подтверждения",
+          "pl": "Kod weryfikacyjny",
+          "ko": "인증 코드",
+          "ar": "رمز التحقق"
+        },
+        "type": "number",
+        "length": 6
+      },
+      "navigation": {
+        "prev": "cloud_login_v5",
+        "next": "cloud_select_v1"
+      }
+    },
+    {
+      "id": "cloud_select_v1",
+      "navigation": {
+        "prev": "pincode"
+      }
+    }
+  ]
+}

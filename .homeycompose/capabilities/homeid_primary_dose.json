@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Primary dose",
+    "tr": "Birincil doz",
+    "nl": "Primaire dosis",
+    "de": "Primärdosis",
+    "fr": "Dose principale",
+    "it": "Dose primaria",
+    "sv": "Primär dos",
+    "no": "Primærdose",
+    "es": "Dosis primaria",
+    "da": "Primær dosis",
+    "ru": "Первичная доза",
+    "pl": "Dawka podstawowa",
+    "ko": "1차 용량",
+    "ar": "الجرعة الأولية"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 500,
+  "step": 1
+}

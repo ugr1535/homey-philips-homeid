@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "AutoCook doneness",
+    "tr": "AutoCook pişme düzeyi",
+    "nl": "AutoCook doneness",
+    "de": "AutoCook Garzeit",
+    "fr": "Cuisson automatique au four",
+    "it": "Doneness AutoCook",
+    "sv": "AutoCook doneness",
+    "no": "AutoCook-stekegrad",
+    "es": "Horneado AutoCook",
+    "da": "AutoCook doneness",
+    "ru": "Пожертвование AutoCook",
+    "pl": "Gotowanie automatyczne",
+    "ko": "AutoCook doneness",
+    "ar": "أوتوكوك دونينس"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

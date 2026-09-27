@@ -1,0 +1,47 @@
+{
+  "title": {
+    "en": "Cooking status changed",
+    "tr": "Pişirme durumu değişti",
+    "nl": "Kookstatus gewijzigd",
+    "de": "Garstatus geändert",
+    "fr": "Le statut de cuisson a changé",
+    "it": "Stato di cottura modificato",
+    "sv": "Matlagningsstatus ändrad",
+    "no": "Matlagingsstatus endret",
+    "es": "Estado de cocción cambiado",
+    "da": "Tilberedningsstatus ændret",
+    "ru": "Статус приготовления изменен",
+    "pl": "Status gotowania zmieniony",
+    "ko": "요리 상태 변경됨",
+    "ar": "تم تغيير حالة الطهي"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    }
+  ],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "value",
+      "title": {
+        "en": "Status",
+        "tr": "Durum",
+        "nl": "Status",
+        "de": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status",
+        "ko": "상태",
+        "ar": "الحالة"
+      }
+    }
+  ]
+}

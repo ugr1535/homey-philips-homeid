@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Cooking error",
+    "tr": "Pişirme hatası",
+    "nl": "Kookfout",
+    "de": "Kochfehler",
+    "fr": "Erreur de cuisson",
+    "it": "Errore di cottura",
+    "sv": "Matlagningsfel",
+    "no": "Matlagingsfeil",
+    "es": "Error de cocción",
+    "da": "Madlavningsfejl",
+    "ru": "Ошибка приготовления",
+    "pl": "Błąd gotowania",
+    "ko": "조리 오류",
+    "ar": "خطأ في الطهي"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

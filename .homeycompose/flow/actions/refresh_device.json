@@ -1,0 +1,41 @@
+{
+  "title": {
+    "en": "Refresh device state",
+    "tr": "Cihaz durumunu yenile",
+    "nl": "Apparaatstatus vernieuwen",
+    "de": "Gerätestatus aktualisieren",
+    "fr": "Actualiser l'état de l'appareil",
+    "it": "Aggiorna lo stato del dispositivo",
+    "sv": "Uppdatera enhetens tillstånd",
+    "no": "Oppdater enhetsstatus",
+    "es": "Actualizar el estado del dispositivo",
+    "da": "Opdater enhedstilstand",
+    "ru": "Обновить состояние устройства",
+    "pl": "Odśwież stan urządzenia",
+    "ko": "장치 상태 새로 고침",
+    "ar": "تحديث حالة الجهاز"
+  },
+  "titleFormatted": {
+    "en": "Refresh [[device]]",
+    "tr": "[[device]] durumunu yenile",
+    "nl": "Vernieuwen [[device]]",
+    "de": "[[device]] aktualisieren",
+    "fr": "Actualiser [[device]]",
+    "it": "Aggiorna [[device]]",
+    "sv": "Uppdatera [[device]]",
+    "no": "Oppdater [[device]]",
+    "es": "Actualiza [[device]]",
+    "da": "Opdater [[device]]",
+    "ru": "Обновить [[device]]",
+    "pl": "Odśwież [[device]]",
+    "ko": "[[device]] 새로 고침",
+    "ar": "تحديث [[device]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker|air_purifier|espresso"
+    }
+  ]
+}

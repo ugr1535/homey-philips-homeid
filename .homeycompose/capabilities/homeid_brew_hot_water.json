@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Brew hot water",
+    "tr": "Sıcak su hazırla",
+    "nl": "Warm water brouwen",
+    "de": "Heißes Wasser aufbrühen",
+    "fr": "Infuser de l'eau chaude",
+    "it": "Prepara l'acqua calda",
+    "sv": "Brygg varmt vatten",
+    "no": "Varmtvannsbereder",
+    "es": "Preparar agua caliente",
+    "da": "Bryg varmt vand",
+    "ru": "Подать горячую воду",
+    "pl": "Gorąca woda do zaparzania",
+    "ko": "온수 추출",
+    "ar": "تحضير الماء الساخن"
+  },
+  "icon": "/assets/icons/water.svg",
+  "getable": false,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "button"
+}

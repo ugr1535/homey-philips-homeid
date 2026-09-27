@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Wick filter remaining",
+    "tr": "Nemlendirme filtresi kalan",
+    "nl": "Lontfilter resterend",
+    "de": "Wickfilter verbleibend",
+    "fr": "Filtre à mèche restant",
+    "it": "Filtro stoppino rimanente",
+    "sv": "Vekefilter återstår",
+    "no": "Vekefilter gjenværende",
+    "es": "Filtro de mecha restante",
+    "da": "Vægefilter tilbage",
+    "ru": "Оставшийся фильтр фитиля",
+    "pl": "Pozostały filtr knota",
+    "ko": "윅 필터 남음",
+    "ar": "يتبقى مرشح الفتيل"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0
+}

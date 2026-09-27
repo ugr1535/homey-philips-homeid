@@ -1,0 +1,3 @@
+Bring kompatible kaffemaskiner, frituregryder, multikogere og luftrensere ind i dine daglige rutiner. Se apparatstatus, brug understøttede kontroller og automatiser handlinger med Flows. Espresso dashboard-widgeten viser oplysninger om bryggeaktivitet og vedligeholdelse med en knap til at tænde eller slukke maskinen.
+
+Opsæt hvert apparat i den officielle Philips HomeID-app først. Log ind med din Philips-konto for cloudforbundne modeller. Understøttede lokale modeller kan kommunikere via dit hjemmenetværk. Tilgængelige funktioner afhænger af modellen, og cloud-forbundne enheder har brug for internetadgang. Denne uafhængige app er ikke tilknyttet Philips eller Versuni.

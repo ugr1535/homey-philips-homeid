@@ -1,0 +1,178 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Brew profile",
+    "tr": "Demleme profili",
+    "nl": "Brouwprofiel",
+    "de": "Zubereitungsprofil",
+    "fr": "Profil d'infusion",
+    "it": "Profilo di preparazione",
+    "sv": "Bryggprofil",
+    "no": "Bryggeprofil",
+    "es": "Perfil de preparación",
+    "da": "Brygprofil",
+    "ru": "Профиль заварки",
+    "pl": "Profil naparu",
+    "ko": "추출 프로필",
+    "ar": "ملف التحضير"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Profile 0",
+        "tr": "Profil 0",
+        "nl": "Profiel 0",
+        "de": "Profil 0",
+        "fr": "Profil 0",
+        "it": "Profilo 0",
+        "sv": "Profil 0",
+        "no": "Profil 0",
+        "es": "Perfil 0",
+        "da": "Profil 0",
+        "ru": "Профиль 0",
+        "pl": "Profil 0",
+        "ko": "프로필 0",
+        "ar": "الملف التعريفي 0"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Profile 1",
+        "tr": "Profil 1",
+        "nl": "Profiel 1",
+        "de": "Profil 1",
+        "fr": "Profil 1",
+        "it": "Profilo 1",
+        "sv": "Profil 1",
+        "no": "Profil 1",
+        "es": "Perfil 1",
+        "da": "Profil 1",
+        "ru": "Профиль 1",
+        "pl": "Profil 1",
+        "ko": "프로필 1",
+        "ar": "الملف الشخصي 1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Profile 2",
+        "tr": "Profil 2",
+        "nl": "Profiel 2",
+        "de": "Profil 2",
+        "fr": "Profil 2",
+        "it": "Profilo 2",
+        "sv": "Profil 2",
+        "no": "Profil 2",
+        "es": "Perfil 2",
+        "da": "Profil 2",
+        "ru": "Профиль 2",
+        "pl": "Profil 2",
+        "ko": "프로필 2",
+        "ar": "الملف الشخصي 2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Profile 3",
+        "tr": "Profil 3",
+        "nl": "Profiel 3",
+        "de": "Profil 3",
+        "fr": "Profil 3",
+        "it": "Profilo 3",
+        "sv": "Profil 3",
+        "no": "Profil 3",
+        "es": "Perfil 3",
+        "da": "Profil 3",
+        "ru": "Профиль 3",
+        "pl": "Profil 3",
+        "ko": "프로필 3",
+        "ar": "الملف الشخصي 3"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Profile 4",
+        "tr": "Profil 4",
+        "nl": "Profiel 4",
+        "de": "Profil 4",
+        "fr": "Profil 4",
+        "it": "Profilo 4",
+        "sv": "Profil 4",
+        "no": "Profil 4",
+        "es": "Perfil 4",
+        "da": "Profil 4",
+        "ru": "Профиль 4",
+        "pl": "Profil 4",
+        "ko": "프로필 4",
+        "ar": "الملف الشخصي 4"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Profile 5",
+        "tr": "Profil 5",
+        "nl": "Profiel 5",
+        "de": "Profil 5",
+        "fr": "Profil 5",
+        "it": "Profilo 5",
+        "sv": "Profil 5",
+        "no": "Profil 5",
+        "es": "Perfil 5",
+        "da": "Profil 5",
+        "ru": "Профиль 5",
+        "pl": "Profil 5",
+        "ko": "프로필 5",
+        "ar": "الملف الشخصي 5"
+      }
+    },
+    {
+      "id": "6",
+      "title": {
+        "en": "Profile 6",
+        "tr": "Profil 6",
+        "nl": "Profiel 6",
+        "de": "Profil 6",
+        "fr": "Profil 6",
+        "it": "Profilo 6",
+        "sv": "Profil 6",
+        "no": "Profil 6",
+        "es": "Perfil 6",
+        "da": "Profil 6",
+        "ru": "Профиль 6",
+        "pl": "Profil 6",
+        "ko": "프로필 6",
+        "ar": "الملف الشخصي 6"
+      }
+    },
+    {
+      "id": "7",
+      "title": {
+        "en": "Profile 7",
+        "tr": "Profil 7",
+        "nl": "Profiel 7",
+        "de": "Profil 7",
+        "fr": "Profil 7",
+        "it": "Profilo 7",
+        "sv": "Profil 7",
+        "no": "Profil 7",
+        "es": "Perfil 7",
+        "da": "Profil 7",
+        "ru": "Профиль 7",
+        "pl": "Profil 7",
+        "ko": "프로필 7",
+        "ar": "الملف الشخصي 7"
+      }
+    }
+  ]
+}

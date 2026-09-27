@@ -1,0 +1,23 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Cooking status",
+    "tr": "Pişirme durumu",
+    "nl": "Kookstatus",
+    "de": "Kochstatus",
+    "fr": "Statut de cuisson",
+    "it": "Stato di cottura",
+    "sv": "Matlagningsstatus",
+    "no": "Matlagingsstatus",
+    "es": "Estado de cocción",
+    "da": "Tilberedningsstatus",
+    "ru": "Статус приготовления",
+    "pl": "Stan gotowania",
+    "ko": "조리 상태",
+    "ar": "حالة الطهي"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

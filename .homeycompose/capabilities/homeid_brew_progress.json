@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "icon": "/assets/icons/progress.svg",
+  "title": {
+    "en": "Brew progress",
+    "tr": "Hazırlama ilerlemesi",
+    "nl": "Voortgang brouwen",
+    "de": "Zubereitungsfortschritt",
+    "fr": "Progression de l'infusion",
+    "it": "Progressi nella preparazione",
+    "sv": "Bryggförlopp",
+    "no": "Bryggefremdrift",
+    "es": "Progreso de preparación",
+    "da": "Brygningsfremskridt",
+    "ru": "Прогресс приготовления",
+    "pl": "Postęp naparu",
+    "ko": "추출 진행률",
+    "ar": "تقدم التحضير"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

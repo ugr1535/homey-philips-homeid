@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { box-sizing: border-box; margin: 0; padding: 1rem; }
+    .pair-page { max-width: 32rem; margin: 0 auto; }
+    .pair-status { color: #666; margin-top: 1rem; }
+    .pair-error { display: none; color: #c62828; margin-top: 1rem; white-space: pre-wrap; }
+    .pair-list { display: grid; gap: .75rem; margin: 1rem 0; }
+    .pair-device { display: flex; gap: .75rem; align-items: flex-start; padding: 1rem; border: 1px solid #d9dce1; border-radius: .75rem; }
+    .pair-device-name { display: block; font-weight: 600; }
+    .pair-device-model { display: block; color: #666; margin-top: .2rem; }
+    .pair-submit { display: block; width: 100%; min-height: 3rem; color: #fff !important; font-weight: 600; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main class="homey-form pair-page">
+    <h1 id="selection-title" class="homey-title">Select an appliance</h1>
+    <div id="selection-devices" class="pair-list" role="radiogroup"></div>
+    <button id="selection-add" class="homey-button-primary-full pair-submit" type="button" hidden>Add appliance</button>
+    <p id="selection-status" class="pair-status"></p>
+    <p id="selection-error" class="pair-error"></p>
+  </main>
+  <script>
+    (function () {
+    'use strict';
+
+    function translate(key, fallback) {
+      try {
+        const value = typeof Homey.__ === 'function' ? Homey.__(key) : '';
+        return value && value !== key ? value : fallback;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    async function reportStage(stage) {
+      try {
+        await Promise.race([
+          Homey.emit('pair_progress', { stage }),
+          new Promise((resolve) => setTimeout(resolve, 2000)),
+        ]);
+      } catch (error) {
+        // Diagnostics must not block pairing.
+      }
+    }
+
+    function showError(error) {
+      const node = document.getElementById('selection-error');
+      node.textContent = error && error.message ? error.message : String(error);
+      node.style.display = 'block';
+    }
+
+    function renderDevices(devices) {
+      const list = document.getElementById('selection-devices');
+      list.textContent = '';
+      devices.forEach((device, index) => {
+        const label = document.createElement('label');
+        label.className = 'pair-device';
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'selection-device';
+        radio.value = String(index);
+        radio.checked = index === 0;
+        const details = document.createElement('span');
+        const name = document.createElement('span');
+        name.className = 'pair-device-name';
+        name.textContent = device.name || 'Philips HomeID';
+        const model = document.createElement('span');
+        model.className = 'pair-device-model';
+        model.textContent = device.settings && device.settings.model ? device.settings.model : '';
+        details.appendChild(name);
+        details.appendChild(model);
+        label.appendChild(radio);
+        label.appendChild(details);
+        list.appendChild(label);
+      });
+    }
+
+    const button = document.getElementById('selection-add');
+    const status = document.getElementById('selection-status');
+    let verifiedDevices = [];
+    document.getElementById('selection-title').textContent = translate('pair.select_device', 'Select an appliance');
+    button.textContent = translate('pair.add', 'Add appliance');
+
+    async function addDevice(device) {
+      if (!device || !device.data || !device.data.id || !device.name) {
+        throw new Error(translate('pair.invalid_device', 'The appliance details are incomplete. Please try again.'));
+      }
+      button.disabled = true;
+      status.textContent = translate('pair.adding', 'Adding appliance…');
+      document.getElementById('selection-error').style.display = 'none';
+      await reportStage('ui_create_start');
+      try {
+        await Homey.createDevice(device);
+      } catch (error) {
+        await reportStage('ui_create_error');
+        button.disabled = false;
+        throw error;
+      }
+      await reportStage('ui_create_ok');
+      await reportStage('ui_done');
+      Homey.done();
+    }
+
+    button.addEventListener('click', async () => {
+      const selected = document.querySelector('input[name="selection-device"]:checked');
+      const device = selected ? verifiedDevices[Number(selected.value)] : null;
+      if (!device) return showError(new Error(translate('pair.select_required', 'Select an appliance first.')));
+      try {
+        await addDevice(device);
+      } catch (error) {
+        status.textContent = '';
+        showError(error);
+      }
+    });
+
+    async function loadDevices() {
+      try {
+        status.textContent = translate('pair.loading', 'Loading appliances…');
+        const devices = await Homey.emit('get_verified_devices');
+        if (!Array.isArray(devices) || !devices.length) {
+          throw new Error(translate('pair.no_devices', 'No compatible appliance was found.'));
+        }
+        verifiedDevices = devices;
+        await reportStage('ui_received_devices');
+        status.textContent = '';
+        if (devices.length === 1) {
+          await addDevice(devices[0]);
+          return;
+        }
+        renderDevices(devices);
+        button.hidden = false;
+      } catch (error) {
+        status.textContent = '';
+        showError(error);
+      }
+    }
+
+    Homey.ready();
+    loadDevices();
+    }());
+  </script>
+</body>
+</html>

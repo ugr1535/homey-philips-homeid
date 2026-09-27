@@ -1,0 +1,266 @@
+{
+  "name": {
+    "en": "Air Purifier",
+    "tr": "Hava Temizleyici",
+    "nl": "Luchtreiniger",
+    "de": "Luftreiniger",
+    "fr": "Purificateur d'air",
+    "it": "Purificatore d'aria",
+    "sv": "Luftrenare",
+    "no": "Luftrenser",
+    "es": "Purificador de aire",
+    "da": "Luftrenser",
+    "ru": "Очиститель воздуха",
+    "pl": "Oczyszczacz powietrza",
+    "ko": "공기청정기",
+    "ar": "جهاز تنقية الهواء"
+  },
+  "images": {
+    "small": "/drivers/air_purifier/assets/images/small.jpg",
+    "large": "/drivers/air_purifier/assets/images/large.jpg"
+  },
+  "class": "other",
+  "connectivity": [
+    "cloud"
+  ],
+  "capabilities": [
+    "onoff",
+    "homeid_operation_mode",
+    "measure_pm25",
+    "homeid_air_quality_index",
+    "measure_temperature",
+    "measure_humidity",
+    "homeid_filter_remaining",
+    "alarm_generic",
+    "homeid_child_lock"
+  ],
+  "capabilitiesOptions": {
+    "alarm_generic": {
+      "title": {
+        "en": "Replace filter",
+        "tr": "Filtreyi değiştir",
+        "nl": "Filter vervangen",
+        "de": "Filter austauschen",
+        "fr": "Remplacer le filtre",
+        "it": "Sostituire il filtro",
+        "sv": "Byt filter",
+        "no": "Bytt filter",
+        "es": "Reemplazar filtro",
+        "da": "Udskift filter",
+        "ru": "Замените фильтр",
+        "pl": "Wymień filtr",
+        "ko": "필터 교체",
+        "ar": "استبدال عامل التصفية"
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "host",
+      "type": "text",
+      "label": {
+        "en": "IP address",
+        "tr": "IP adresi",
+        "nl": "IP-adres",
+        "de": "IP-Adresse",
+        "fr": "Adresse IP",
+        "it": "Indirizzo IP",
+        "sv": "IP-adress",
+        "no": "IP-adresse",
+        "es": "Dirección IP",
+        "da": "IP-adresse",
+        "ru": "IP-адрес",
+        "pl": "Adres IP",
+        "ko": "IP 주소",
+        "ar": "عنوان بروتوكول الإنترنت (IP)"
+      },
+      "value": ""
+    },
+    {
+      "id": "model",
+      "type": "label",
+      "label": {
+        "en": "Model",
+        "tr": "Model",
+        "nl": "Model",
+        "de": "Modell",
+        "fr": "Modèle",
+        "it": "Modello",
+        "sv": "Modell",
+        "no": "Modell",
+        "es": "Modelo",
+        "da": "Model",
+        "ru": "Модель",
+        "pl": "Model",
+        "ko": "모델",
+        "ar": "الطراز"
+      },
+      "value": ""
+    },
+    {
+      "id": "connection",
+      "type": "label",
+      "label": {
+        "en": "Connection",
+        "tr": "Bağlantı",
+        "nl": "Verbinding",
+        "de": "Verbindung",
+        "fr": "Connexion",
+        "it": "Connessione",
+        "sv": "Anslutning",
+        "no": "Tilkobling",
+        "es": "Conexión",
+        "da": "Forbindelse",
+        "ru": "Соединение",
+        "pl": "Połączenie",
+        "ko": "연결",
+        "ar": "الاتصال"
+      },
+      "value": "cloud"
+    },
+    {
+      "id": "firmware",
+      "type": "label",
+      "label": {
+        "en": "Firmware",
+        "tr": "Yazılım",
+        "nl": "Firmware",
+        "de": "Firmware",
+        "fr": "Firmware",
+        "it": "Firmware",
+        "sv": "Firmware",
+        "no": "Fastvare",
+        "es": "Firmware",
+        "da": "Firmware",
+        "ru": "Прошивка",
+        "pl": "Oprogramowanie sprzętowe",
+        "ko": "펌웨어",
+        "ar": "البرنامج الثابت"
+      },
+      "value": "-"
+    },
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Poll interval",
+        "tr": "Sorgulama aralığı",
+        "nl": "Poll-interval",
+        "de": "Abfrageintervall",
+        "fr": "Intervalle de sondage",
+        "it": "Intervallo di polling",
+        "sv": "Omröstningsintervall",
+        "no": "Avstemningsintervall",
+        "es": "Intervalo de sondeo",
+        "da": "Afstemningsinterval",
+        "ru": "Интервал опроса",
+        "pl": "Interwał sondażu",
+        "ko": "폴링 간격",
+        "ar": "الفاصل الزمني للاستطلاع"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 60,
+      "min": 15,
+      "max": 3600
+    },
+    {
+      "id": "active_poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Active poll interval",
+        "tr": "Aktif sorgulama aralığı",
+        "nl": "Actief poll-interval",
+        "de": "Aktives Umfrageintervall",
+        "fr": "Intervalle de sondage actif",
+        "it": "Intervallo di polling attivo",
+        "sv": "Aktivt omröstningsintervall",
+        "no": "Aktivt avstemningsintervall",
+        "es": "Intervalo de sondeo activo",
+        "da": "Aktivt afstemningsinterval",
+        "ru": "Активный интервал опроса",
+        "pl": "Aktywny interwał ankiety",
+        "ko": "활성 폴링 간격",
+        "ar": "فترة الاستطلاع النشطة"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 10,
+      "min": 5,
+      "max": 300
+    }
+  ],
+  "pair": [
+    {
+      "id": "choose_method_v5"
+    },
+    {
+      "id": "manual"
+    },
+    {
+      "id": "cloud_login_v5"
+    },
+    {
+      "id": "pincode",
+      "template": "pincode",
+      "options": {
+        "title": {
+          "en": "Verification code",
+          "tr": "Doğrulama kodu",
+          "nl": "Verificatiecode",
+          "de": "Verifizierungscode",
+          "fr": "Code de vérification",
+          "it": "Codice di verifica",
+          "sv": "Verifieringskod",
+          "no": "Bekreftelseskode",
+          "es": "Código de verificación",
+          "da": "Bekræftelseskode",
+          "ru": "Код подтверждения",
+          "pl": "Kod weryfikacyjny",
+          "ko": "인증 코드",
+          "ar": "رمز التحقق"
+        },
+        "type": "number",
+        "length": 6
+      },
+      "navigation": {
+        "prev": "cloud_login_v5",
+        "next": "cloud_select_v1"
+      }
+    },
+    {
+      "id": "cloud_select_v1",
+      "navigation": {
+        "prev": "pincode"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Espresso Now</title>
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color-scheme: light;
+      --surface: #fffaf4; --text: #2d211c; --muted: #796a62; --edge: rgba(76, 47, 30, .12);
+      --chip: #f5e8db; --accent: #9b582f; --track: #e9d9c8; }
+    html.homey-dark-mode, body.homey-dark-mode { color-scheme: dark; --surface: #27201d; --text: #fff6ee;
+      --muted: #c4afa1; --edge: rgba(255, 255, 255, .1); --chip: #3b302a; --accent: #dc9c6b; --track: #534137; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: transparent; color: var(--text); }
+    .card { position: relative; height: 100vh; min-height: 300px; padding: 15px; border: 1px solid var(--edge); border-radius: 26px;
+      background: var(--surface); display: flex; flex-direction: column; overflow: hidden; }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-width: 0; }
+    .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+    .device { margin-top: 3px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .badge { flex: none; border-radius: 99px; padding: 6px 10px; background: var(--chip); color: var(--accent);
+      font-size: 11px; font-weight: 700; max-width: 92px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-actions { flex: none; display: flex; align-items: center; gap: 8px; }
+    .power { flex: none; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0;
+      border-radius: 50%; background: var(--chip); color: var(--muted); cursor: pointer; }
+    .power.active { color: var(--accent); }
+    .power svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2.3;
+      stroke-linecap: round; stroke-linejoin: round; }
+    .power[hidden] { display: none; }
+    .content { flex: 1; display: flex; align-items: center; gap: 17px; min-height: 104px; }
+    .art { flex: none; width: 104px; height: 104px; border-radius: 24px; display: flex; align-items: center;
+      justify-content: center; background: linear-gradient(145deg, #f1dcc5, #e7c5a3); overflow: hidden; }
+    .art.original { background: #11172b; }
+    .art img { width: 88px; height: 88px; object-fit: contain; }
+    .art .source { flex: none; width: 104px; height: 104px; background-repeat: no-repeat; background-color: #11172b; }
+    .art img[hidden], .art .source[hidden] { display: none; }
+    .copy { min-width: 0; }
+    h1 { margin: 0 0 5px; font-size: clamp(18px, 6vw, 25px); line-height: 1.08; letter-spacing: -.03em;
+      overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .detail { color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .maintenance { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 0 0 7px; }
+    .maintenance[hidden], .metric[hidden], .footer[hidden] { display: none; }
+    .metric { min-width: 0; padding: 6px 8px; background: var(--chip); border-radius: 12px; }
+    .metric-line { display: flex; align-items: baseline; justify-content: space-between; gap: 4px; }
+    .metric-label { color: var(--muted); font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .metric-value { color: var(--text); font-size: 14px; font-weight: 750; flex: none; }
+    .metric.low .metric-value { color: #b65b2a; }
+    .metric.critical .metric-value { color: #c63030; }
+    .metric-track { height: 3px; margin-top: 5px; background: var(--track); border-radius: 3px; overflow: hidden; }
+    .metric-fill { display: block; height: 100%; background: var(--accent); border-radius: inherit; }
+    .metric.low .metric-fill { background: #d98038; }
+    .metric.critical .metric-fill { background: #d34d4d; }
+    .footer { min-height: 12px; display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 10px; }
+    .progress { flex: 1; height: 5px; border-radius: 9px; overflow: hidden; background: var(--track); display: none; }
+    .progress > span { display: block; height: 100%; width: 0%; background: var(--accent); border-radius: inherit; }
+    .progress.active { display: block; }
+    .progress.indeterminate > span { width: 35%; animation: move 1.6s ease-in-out infinite alternate; }
+    .open-brew, .start-brew { border: 0; border-radius: 12px; background: var(--accent); color: var(--surface);
+      font: inherit; font-size: 13px; font-weight: 750; min-height: 36px; cursor: pointer; }
+    .open-brew { flex: none; margin-top: 5px; }
+    .open-brew[hidden], .brew-panel[hidden] { display: none; }
+    button:disabled { opacity: .5; cursor: default; }
+    .brew-panel { position: absolute; inset: 0; z-index: 2; padding: 15px; background: var(--surface);
+      border-radius: inherit; display: flex; flex-direction: column; gap: 9px; }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .panel-title { margin: 0; font-size: 18px; line-height: 1.1; }
+    .panel-close { border: 0; background: var(--chip); color: var(--text); width: 32px; height: 32px;
+      border-radius: 50%; font: inherit; font-size: 18px; cursor: pointer; }
+    .brew-label { display: grid; gap: 4px; font-size: 11px; color: var(--muted); }
+    .brew-select { width: 100%; height: 39px; border-radius: 10px; border: 1px solid var(--edge); padding: 0 10px;
+      background: var(--chip); color: var(--text); font: inherit; font-size: 16px; }
+    .brew-feedback { flex: 1; min-height: 24px; color: var(--muted); font-size: 11px; line-height: 1.25; }
+    .start-brew { flex: none; min-height: 40px; }
+    @keyframes move { from { transform: translateX(0); } to { transform: translateX(186%); } }
+    @media (max-width: 320px) { .card { padding: 15px; } .art { width: 82px; height: 82px; border-radius: 20px; }
+      .art img { width: 72px; height: 72px; } .art .source { transform: scale(.79); } .content { gap: 11px; } }
+  </style>
+</head>
+<body>
+  <main class="card" aria-live="polite">
+    <div class="top"><div style="min-width:0"><div class="eyebrow" id="heading">ESPRESSO NOW</div>
+      <div class="device" id="device">—</div></div><div class="top-actions"><span class="badge" id="badge">—</span>
+      <button class="power" id="power" type="button" aria-label="Turn on" aria-pressed="false" disabled hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v9M5.6 5.6a9 9 0 1 0 12.8 0"/></svg>
+      </button></div></div>
+    <div class="content"><div class="art" id="artbox"><img id="art" src="./images/generic.svg" alt="">
+      <div class="source" id="source" role="img" hidden></div></div>
+      <div class="copy"><h1 id="name">Loading…</h1><div class="detail" id="detail">Waiting for machine status</div></div></div>
+    <div class="maintenance" id="maintenance" hidden>
+      <div class="metric" id="metric-aquaclean"><div class="metric-line"><span class="metric-label" id="label-aquaclean"></span><span class="metric-value" id="value-aquaclean"></span></div><div class="metric-track"><span class="metric-fill" id="fill-aquaclean"></span></div></div>
+      <div class="metric" id="metric-descale"><div class="metric-line"><span class="metric-label" id="label-descale"></span><span class="metric-value" id="value-descale"></span></div><div class="metric-track"><span class="metric-fill" id="fill-descale"></span></div></div>
+      <div class="metric" id="metric-coffee"><div class="metric-line"><span class="metric-label" id="label-coffee"></span><span class="metric-value" id="value-coffee"></span></div><div class="metric-track"><span class="metric-fill" id="fill-coffee"></span></div></div>
+      <div class="metric" id="metric-brewGroup"><div class="metric-line"><span class="metric-label" id="label-brewGroup"></span><span class="metric-value" id="value-brewGroup"></span></div><div class="metric-track"><span class="metric-fill" id="fill-brewGroup"></span></div></div>
+    </div>
+    <div class="footer" id="footer" hidden><div class="progress" id="progress"><span id="fill"></span></div>
+      <span id="percent"></span></div>
+    <button class="open-brew" id="open-brew" type="button" hidden></button>
+    <section class="brew-panel" id="brew-panel" aria-labelledby="panel-title" hidden>
+      <div class="panel-head"><h2 class="panel-title" id="panel-title"></h2>
+        <button class="panel-close" id="panel-close" type="button" aria-label="Close">×</button></div>
+      <label class="brew-label" for="profile-select"><span id="profile-label"></span>
+        <select class="brew-select" id="profile-select"></select></label>
+      <label class="brew-label" for="recipe-select"><span id="recipe-label"></span>
+        <select class="brew-select" id="recipe-select"></select></label>
+      <div class="brew-feedback" id="brew-feedback" role="status"></div>
+      <button class="start-brew" id="start-brew" type="button" disabled></button>
+    </section>
+  </main>
+  <script>
+    'use strict';
+    const ui = Object.fromEntries(['heading', 'device', 'badge', 'power', 'name', 'detail', 'artbox', 'art', 'source',
+      'progress', 'fill', 'percent', 'footer', 'maintenance',
+      'metric-aquaclean', 'metric-descale', 'metric-coffee', 'metric-brewGroup',
+      'label-aquaclean', 'label-descale', 'label-coffee', 'label-brewGroup',
+      'value-aquaclean', 'value-descale', 'value-coffee', 'value-brewGroup',
+      'fill-aquaclean', 'fill-descale', 'fill-coffee', 'fill-brewGroup',
+      'open-brew', 'brew-panel', 'panel-title', 'panel-close', 'profile-label', 'profile-select',
+      'recipe-label', 'recipe-select', 'brew-feedback', 'start-brew']
+      .map((id) => [id, document.getElementById(id)]));
+    const strings = {
+  "tr": {
+    "heading": "ESPRESSO ŞİMDİ",
+    "loading": "Yükleniyor…",
+    "waiting": "Makine durumu bekleniyor",
+    "close": "Kapat",
+    "brewing": "Kahve hazırlanıyor",
+    "ready": "Hazır",
+    "idle": "Makine hazır",
+    "off": "Kapalı",
+    "powerOn": "Makineyi aç",
+    "powerOff": "Makineyi kapat",
+    "powerBusy": "Güç komutu gönderiliyor…",
+    "powerFailed": "Makinenin güç durumu değiştirilemedi.",
+    "powerTimeout": "Makinenin güç durumu doğrulanamadı.",
+    "offline": "Bağlantı yok",
+    "offlineDetail": "Makineye bağlanılamıyor",
+    "unknown": "Durum bilinmiyor",
+    "action": "Müdahale gerekiyor",
+    "error": "Makine hatası",
+    "rinsing": "Durulama yapılıyor",
+    "selected": "Homey üzerinden başlatıldı",
+    "unreported": "İçecek türü makine tarafından bildirilmiyor",
+    "readyDetail": "Kahve hazırlamaya hazır",
+    "aquaclean": "AquaClean",
+    "descale": "Kireç çözme",
+    "coffee": "Kahve bakımı",
+    "brewGroup": "Demleme grubu",
+    "openBrew": "Kahve hazırla",
+    "panelTitle": "Kayıtlı kahve hazırla",
+    "profile": "Profil",
+    "recipe": "Kayıtlı kahve",
+    "startBrew": "Hazırla",
+    "sending": "İstek gönderiliyor…",
+    "sent": "Demleme isteği gönderildi.",
+    "noProfiles": "Henüz makineden profil bilgisi gelmedi. Biraz sonra tekrar deneyin.",
+    "noRecipes": "Bu profilde kayıtlı kahve yok.",
+    "notReady": "Demlemek için makine açık ve hazır olmalı.",
+    "menuFailed": "Profiller okunamadı. Tekrar deneyin.",
+    "brewFailed": "Demleme isteği gönderilemedi.",
+    "duplicate": "Bir demleme isteği zaten gönderildi.",
+    "choose": "Widget ayarlarından espresso makinesi seçin",
+    "retry": "Durum okunamadı"
+  },
+  "en": {
+    "heading": "ESPRESSO NOW",
+    "loading": "Loading…",
+    "waiting": "Waiting for machine status",
+    "close": "Close",
+    "brewing": "Preparing coffee",
+    "ready": "Ready",
+    "idle": "Machine ready",
+    "off": "Off",
+    "powerOn": "Turn machine on",
+    "powerOff": "Turn machine off",
+    "powerBusy": "Sending power command…",
+    "powerFailed": "Could not change machine power.",
+    "powerTimeout": "Could not confirm machine power state.",
+    "offline": "Offline",
+    "offlineDetail": "Cannot reach the machine",
+    "unknown": "Status unknown",
+    "action": "Action required",
+    "error": "Machine error",
+    "rinsing": "Rinsing",
+    "selected": "Started from Homey",
+    "unreported": "Drink type is not reported by the machine",
+    "readyDetail": "Ready to make coffee",
+    "aquaclean": "AquaClean",
+    "descale": "Descaling",
+    "coffee": "Coffee care",
+    "brewGroup": "Brew group",
+    "openBrew": "Make coffee",
+    "panelTitle": "Brew saved coffee",
+    "profile": "Profile",
+    "recipe": "Saved coffee",
+    "startBrew": "Brew",
+    "sending": "Sending request…",
+    "sent": "Brew request sent.",
+    "noProfiles": "Profiles have not arrived from the machine yet. Try again shortly.",
+    "noRecipes": "No saved coffee in this profile.",
+    "notReady": "The machine must be on and ready to brew.",
+    "menuFailed": "Could not load profiles. Try again.",
+    "brewFailed": "Could not send the brew request.",
+    "duplicate": "A brew request was already sent.",
+    "choose": "Select an espresso machine in widget settings",
+    "retry": "Status unavailable"
+  },
+  "nl": {
+    "heading": "ESPRESSO NU",
+    "loading": "Bezig met laden...",
+    "waiting": "Wachten op machinestatus",
+    "close": "Sluiten",
+    "brewing": "Koffie zetten",
+    "ready": "Gereed",
+    "idle": "Machine gereed",
+    "off": "Uit",
+    "powerOn": "Machine inschakelen",
+    "powerOff": "Machine uitschakelen",
+    "powerBusy": "Aan-uitopdracht wordt verzonden…",
+    "powerFailed": "De machine kon niet worden in- of uitgeschakeld.",
+    "powerTimeout": "De aan-uitstatus van de machine kon niet worden bevestigd.",
+    "offline": "Offline",
+    "offlineDetail": "Kan de machine niet bereiken",
+    "unknown": "Status onbekend",
+    "action": "Actie vereist",
+    "error": "Machinefout",
+    "rinsing": "Spoelen",
+    "selected": "Gestart vanuit Homey",
+    "unreported": "Dranktype wordt niet gerapporteerd door de machine",
+    "readyDetail": "Klaar om koffie te zetten",
+    "aquaclean": "AquaClean",
+    "descale": "Ontkalken",
+    "coffee": "Koffieverzorging",
+    "brewGroup": "Zetgroep",
+    "openBrew": "Koffie zetten",
+    "panelTitle": "Opgeslagen koffie zetten",
+    "profile": "Profiel",
+    "recipe": "Opgeslagen koffie",
+    "startBrew": "Bereiden",
+    "sending": "Verzoek wordt verzonden...",
+    "sent": "Brouwverzoek verzonden.",
+    "noProfiles": "Profielen zijn nog niet uit de machine gekomen. Probeer het binnenkort opnieuw.",
+    "noRecipes": "Geen opgeslagen koffie in dit profiel.",
+    "notReady": "De machine moet aan staan en klaar zijn om te brouwen.",
+    "menuFailed": "Kan profielen niet laden. Probeer het opnieuw.",
+    "brewFailed": "Kon het brouwverzoek niet verzenden.",
+    "duplicate": "Er is al een brouwverzoek verzonden.",
+    "choose": "Selecteer een espressomachine in de widgetinstellingen",
+    "retry": "Status niet beschikbaar"
+  },
+  "de": {
+    "heading": "ESPRESSO JETZT",
+    "loading": "Wird geladen…",
+    "waiting": "Warten auf Maschinenzustand",
+    "close": "Schließen",
+    "brewing": "Kaffeezubereitung",
+    "ready": "Bereit",
+    "idle": "Maschinenbereit",
+    "off": "Aus",
+    "powerOn": "Maschine einschalten",
+    "powerOff": "Maschine ausschalten",
+    "powerBusy": "Ein-/Ausschaltbefehl wird gesendet…",
+    "powerFailed": "Die Maschine konnte nicht ein- oder ausgeschaltet werden.",
+    "powerTimeout": "Der Betriebszustand der Maschine konnte nicht bestätigt werden.",
+    "offline": "Offline",
+    "offlineDetail": "Kann die Maschine nicht erreichen",
+    "unknown": "Status unbekannt",
+    "action": "Handlungsbedarf",
+    "error": "Maschinenfehler",
+    "rinsing": "Spülen",
+    "selected": "Begonnen von Homey",
+    "unreported": "Getränketyp wird von der Maschine nicht gemeldet",
+    "readyDetail": "Bereit für die Kaffeezubereitung",
+    "aquaclean": "AquaClean",
+    "descale": "Entkalkung",
+    "coffee": "Kaffeepflege",
+    "brewGroup": "Brühgruppe",
+    "openBrew": "Kaffee zubereiten",
+    "panelTitle": "Gespeicherten Kaffee zubereiten",
+    "profile": "Profil",
+    "recipe": "Gespeicherter Kaffee",
+    "startBrew": "Zubereiten",
+    "sending": "Anfrage wird gesendet...",
+    "sent": "Brühanfrage gesendet.",
+    "noProfiles": "Profile sind noch nicht von der Maschine angekommen. Versuchen Sie es in Kürze erneut.",
+    "noRecipes": "Kein gespeicherter Kaffee in diesem Profil.",
+    "notReady": "Die Maschine muss eingeschaltet und bereit zum Brühen sein.",
+    "menuFailed": "Profile konnten nicht geladen werden. Versuchen Sie es erneut.",
+    "brewFailed": "Die Brühanfrage konnte nicht gesendet werden.",
+    "duplicate": "Eine Brühanfrage wurde bereits gesendet.",
+    "choose": "Wählen Sie eine Espressomaschine in den Widget-Einstellungen aus",
+    "retry": "Status nicht verfügbar"
+  },
+  "fr": {
+    "heading": "EXPRESSO MAINTENANT",
+    "loading": "Chargement…",
+    "waiting": "En attente de l'état de la machine",
+    "close": "Fermer",
+    "brewing": "Préparation du café",
+    "ready": "Prêt",
+    "idle": "Machine prête",
+    "off": "Désactivé",
+    "powerOn": "Allumer la machine",
+    "powerOff": "Éteindre la machine",
+    "powerBusy": "Envoi de la commande d’alimentation…",
+    "powerFailed": "Impossible d’allumer ou d’éteindre la machine.",
+    "powerTimeout": "Impossible de confirmer l’état d’alimentation de la machine.",
+    "offline": "Hors ligne",
+    "offlineDetail": "Impossible d'atteindre la machine",
+    "unknown": "Statut inconnu",
+    "action": "Action requise",
+    "error": "Erreur machine",
+    "rinsing": "Rinçage",
+    "selected": "Démarré à partir de Homey",
+    "unreported": "Le type de boisson n'est pas signalé par la machine",
+    "readyDetail": "Prêt à faire du café",
+    "aquaclean": "AquaClean",
+    "descale": "Détartrage",
+    "coffee": "Soin du café",
+    "brewGroup": "Groupe d'infusion",
+    "openBrew": "Faire du café",
+    "panelTitle": "Préparer un café enregistré",
+    "profile": "Profil",
+    "recipe": "Café enregistré",
+    "startBrew": "Préparer",
+    "sending": "Envoi de la demande…",
+    "sent": "Demande d'infusion envoyée.",
+    "noProfiles": "Les profils ne sont pas encore arrivés de la machine. Réessayez sous peu.",
+    "noRecipes": "Aucun café enregistré dans ce profil.",
+    "notReady": "La machine doit être allumée et prête à infuser.",
+    "menuFailed": "Impossible de charger les profils. Réessayez.",
+    "brewFailed": "Impossible d'envoyer la demande d'infusion.",
+    "duplicate": "Une demande d'infusion a déjà été envoyée.",
+    "choose": "Sélectionnez une machine à expresso dans les paramètres du widget",
+    "retry": "Statut indisponible"
+  },
+  "it": {
+    "heading": "ESPRESSO SUBITO",
+    "loading": "Caricamento in corso...",
+    "waiting": "Attesa stato macchina",
+    "close": "Chiudi",
+    "brewing": "Preparazione del caffè",
+    "ready": "Pronto",
+    "idle": "Macchina pronta",
+    "off": "Off",
+    "powerOn": "Accendi la macchina",
+    "powerOff": "Spegni la macchina",
+    "powerBusy": "Invio del comando di accensione…",
+    "powerFailed": "Impossibile accendere o spegnere la macchina.",
+    "powerTimeout": "Impossibile confermare lo stato di accensione della macchina.",
+    "offline": "Offline",
+    "offlineDetail": "Impossibile raggiungere la macchina",
+    "unknown": "Stato sconosciuto",
+    "action": "Azione richiesta",
+    "error": "Errore macchina",
+    "rinsing": "Risciacquo",
+    "selected": "Iniziato da Homey",
+    "unreported": "Tipo di bevanda non segnalato dalla macchina",
+    "readyDetail": "Pronto per fare il caffè",
+    "aquaclean": "AquaClean",
+    "descale": "Decalcificazione",
+    "coffee": "Cura del caffè",
+    "brewGroup": "Brew Group",
+    "openBrew": "Prepara il caffè",
+    "panelTitle": "Prepara un caffè salvato",
+    "profile": "Profilo",
+    "recipe": "Caffè salvato",
+    "startBrew": "Prepara",
+    "sending": "Invio richiesta in corso...",
+    "sent": "Richiesta di infusione inviata.",
+    "noProfiles": "I profili non sono ancora arrivati dalla macchina. Riprova a breve.",
+    "noRecipes": "Nessun caffè salvato in questo profilo.",
+    "notReady": "La macchina deve essere accesa e pronta per la preparazione.",
+    "menuFailed": "Impossibile caricare i profili. Riprova.",
+    "brewFailed": "Impossibile inviare la richiesta di infusione.",
+    "duplicate": "È già stata inviata una richiesta di preparazione.",
+    "choose": "Seleziona una macchina per caffè espresso nelle impostazioni del widget",
+    "retry": "Stato non disponibile"
+  },
+  "sv": {
+    "heading": "ESPRESSO NU",
+    "loading": "Laddar...",
+    "waiting": "Väntar på maskinstatus",
+    "close": "Stäng",
+    "brewing": "Förbereder kaffe",
+    "ready": "Klar",
+    "idle": "Maskin klar",
+    "off": "AV",
+    "powerOn": "Slå på maskinen",
+    "powerOff": "Stäng av maskinen",
+    "powerBusy": "Skickar strömkommando…",
+    "powerFailed": "Det gick inte att slå på eller stänga av maskinen.",
+    "powerTimeout": "Det gick inte att bekräfta maskinens strömstatus.",
+    "offline": "Offline",
+    "offlineDetail": "Kan inte nå maskinen",
+    "unknown": "Status okänd",
+    "action": "Åtgärd krävs",
+    "error": "Maskinfel",
+    "rinsing": "Sköljning",
+    "selected": "Startade från Homey",
+    "unreported": "Typ av dryck rapporteras inte av maskinen",
+    "readyDetail": "Redo att göra kaffe",
+    "aquaclean": "AquaClean",
+    "descale": "Avkalkning",
+    "coffee": "Kaffevård",
+    "brewGroup": "Bryggrupp",
+    "openBrew": "Gör kaffe",
+    "panelTitle": "Brygg sparat kaffe",
+    "profile": "Profil",
+    "recipe": "Sparat kaffe",
+    "startBrew": "Brygg",
+    "sending": "Skickar förfrågan...",
+    "sent": "Bryggningsbegäran skickad.",
+    "noProfiles": "Profiler har inte kommit från maskinen ännu. Försök igen inom kort.",
+    "noRecipes": "Inget sparat kaffe i den här profilen.",
+    "notReady": "Maskinen måste vara påslagen och redo att bryggas.",
+    "menuFailed": "Kunde inte ladda profiler. Försök igen.",
+    "brewFailed": "Det gick inte att skicka bryggningsbegäran.",
+    "duplicate": "En bryggbegäran har redan skickats.",
+    "choose": "Välj en espressomaskin i widgetinställningarna",
+    "retry": "Status ej tillgänglig"
+  },
+  "no": {
+    "heading": "ESPRESSO NÅ",
+    "loading": "Laster…",
+    "waiting": "Venter på maskinstatus",
+    "close": "Lukk",
+    "brewing": "Tilberedning av kaffe",
+    "ready": "Klar",
+    "idle": "Maskinen er klar",
+    "off": "Av",
+    "powerOn": "Slå på maskinen",
+    "powerOff": "Slå av maskinen",
+    "powerBusy": "Sender strømkommando…",
+    "powerFailed": "Kunne ikke slå maskinen av eller på.",
+    "powerTimeout": "Kunne ikke bekrefte maskinens strømstatus.",
+    "offline": "Offline",
+    "offlineDetail": "Kan ikke nå maskinen",
+    "unknown": "Status ukjent",
+    "action": "Handling kreves",
+    "error": "Maskinfeil",
+    "rinsing": "Skylling",
+    "selected": "Startet fra Homey",
+    "unreported": "Drikketypen rapporteres ikke av maskinen",
+    "readyDetail": "Klar til å lage kaffe",
+    "aquaclean": "AquaClean",
+    "descale": "Avkalkning",
+    "coffee": "Kaffepleie",
+    "brewGroup": "Bryggegruppe",
+    "openBrew": "Lage kaffe",
+    "panelTitle": "Brygg lagret kaffe",
+    "profile": "Profil",
+    "recipe": "Lagret kaffe",
+    "startBrew": "Brygg",
+    "sending": "Sender forespørsel …",
+    "sent": "Bryggeforespørsel sendt.",
+    "noProfiles": "Profilene har ikke kommet fra maskinen ennå. Prøv igjen snart.",
+    "noRecipes": "Ingen lagret kaffe i denne profilen.",
+    "notReady": "Maskinen må være på og klar til å brygge.",
+    "menuFailed": "Kunne ikke laste inn profilene. Prøv på nytt.",
+    "brewFailed": "Kunne ikke sende bryggeforespørselen.",
+    "duplicate": "En bryggeforespørsel er allerede sendt.",
+    "choose": "Velg en espressomaskin i widgetinnstillingene",
+    "retry": "Status utilgjengelig"
+  },
+  "es": {
+    "heading": "ESPRESSO AHORA",
+    "loading": "Cargando...",
+    "waiting": "Esperando el estado de la máquina",
+    "close": "Cerrar",
+    "brewing": "Preparación del café",
+    "ready": "Listo",
+    "idle": "Máquina lista",
+    "off": "Apagado",
+    "powerOn": "Encender la máquina",
+    "powerOff": "Apagar la máquina",
+    "powerBusy": "Enviando comando de potencia...",
+    "powerFailed": "No se pudo encender ni apagar la máquina.",
+    "powerTimeout": "No se ha podido confirmar el estado de alimentación de la máquina.",
+    "offline": "Sin conexión",
+    "offlineDetail": "No se puede acceder a la máquina",
+    "unknown": "Estado desconocido",
+    "action": "Acción necesaria",
+    "error": "Error de máquina",
+    "rinsing": "Enjuague",
+    "selected": "Iniciado desde Homey",
+    "unreported": "El tipo de bebida no es informado por la máquina",
+    "readyDetail": "Listo para hacer café",
+    "aquaclean": "AquaClean",
+    "descale": "Descalcificación",
+    "coffee": "Cuidado del café",
+    "brewGroup": "Grupo de preparación",
+    "openBrew": "Hacer café",
+    "panelTitle": "Preparar café guardado",
+    "profile": "Perfil",
+    "recipe": "Café guardado",
+    "startBrew": "Preparar",
+    "sending": "Enviando solicitud...",
+    "sent": "Solicitud de preparación enviada.",
+    "noProfiles": "Los perfiles aún no han llegado de la máquina. Inténtalo de nuevo en breve.",
+    "noRecipes": "No hay café guardado en este perfil.",
+    "notReady": "La máquina debe estar encendida y lista para preparar.",
+    "menuFailed": "No se han podido cargar los perfiles. Inténtalo de nuevo.",
+    "brewFailed": "No se ha podido enviar la solicitud de preparación.",
+    "duplicate": "Ya se ha enviado una solicitud de preparación.",
+    "choose": "Seleccione una máquina de café espresso en la configuración del widget",
+    "retry": "Estado no disponible"
+  },
+  "da": {
+    "heading": "ESPRESSO NU",
+    "loading": "Indlæser...",
+    "waiting": "Venter på maskinstatus",
+    "close": "Luk",
+    "brewing": "Forberedelse af kaffe",
+    "ready": "Klar",
+    "idle": "Maskinen er klar",
+    "off": "Fra",
+    "powerOn": "Tænd for maskinen",
+    "powerOff": "Sluk for maskinen",
+    "powerBusy": "Sender strømkommando...",
+    "powerFailed": "Kunne ikke tænde eller slukke maskinen.",
+    "powerTimeout": "Kunne ikke bekræfte maskinens strømtilstand.",
+    "offline": "Offline",
+    "offlineDetail": "Kan ikke nå maskinen",
+    "unknown": "Status ukendt",
+    "action": "Handling påkrævet",
+    "error": "Maskinfejl",
+    "rinsing": "Skylning",
+    "selected": "Startet fra Homey",
+    "unreported": "Drikketype rapporteres ikke af maskinen",
+    "readyDetail": "Klar til at lave kaffe",
+    "aquaclean": "AquaClean",
+    "descale": "Afkalkning",
+    "coffee": "Kaffepleje",
+    "brewGroup": "Bryggruppe",
+    "openBrew": "Lav kaffe",
+    "panelTitle": "Bryg gemt kaffe",
+    "profile": "Profil",
+    "recipe": "Gemt kaffe",
+    "startBrew": "Bryg",
+    "sending": "Sender anmodning...",
+    "sent": "Bryggeanmodning sendt.",
+    "noProfiles": "Profiler er ikke ankommet fra maskinen endnu. Prøv igen om lidt.",
+    "noRecipes": "Ingen gemt kaffe i denne profil.",
+    "notReady": "Maskinen skal være tændt og klar til at brygge.",
+    "menuFailed": "Kunne ikke indlæse profiler. Prøv igen.",
+    "brewFailed": "Kunne ikke sende bryggeanmodningen.",
+    "duplicate": "En bryggeanmodning blev allerede sendt.",
+    "choose": "Vælg en espressomaskine i widgetindstillinger",
+    "retry": "Status utilgængelig"
+  },
+  "ru": {
+    "heading": "ЭСПРЕССО СЕЙЧАС",
+    "loading": "Загрузка…",
+    "waiting": "Ожидание состояния машины",
+    "close": "Закрыть",
+    "brewing": "Приготовление кофе",
+    "ready": "Готово",
+    "idle": "Кофемашина готова",
+    "off": "ВЫКЛ",
+    "powerOn": "Включите машину",
+    "powerOff": "Выключите машину",
+    "powerBusy": "Отправка команды питания...",
+    "powerFailed": "Не удалось включить или выключить кофемашину.",
+    "powerTimeout": "Не удалось подтвердить состояние питания машины.",
+    "offline": "Не в сети",
+    "offlineDetail": "Нет связи с кофемашиной",
+    "unknown": "Статус неизвестен",
+    "action": "Требуется действие",
+    "error": "Ошибка машины",
+    "rinsing": "Промывка",
+    "selected": "Начал (-а) с Homey",
+    "unreported": "Тип напитка не сообщается машиной",
+    "readyDetail": "Готов к приготовлению кофе",
+    "aquaclean": "AquaClean",
+    "descale": "Удаление накипи",
+    "coffee": "Уход за кофе",
+    "brewGroup": "Заварочный блок",
+    "openBrew": "Приготовить кофе",
+    "panelTitle": "Приготовить сохранённый кофе",
+    "profile": "Профиль",
+    "recipe": "Сохранённый кофе",
+    "startBrew": "Приготовить",
+    "sending": "Отправка запроса...",
+    "sent": "Запрос на заварку отправлен.",
+    "noProfiles": "Профили еще не поступили с машины. Повторите попытку позже.",
+    "noRecipes": "В этом профиле нет сохраненного кофе.",
+    "notReady": "Машина должна быть включена и готова к завариванию.",
+    "menuFailed": "Не удалось загрузить профили. Повторите попытку.",
+    "brewFailed": "Не удалось отправить запрос на приготовление.",
+    "duplicate": "Запрос на заваривание уже отправлен.",
+    "choose": "Выберите эспрессо-машину в настройках виджета",
+    "retry": "Статус недоступен"
+  },
+  "pl": {
+    "heading": "ESPRESSO TERAZ",
+    "loading": "Ładowanie…",
+    "waiting": "Oczekiwanie na status maszyny",
+    "close": "Zamknij",
+    "brewing": "Przygotowanie kawy",
+    "ready": "Gotowe",
+    "idle": "Maszyna gotowa",
+    "off": "Wył.",
+    "powerOn": "Włącz maszynę",
+    "powerOff": "Wyłącz maszynę",
+    "powerBusy": "Wysyłanie polecenia zasilania…",
+    "powerFailed": "Nie można włączyć ani wyłączyć ekspresu.",
+    "powerTimeout": "Nie można potwierdzić stanu zasilania maszyny.",
+    "offline": "Offline",
+    "offlineDetail": "Nie można połączyć się z maszyną",
+    "unknown": "Status nieznany",
+    "action": "Wymagane działanie",
+    "error": "Błąd maszyny",
+    "rinsing": "Płukanie",
+    "selected": "Rozpoczęto z Homey",
+    "unreported": "Rodzaj napoju nie jest zgłaszany przez maszynę",
+    "readyDetail": "Gotowa do zrobienia kawy",
+    "aquaclean": "AquaClean",
+    "descale": "Odkamienianie",
+    "coffee": "Pielęgnacja kawy",
+    "brewGroup": "Grupa zaparzania",
+    "openBrew": "Zaparz kawę",
+    "panelTitle": "Zaparz zapisaną kawę",
+    "profile": "Profil",
+    "recipe": "Zapisana kawa",
+    "startBrew": "Zaparz",
+    "sending": "Wysyłanie prośby...",
+    "sent": "Wysłano prośbę o zaparzenie.",
+    "noProfiles": "Profile nie dotarły jeszcze z maszyny. Spróbuj ponownie za chwilę.",
+    "noRecipes": "Brak zapisanej kawy w tym profilu.",
+    "notReady": "Maszyna musi być włączona i gotowa do parzenia.",
+    "menuFailed": "Nie można załadować profili. Spróbuj ponownie.",
+    "brewFailed": "Nie można wysłać żądania zaparzenia.",
+    "duplicate": "Żądanie naparu zostało już wysłane.",
+    "choose": "Wybierz ekspres do kawy w ustawieniach widżetu",
+    "retry": "Status niedostępny"
+  },
+  "ko": {
+    "heading": "지금 에스프레소 즐기기",
+    "loading": "로딩 중...",
+    "waiting": "기기 상태 대기 중",
+    "close": "닫기",
+    "brewing": "커피 준비하기",
+    "ready": "준비",
+    "idle": "기기 준비 완료",
+    "off": "끄기",
+    "powerOn": "기기 켜기",
+    "powerOff": "기기 끄기",
+    "powerBusy": "전원 명령 전송 중...",
+    "powerFailed": "기기의 전원을 켜거나 끌 수 없습니다.",
+    "powerTimeout": "기기 전원 상태를 확인할 수 없습니다.",
+    "offline": "오프라인",
+    "offlineDetail": "기계에 연결할 수 없습니다",
+    "unknown": "알 수 없는 상태",
+    "action": "조치 필요",
+    "error": "기계 오류",
+    "rinsing": "헹굼",
+    "selected": "Homey에서 시작",
+    "unreported": "음료 유형이 기계에 의해 보고되지 않음",
+    "readyDetail": "커피를 만들 준비가 되었습니다",
+    "aquaclean": "AquaClean",
+    "descale": "디스케일링",
+    "coffee": "커피 관리",
+    "brewGroup": "추출 그룹",
+    "openBrew": "커피 만들기",
+    "panelTitle": "저장된 커피 추출",
+    "profile": "프로필",
+    "recipe": "저장된 커피",
+    "startBrew": "추출",
+    "sending": "요청 전송 중...",
+    "sent": "추출 요청을 보냈습니다.",
+    "noProfiles": "기계에서 프로필이 아직 도착하지 않았습니다. 잠시 후 다시 시도하세요.",
+    "noRecipes": "이 프로필에 저장된 커피가 없습니다.",
+    "notReady": "추출하려면 기기가 켜져 있고 준비되어 있어야 합니다.",
+    "menuFailed": "프로필을 로드할 수 없습니다. 다시 시도하십시오.",
+    "brewFailed": "추출 요청을 보낼 수 없습니다.",
+    "duplicate": "추출 요청을 이미 보냈습니다.",
+    "choose": "위젯 설정에서 에스프레소 머신 선택",
+    "retry": "상태를 확인할 수 없음"
+  },
+  "ar": {
+    "heading": "إسبرسو الآن",
+    "loading": "جارٍ التحميل...",
+    "waiting": "في انتظار حالة الجهاز",
+    "close": "إغلاق",
+    "brewing": "تحضير القهوة",
+    "ready": "جاهز",
+    "idle": "الماكينة جاهزة",
+    "off": "إيقاف",
+    "powerOn": "تشغيل الماكينة",
+    "powerOff": "إيقاف تشغيل الماكينة",
+    "powerBusy": "جارٍ إرسال أمر الطاقة...",
+    "powerFailed": "تعذر تشغيل الماكينة أو إيقاف تشغيلها.",
+    "powerTimeout": "تعذر تأكيد حالة طاقة الجهاز.",
+    "offline": "غير متصل",
+    "offlineDetail": "لا يمكن الوصول إلى الجهاز",
+    "unknown": "الحالة غير معروفة",
+    "action": "الإجراء المطلوب",
+    "error": "خطأ في الماكينة",
+    "rinsing": "الشطف",
+    "selected": "بدأ من Homey",
+    "unreported": "لا يتم الإبلاغ عن نوع المشروب بواسطة الماكينة",
+    "readyDetail": "جاهز لصنع القهوة",
+    "aquaclean": "AquaClean",
+    "descale": "إزالة الترسبات",
+    "coffee": "العناية بالقهوة",
+    "brewGroup": "وحدة تحضير القهوة",
+    "openBrew": "اصنع القهوة",
+    "panelTitle": "تحضير القهوة المحفوظة",
+    "profile": "الملف الشخصي",
+    "recipe": "قهوة محفوظة",
+    "startBrew": "تحضير",
+    "sending": "جارٍ إرسال الطلب...",
+    "sent": "تم إرسال طلب التخمير.",
+    "noProfiles": "لم تصل الملفات الشخصية من الجهاز بعد. حاول مرة أخرى قريبًا.",
+    "noRecipes": "لا توجد قهوة محفوظة في هذا الملف التعريفي.",
+    "notReady": "يجب أن تكون الماكينة قيد التشغيل وجاهزة للتحضير.",
+    "menuFailed": "تعذر تحميل الملفات التعريفية. حاول مرة أخرى.",
+    "brewFailed": "تعذر إرسال طلب التحضير.",
+    "duplicate": "تم إرسال طلب تخمير بالفعل.",
+    "choose": "حدد آلة إسبرسو في إعدادات الأداة الذكية",
+    "retry": "الحالة غير متاحة"
+  }
+};
+    const language = (navigator.language || 'en').split('-')[0].toLowerCase();
+    const lang = strings[language] ? language : 'en';
+    let t = strings[lang];
+    if (document.documentElement) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+    document.title = t.heading;
+    let homey;
+    let deviceId;
+    let refreshing = false;
+    let timer;
+    let brewMenu;
+    let lastStatus;
+    let menuLoading = false;
+    let brewSending = false;
+    let lastBrewSentAt = 0;
+    let pendingDrink = null;
+    let brewRefreshTimers = [];
+    let powerSending = false;
+    let powerPending = null;
+    let powerPollTimer = null;
+
+    // Source sheets are the user's unaltered Philips HomeID menu screenshots.
+    // Each entry is [left tile, right tile] in one row of its screenshot.
+    const originalRows = {
+      1811: [
+        ['ristretto', 'espresso'], ['espresso lungo', 'double espresso'],
+        ['coffee', 'caffe crema'], ['americano', 'espresso macchiato'],
+        ['cortado', 'melange'], ['cappuccino', 'flat white'], ['latte', 'milk coffee'],
+      ],
+      1812: [
+        ['latte macchiato', 'frothed milk'], ['hot water', 'galao'],
+        ['italian cappuccino', 'iced coffee'], ['iced americano', 'iced espresso'],
+        ['iced caffe crema', 'iced latte macchiato'], ['iced cappuccino', 'iced latte'],
+        ['iced milk coffee', 'long black'],
+      ],
+      1813: [
+        ['iced long black', 'iced double espresso'], ['cut', 'red eye'],
+        ['black eye', 'dripped eye'], ['piccolo latte', 'magic'],
+        ['iced espresso macchiato', 'iced flat white'], ['iced espresso lungo', 'iced frothed milk'],
+        ['iced cortado', 'iced italian cappuccino'],
+      ],
+      1814: [
+        ['iced cortado', 'iced italian cappuccino'], ['iced galao', 'iced melange'],
+        ['milk iced coffee', 'flash brew'], ['babyccino', 'cold brew'],
+        ['cold brew espresso', 'cold brew latte'], ['cold brew macchiato', 'coldpresso'],
+        ['milk coldpresso', 'cappuccino xl'],
+      ],
+    };
+    const rowCenters = {
+      1811: [94, 426, 760, 1098, 1435, 1767, 2110],
+      1812: [90, 438, 775, 1100, 1440, 1775, 2110],
+      1813: [125, 455, 790, 1120, 1465, 1795, 2130],
+      1814: [115, 455, 785, 1125, 1460, 1790, 2130],
+    };
+    const cropScale = 0.9;
+    const sheetHeights = { 1811: 2292, 1812: 2295, 1813: 2318, 1814: 2318 };
+    const idNames = {
+      1: 'ristretto', 2: 'espresso', 4: 'espresso lungo', 5: 'double espresso',
+      7: 'caffe crema', 8: 'americano', 10: 'espresso macchiato', 11: 'cortado',
+      13: 'melange', 14: 'cappuccino', 15: 'flat white', 16: 'latte',
+      17: 'milk coffee', 19: 'latte macchiato', 20: 'frothed milk', 21: 'hot water',
+      23: 'galao', 24: 'italian cappuccino', 35: 'long black', 38: 'cut',
+      39: 'red eye', 40: 'black eye', 41: 'dripped eye', 42: 'piccolo latte',
+      43: 'magic', 54: 'babyccino', 61: 'cappuccino xl',
+    };
+    const aliases = {
+      'kahve': 'coffee', 'sutlu kahve': 'milk coffee', 'caffe latte': 'latte',
+      'cafe latte': 'latte', 'cafe au lait': 'milk coffee',
+      'kopurtulmus sut': 'frothed milk', 'kopuklu sut': 'frothed milk',
+      'froth milk': 'frothed milk', 'milk froth': 'frothed milk',
+      'sicak su': 'hot water', 'italyan cappuccino': 'italian cappuccino',
+      'espresso doppio': 'double espresso', 'sutlu buzlu kahve': 'milk iced coffee',
+      'sutlu coldpresso': 'milk coldpresso',
+    };
+    const originalTiles = new Map();
+    for (const [sheet, rows] of Object.entries(originalRows)) {
+      rows.forEach((pair, row) => pair.forEach((name, column) => {
+        originalTiles.set(name, { sheet, row, column });
+      }));
+    }
+
+    function normalizedDrink(name) {
+      let key = String(name || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/ı/g, 'i').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      if (aliases[key]) return aliases[key];
+      if (key.startsWith('buzlu ')) {
+        key = key.slice(6);
+        return `iced ${aliases[key] || key}`;
+      }
+      if (key.startsWith('iced ')) {
+        key = key.slice(5);
+        return `iced ${aliases[key] || key}`;
+      }
+      return key;
+    }
+
+    function originalTile(name, id) {
+      return originalTiles.get(normalizedDrink(name)) || originalTiles.get(idNames[id]);
+    }
+
+    function renderDrinkImage(name, id) {
+      const tile = name ? originalTile(name, id) : null;
+      ui.artbox.classList.toggle('original', Boolean(tile));
+      ui.source.hidden = !tile;
+      ui.art.hidden = Boolean(tile);
+      if (tile) {
+        const x = Math.round((tile.column === 0 ? 360 : 960) * cropScale - 52);
+        const y = Math.round(rowCenters[tile.sheet][tile.row] * cropScale - 52);
+        ui.source.style.backgroundImage = `url(./images/philips/menu-${tile.sheet}.jpg)`;
+        ui.source.style.backgroundSize = `${Math.round(1320 * cropScale)}px ${Math.round(sheetHeights[tile.sheet] * cropScale)}px`;
+        ui.source.style.backgroundPosition = `-${x}px -${y}px`;
+        ui.source.setAttribute('aria-label', name);
+      } else {
+        ui.source.style.backgroundImage = '';
+        ui.source.removeAttribute('aria-label');
+        ui.art.src = `./images/${name ? drinkArt(name) : 'generic'}.svg`;
+        ui.art.alt = name || '';
+      }
+    }
+
+    function renderMaintenance(maintenance) {
+      let visible = false;
+      for (const key of ['aquaclean', 'descale', 'coffee', 'brewGroup']) {
+        const raw = maintenance?.[key];
+        const value = raw === null || raw === undefined || raw === '' ? NaN : Number(raw);
+        const available = Number.isFinite(value);
+        const metric = ui[`metric-${key}`];
+        metric.hidden = !available;
+        if (!available) continue;
+        visible = true;
+        const percentage = Math.max(0, Math.min(100, value));
+        ui[`label-${key}`].textContent = t[key];
+        ui[`value-${key}`].textContent = `${Math.round(percentage)}%`;
+        ui[`fill-${key}`].style.width = `${percentage}%`;
+        metric.classList.toggle('critical', percentage <= 10);
+        metric.classList.toggle('low', percentage > 10 && percentage <= 20);
+      }
+      ui.maintenance.hidden = !visible;
+    }
+
+    function drinkArt(name) {
+      const value = String(name || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      if (/water/.test(value)) return 'water';
+      if (/iced|cold|galao/.test(value)) return 'iced';
+      if (/cappuccino|flat white|froth|babyccino/.test(value)) return 'cappuccino';
+      if (/latte|macchiato|cortado|piccolo|melange/.test(value)) return 'latte';
+      if (/americano|long black|coffee|crema|au lait/.test(value)) return 'coffee';
+      if (/espresso|ristretto|red eye|black eye/.test(value)) return 'espresso';
+      return 'generic';
+    }
+
+    function fillOptions(select, entries) {
+      select.replaceChildren(...entries.map(({ slot, name }) => {
+        const option = document.createElement('option');
+        option.value = String(slot);
+        option.textContent = name;
+        return option;
+      }));
+      select.disabled = entries.length === 0;
+    }
+
+    function updateBrewButton() {
+      ui['open-brew'].disabled = !lastStatus?.canStartBrew || powerSending || Boolean(powerPending);
+      ui['open-brew'].title = ui['open-brew'].disabled ? t.notReady : t.openBrew;
+      const profileSlot = Number(ui['profile-select'].value);
+      const recipeSlot = Number(ui['recipe-select'].value);
+      const profile = brewMenu?.profiles?.find((entry) => entry.slot === profileSlot);
+      const validRecipe = profile?.recipes?.some((entry) => entry.slot === recipeSlot);
+      ui['start-brew'].disabled = !validRecipe || !lastStatus?.canStartBrew || brewSending || powerSending || Boolean(powerPending)
+        || Date.now() - lastBrewSentAt < 15000;
+    }
+
+    function updatePowerButton() {
+      const powered = lastStatus?.powerOn === true;
+      const label = powerSending || powerPending ? t.powerBusy : powered ? t.powerOff : t.powerOn;
+      ui.power.hidden = !deviceId;
+      ui.power.disabled = !lastStatus?.canControlPower || typeof lastStatus.powerOn !== 'boolean'
+        || powerSending || Boolean(powerPending);
+      ui.power.classList.toggle('active', powered);
+      ui.power.setAttribute('aria-pressed', String(powered));
+      ui.power.setAttribute('aria-label', label);
+      ui.power.title = label;
+    }
+
+    function queuePowerRefresh() {
+      if (!powerPending || powerPollTimer) return;
+      powerPollTimer = window.setTimeout(async () => {
+        powerPollTimer = null;
+        await refresh();
+        if (!powerPending) return;
+        if (Date.now() - powerPending.since >= 30000) {
+          powerPending = null;
+          updatePowerButton();
+          ui.detail.textContent = t.powerTimeout;
+        } else queuePowerRefresh();
+      }, 3000);
+    }
+
+    async function togglePower() {
+      if (!homey || !deviceId || powerSending || powerPending || !lastStatus?.canControlPower
+        || typeof lastStatus.powerOn !== 'boolean') return;
+      const enabled = !lastStatus.powerOn;
+      powerSending = true;
+      updatePowerButton();
+      updateBrewButton();
+      ui.detail.textContent = t.powerBusy;
+      try {
+        await homey.api('POST', `/power/${encodeURIComponent(deviceId)}`, { enabled });
+        powerPending = { enabled, since: Date.now() };
+        queuePowerRefresh();
+      } catch (error) {
+        ui.detail.textContent = t.powerFailed;
+      } finally {
+        powerSending = false;
+        updatePowerButton();
+        updateBrewButton();
+      }
+    }
+
+    function renderRecipeOptions() {
+      const profileSlot = Number(ui['profile-select'].value);
+      const profile = brewMenu?.profiles?.find((entry) => entry.slot === profileSlot);
+      fillOptions(ui['recipe-select'], profile?.recipes || []);
+      ui['brew-feedback'].textContent = !profile?.recipes?.length ? t.noRecipes
+        : !lastStatus?.canStartBrew ? t.notReady : '';
+      updateBrewButton();
+    }
+
+    async function openBrewPanel() {
+      if (!homey || !deviceId || menuLoading || !lastStatus?.canStartBrew || powerSending || powerPending) return;
+      ui['brew-panel'].hidden = false;
+      ui['brew-feedback'].textContent = t.loading;
+      fillOptions(ui['profile-select'], []);
+      fillOptions(ui['recipe-select'], []);
+      updateBrewButton();
+      menuLoading = true;
+      try {
+        brewMenu = await homey.api('GET', `/brew-menu/${encodeURIComponent(deviceId)}`, {});
+        if (!brewMenu?.supported || !brewMenu.profiles?.length) {
+          ui['brew-feedback'].textContent = t.noProfiles;
+          return;
+        }
+        fillOptions(ui['profile-select'], brewMenu.profiles);
+        if (brewMenu.profiles.some((entry) => entry.slot === brewMenu.selectedProfile)) {
+          ui['profile-select'].value = String(brewMenu.selectedProfile);
+        }
+        renderRecipeOptions();
+      } catch (error) {
+        brewMenu = null;
+        ui['brew-feedback'].textContent = t.menuFailed;
+      } finally { menuLoading = false; }
+    }
+
+    async function startSavedBrew() {
+      if (!homey || !deviceId || brewSending) return;
+      if (!lastStatus?.canStartBrew) { ui['brew-feedback'].textContent = t.notReady; return; }
+      if (Date.now() - lastBrewSentAt < 15000) { ui['brew-feedback'].textContent = t.duplicate; return; }
+      updateBrewButton();
+      if (ui['start-brew'].disabled) return;
+      const profileSlot = Number(ui['profile-select'].value);
+      const recipeSlot = Number(ui['recipe-select'].value);
+      const recipe = brewMenu?.profiles?.find((profile) => profile.slot === profileSlot)
+        ?.recipes?.find((entry) => entry.slot === recipeSlot);
+      brewSending = true;
+      updateBrewButton();
+      ui['brew-feedback'].textContent = t.sending;
+      try {
+        await homey.api('POST', `/brew-saved/${encodeURIComponent(deviceId)}`, {
+          profileSlot, recipeSlot,
+        });
+        lastBrewSentAt = Date.now();
+        pendingDrink = {
+          name: recipe?.name || t.recipe,
+          imageName: recipe?.imageName || null,
+          id: recipe?.drinkId || null,
+          requestedAt: lastBrewSentAt,
+          seenBrewing: false,
+        };
+        ui['brew-feedback'].textContent = t.sent;
+        ui['brew-panel'].hidden = true;
+        if (lastStatus) render(lastStatus);
+        refresh();
+        for (const timeout of brewRefreshTimers) window.clearTimeout(timeout);
+        brewRefreshTimers = [2500, 6000].map((delay) => window.setTimeout(refresh, delay));
+      } catch (error) {
+        ui['brew-feedback'].textContent = /already sent/i.test(error?.message || '') ? t.duplicate : t.brewFailed;
+      } finally {
+        brewSending = false;
+        updateBrewButton();
+      }
+    }
+
+    function render(status) {
+      lastStatus = status;
+      if (powerPending && status.powerOn === powerPending.enabled) {
+        powerPending = null;
+        if (powerPollTimer) window.clearTimeout(powerPollTimer);
+        powerPollTimer = null;
+      }
+      ui['open-brew'].hidden = !status.savedRecipeControl;
+      updatePowerButton();
+      updateBrewButton();
+      ui.device.textContent = status.deviceName || 'Philips Espresso';
+      const state = status.available === false ? 'offline' : status.powerOn === false ? 'off' : status.state;
+      const brewing = state === 'brewing';
+      const named = brewing && Boolean(status.drinkName);
+      if (named || (pendingDrink && (Date.now() - pendingDrink.requestedAt > 45000
+        || ['offline', 'off', 'action_required', 'unrecoverable_error'].includes(state)
+        || (pendingDrink.seenBrewing && !brewing)))) pendingDrink = null;
+      if (pendingDrink && brewing) pendingDrink.seenBrewing = true;
+      const requested = !named ? pendingDrink : null;
+      ui.heading.textContent = t.heading;
+      ui.badge.textContent = state === 'offline' ? t.offline : brewing ? t.brewing
+        : state === 'action_required' ? t.action : state === 'unrecoverable_error' ? t.error
+          : state === 'off' ? t.off : t.ready;
+      ui.name.textContent = named ? status.drinkName : requested ? requested.name : brewing ? t.brewing
+        : state === 'ready' || state === 'standby' || state === 'not_used' ? t.idle
+          : state === 'off' ? t.off : state === 'rinsing' ? t.rinsing
+            : state === 'offline' ? t.offline : state === 'action_required' ? t.action
+              : state === 'unrecoverable_error' ? t.error : t.unknown;
+      ui.detail.textContent = state === 'offline' ? t.offlineDetail : named ? t.selected : requested ? t.sent
+        : brewing ? t.unreported : status.alert && status.alert !== 'not_used'
+          ? status.alert.replaceAll('_', ' ') : state === 'ready' || state === 'standby' || state === 'not_used'
+            ? t.readyDetail : t.waiting;
+      renderDrinkImage(named ? status.drinkImageName || status.drinkName : requested?.imageName || requested?.name,
+        named ? status.drinkId : requested?.id);
+      renderMaintenance(status.maintenance);
+      const progress = Number(status.progress);
+      const hasProgress = brewing && status.progress !== null && Number.isFinite(progress);
+      ui.progress.classList.toggle('active', brewing);
+      ui.progress.classList.toggle('indeterminate', brewing && !hasProgress);
+      ui.footer.hidden = !brewing;
+      ui.fill.style.width = hasProgress ? `${Math.max(0, Math.min(100, progress))}%` : '';
+      ui.percent.textContent = hasProgress ? `${Math.round(progress)}%` : '';
+    }
+
+    async function refresh() {
+      if (!homey || !deviceId || refreshing || document.visibilityState === 'hidden') return;
+      refreshing = true;
+      try {
+        render(await homey.api('GET', `/status/${encodeURIComponent(deviceId)}`, {}));
+      } catch (error) {
+        powerPending = null;
+        if (powerPollTimer) window.clearTimeout(powerPollTimer);
+        powerPollTimer = null;
+        lastStatus = { canStartBrew: false, canControlPower: false, powerOn: null };
+        updateBrewButton();
+        updatePowerButton();
+        ui.name.textContent = t.retry;
+        ui.detail.textContent = t.offlineDetail;
+        ui.badge.textContent = t.offline;
+        renderDrinkImage(null, null);
+        ui.progress.classList.remove('active', 'indeterminate');
+        ui.footer.hidden = true;
+        renderMaintenance(null);
+        ui.percent.textContent = '';
+      } finally { refreshing = false; }
+    }
+
+    function onHomeyReady(Homey) {
+      homey = Homey;
+      if (typeof Homey.__ === 'function') {
+        t = Object.fromEntries(Object.keys(strings.en).map((key) => {
+          const path = `widget.espressoNow.${key}`;
+          let translated;
+          try { translated = Homey.__(path); } catch (error) { translated = null; }
+          return [key, typeof translated === 'string' && translated && translated !== path
+            ? translated : strings.en[key]];
+        }));
+        let homeyLanguage;
+        try { homeyLanguage = Homey.__('widget.espressoNow.language'); } catch (error) { homeyLanguage = null; }
+        const activeLanguage = typeof homeyLanguage === 'string' && /^[a-z]{2}$/.test(homeyLanguage)
+          ? homeyLanguage : 'en';
+        if (document.documentElement) {
+          document.documentElement.lang = activeLanguage;
+          document.documentElement.dir = activeLanguage === 'ar' ? 'rtl' : 'ltr';
+        }
+        document.title = t.heading;
+      }
+      deviceId = (Homey.getDeviceIds() || [])[0];
+      updatePowerButton();
+      ui.heading.textContent = t.heading;
+      ui.name.textContent = deviceId ? t.loading : t.choose;
+      ui.detail.textContent = t.waiting;
+      ui['open-brew'].textContent = t.openBrew;
+      ui['panel-title'].textContent = t.panelTitle;
+      ui['panel-close'].setAttribute('aria-label', t.close);
+      ui['profile-label'].textContent = t.profile;
+      ui['recipe-label'].textContent = t.recipe;
+      ui['start-brew'].textContent = t.startBrew;
+      ui['open-brew'].addEventListener('click', openBrewPanel);
+      ui.power.addEventListener('click', togglePower);
+      ui['panel-close'].addEventListener('click', () => { ui['brew-panel'].hidden = true; });
+      ui['profile-select'].addEventListener('change', renderRecipeOptions);
+      ui['recipe-select'].addEventListener('change', updateBrewButton);
+      ui['start-brew'].addEventListener('click', startSavedBrew);
+      Homey.ready();
+      refresh();
+      timer = window.setInterval(refresh, 15000);
+      document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
+      window.addEventListener('pagehide', () => {
+        window.clearInterval(timer);
+        if (powerPollTimer) window.clearTimeout(powerPollTimer);
+        for (const timeout of brewRefreshTimers) window.clearTimeout(timeout);
+      }, { once: true });
+    }
+
+    if (new URLSearchParams(window.location.search).has('preview')) {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('theme') === 'dark') document.documentElement.classList.add('homey-dark-mode');
+      onHomeyReady({ getDeviceIds: () => ['preview'], ready: () => {}, api: async () => ({
+        deviceName: '8000 Serisi Café Aromis', available: true, state: 'brewing',
+        drinkName: 'Cappuccino', drinkId: 14, drinkSource: 'homey_request', progress: 64, alert: null,
+        savedRecipeControl: true, canStartBrew: false, powerOn: true, canControlPower: true,
+        maintenance: { aquaclean: 100, descale: 98, coffee: 94, brewGroup: 88 },
+      }) });
+    }
+  </script>
+</body>
+</html>

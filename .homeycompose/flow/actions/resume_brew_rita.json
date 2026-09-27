@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Resume the brew",
+    "tr": "Demlemeye devam et",
+    "nl": "Hervat het brouwsel",
+    "de": "Zubereitung fortsetzen",
+    "fr": "Reprendre l'infusion",
+    "it": "Riprendere l'infusione",
+    "sv": "Återuppta bryggningen",
+    "no": "Gjenoppta bryggingen",
+    "es": "Reanudar la preparación",
+    "da": "Genoptag brygningen",
+    "ru": "Возобновить заваривание",
+    "pl": "Wznów parzenie",
+    "ko": "추출 재개",
+    "ar": "استئناف التحضير"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Shake reminder",
+    "tr": "Sallama uyarısı",
+    "nl": "Herinnering schudden",
+    "de": "Schüttelerinnerung",
+    "fr": "Rappel de secousse",
+    "it": "Promemoria agitazione",
+    "sv": "Skakningspåminnelse",
+    "no": "Ristepåminnelse",
+    "es": "Recordatorio de sacudida",
+    "da": "Rystepåmindelse",
+    "ru": "Напоминание о встряхивании",
+    "pl": "Przypomnienie o potrząśnięciu",
+    "ko": "쉐이크 리마인더",
+    "ar": "تذكير الهز"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

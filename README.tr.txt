@@ -1,0 +1,3 @@
+Uyumlu kahve makinelerini, airfryer'ları, çok amaçlı pişiricileri ve hava temizleyicileri günlük rutinlerinize katın. Cihaz durumunu görün, desteklenen kontrolleri kullanın ve işlemleri Akışlarla otomatikleştirin. Espresso pano widget'ı hazırlama durumunu, bakım bilgilerini ve makineyi açıp kapatma düğmesini gösterir.
+
+Önce her cihazı resmi Philips HomeID uygulamasına ekleyin. Buluta bağlı modeller için Philips hesabınızla oturum açın; desteklenen yerel modeller ev ağınız üzerinden iletişim kurabilir. Kullanılabilir özellikler modele göre değişir ve buluta bağlı cihazlar internet bağlantısı gerektirir. Bu bağımsız uygulamanın Philips veya Versuni ile resmi bağlantısı yoktur.

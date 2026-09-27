@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Keep warm state",
+    "tr": "Sıcak tutma durumu",
+    "nl": "Warme toestand behouden",
+    "de": "Warmhalten",
+    "fr": "Garder l'état chaud",
+    "it": "Mantieni lo stato caldo",
+    "sv": "Håll varmt tillstånd",
+    "no": "Hold varm tilstand",
+    "es": "Mantenga el estado caliente",
+    "da": "Hold varmetilstand",
+    "ru": "Сохраняйте теплое состояние",
+    "pl": "Utrzymywanie stanu ciepłego",
+    "ko": "보온 상태 유지",
+    "ar": "الحفاظ على الدفء"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

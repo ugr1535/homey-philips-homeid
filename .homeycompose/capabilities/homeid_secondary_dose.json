@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Secondary dose",
+    "tr": "İkincil doz",
+    "nl": "Secundaire dosis",
+    "de": "Sekundärdosis",
+    "fr": "Dose secondaire",
+    "it": "Dose secondaria",
+    "sv": "Sekundär dos",
+    "no": "Sekundær dose",
+    "es": "Dosis secundaria",
+    "da": "Sekundær dosis",
+    "ru": "Вторичная доза",
+    "pl": "Dawka drugorzędna",
+    "ko": "이차 투여량",
+    "ar": "جرعة ثانوية"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 0,
+  "max": 500,
+  "step": 1
+}

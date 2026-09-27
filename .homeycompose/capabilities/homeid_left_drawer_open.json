@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Left drawer open",
+    "tr": "Sol çekmece açık",
+    "nl": "Linker lade open",
+    "de": "Schublade links offen",
+    "fr": "Tiroir gauche ouvert",
+    "it": "Cassetto sinistro aperto",
+    "sv": "Vänster låda öppen",
+    "no": "Venstre skuff åpen",
+    "es": "Cajón izquierdo abierto",
+    "da": "Venstre skuffe åben",
+    "ru": "Левый ящик открыт",
+    "pl": "Lewa szuflada otwarta",
+    "ko": "왼쪽 서랍 열림",
+    "ar": "الدرج الأيسر مفتوح"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

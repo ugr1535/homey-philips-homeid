@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Water tank empty",
+    "tr": "Su haznesi boş",
+    "nl": "Watertank leeg",
+    "de": "Wassertank leer",
+    "fr": "Réservoir d'eau vide",
+    "it": "Serbatoio dell'acqua vuoto",
+    "sv": "Vattentank tom",
+    "no": "Vanntanken er tom:",
+    "es": "Tanque de agua vacío",
+    "da": "Vandtank tom",
+    "ru": "Резервуар для воды пуст",
+    "pl": "Pusty zbiornik na wodę",
+    "ko": "물 탱크가 비어 있음",
+    "ar": "خزان المياه فارغ"
+  },
+  "icon": "/assets/icons/water.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

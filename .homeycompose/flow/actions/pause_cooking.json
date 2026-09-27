@@ -1,0 +1,25 @@
+{
+  "title": {
+    "en": "Pause cooking",
+    "tr": "Pişirmeyi duraklat",
+    "nl": "Koken pauzeren",
+    "de": "Kochen unterbrechen",
+    "fr": "Suspendre la cuisson",
+    "it": "Metti in pausa la cottura",
+    "sv": "Pausa matlagning",
+    "no": "Pause matlagingen",
+    "es": "Pausar la cocción",
+    "da": "Sæt madlavning på pause",
+    "ru": "Приостановить приготовление",
+    "pl": "Wstrzymaj gotowanie",
+    "ko": "요리 일시 중지",
+    "ar": "إيقاف الطهي مؤقتًا"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=airfryer|multicooker"
+    }
+  ]
+}

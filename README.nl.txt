@@ -1,0 +1,3 @@
+Neem compatibele koffiemachines, heteluchtfriteuses, multicookers en luchtreinigers op in uw dagelijkse routines. Bekijk de apparaatstatus, gebruik ondersteunde bedieningselementen en automatiseer acties met Flows. De espresso-widget toont de bereiding, onderhoudsinformatie en een knop om de machine aan of uit te zetten.
+
+Stel elk apparaat eerst in de officiële Philips HomeID-app in. Meld u aan met uw Philips-account voor cloud-verbonden modellen; ondersteunde lokale modellen kunnen communiceren via uw thuisnetwerk. Beschikbare functies zijn afhankelijk van het model en met de cloud verbonden apparaten hebben internettoegang nodig. Deze onafhankelijke app is niet gelieerd aan Philips of Versuni.

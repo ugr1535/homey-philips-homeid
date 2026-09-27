@@ -1,0 +1,520 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Built-in drink",
+    "tr": "Hazır içecek",
+    "nl": "Ingebouwd drankje",
+    "de": "Eingebautes Getränk",
+    "fr": "Boisson intégrée",
+    "it": "Bevanda integrata",
+    "sv": "Inbyggd dryck",
+    "no": "Innebygd drikke",
+    "es": "Bebida incorporada",
+    "da": "Indbygget drink",
+    "ru": "Встроенный напиток",
+    "pl": "Napój do zabudowy",
+    "ko": "빌트인 드링크",
+    "ar": "مشروب مدمج"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "1",
+      "title": {
+        "en": "Ristretto",
+        "tr": "Ristretto",
+        "nl": "Ristretto",
+        "de": "Ristretto",
+        "fr": "Ristretto",
+        "it": "Ristretto",
+        "sv": "Ristretto",
+        "no": "Ristretto",
+        "es": "Ristretto",
+        "da": "Ristretto",
+        "ru": "Ristretto",
+        "pl": "Ristretto",
+        "ko": "Ristretto",
+        "ar": "Ristretto"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Espresso",
+        "tr": "Espresso",
+        "nl": "Espresso",
+        "de": "Espresso",
+        "fr": "Espresso",
+        "it": "Espresso",
+        "sv": "Espresso",
+        "no": "Espresso",
+        "es": "Espresso",
+        "da": "Espresso",
+        "ru": "Espresso",
+        "pl": "Espresso",
+        "ko": "Espresso",
+        "ar": "Espresso"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Espresso Lungo",
+        "tr": "Espresso Lungo",
+        "nl": "Espresso Lungo",
+        "de": "Espresso Lungo",
+        "fr": "Espresso Lungo",
+        "it": "Espresso Lungo",
+        "sv": "Espresso Lungo",
+        "no": "Espresso Lungo",
+        "es": "Espresso Lungo",
+        "da": "Espresso Lungo",
+        "ru": "Espresso Lungo",
+        "pl": "Espresso Lungo",
+        "ko": "Espresso Lungo",
+        "ar": "Espresso Lungo"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Double Espresso",
+        "tr": "Çift Espresso",
+        "nl": "Dubbele espresso",
+        "de": "Doppelter Espresso",
+        "fr": "Double expresso",
+        "it": "Double Espresso",
+        "sv": "Dubbel espresso",
+        "no": "Dobbel espresso",
+        "es": "Espresso doble",
+        "da": "Dobbelt Espresso",
+        "ru": "Двойной эспрессо",
+        "pl": "Podwójne espresso",
+        "ko": "더블 에스프레소",
+        "ar": "إسبريسو مزدوج"
+      }
+    },
+    {
+      "id": "7",
+      "title": {
+        "en": "Caffè Crema",
+        "tr": "Caffè Crema",
+        "nl": "Caffè Crema",
+        "de": "Caffè Crema",
+        "fr": "Caffè Crema",
+        "it": "Caffè Crema",
+        "sv": "Caffè Crema",
+        "no": "Caffè Crema",
+        "es": "Caffè Crema",
+        "da": "Caffè Crema",
+        "ru": "Caffè Crema",
+        "pl": "Caffè Crema",
+        "ko": "Caffè Crema",
+        "ar": "Caffè Crema"
+      }
+    },
+    {
+      "id": "8",
+      "title": {
+        "en": "Americano",
+        "tr": "Americano",
+        "nl": "Americano",
+        "de": "Americano",
+        "fr": "Americano",
+        "it": "Americano",
+        "sv": "Americano",
+        "no": "Americano",
+        "es": "Americano",
+        "da": "Americano",
+        "ru": "Americano",
+        "pl": "Americano",
+        "ko": "Americano",
+        "ar": "Americano"
+      }
+    },
+    {
+      "id": "10",
+      "title": {
+        "en": "Espresso Macchiato",
+        "tr": "Espresso Macchiato",
+        "nl": "Espresso Macchiato",
+        "de": "Espresso Macchiato",
+        "fr": "Espresso Macchiato",
+        "it": "Espresso Macchiato",
+        "sv": "Espresso Macchiato",
+        "no": "Espresso Macchiato",
+        "es": "Espresso Macchiato",
+        "da": "Espresso Macchiato",
+        "ru": "Espresso Macchiato",
+        "pl": "Espresso Macchiato",
+        "ko": "Espresso Macchiato",
+        "ar": "Espresso Macchiato"
+      }
+    },
+    {
+      "id": "11",
+      "title": {
+        "en": "Cortado",
+        "tr": "Cortado",
+        "nl": "Cortado",
+        "de": "Cortado",
+        "fr": "Cortado",
+        "it": "Cortado",
+        "sv": "Cortado",
+        "no": "Cortado",
+        "es": "Cortado",
+        "da": "Cortado",
+        "ru": "Cortado",
+        "pl": "Cortado",
+        "ko": "Cortado",
+        "ar": "Cortado"
+      }
+    },
+    {
+      "id": "13",
+      "title": {
+        "en": "Mélange",
+        "tr": "Mélange",
+        "nl": "Mélange",
+        "de": "Mélange",
+        "fr": "Mélange",
+        "it": "Mélange",
+        "sv": "Mélange",
+        "no": "Mélange",
+        "es": "Mélange",
+        "da": "Mélange",
+        "ru": "Mélange",
+        "pl": "Mélange",
+        "ko": "Mélange",
+        "ar": "Mélange"
+      }
+    },
+    {
+      "id": "14",
+      "title": {
+        "en": "Cappuccino",
+        "tr": "Cappuccino",
+        "nl": "Cappuccino",
+        "de": "Cappuccino",
+        "fr": "Cappuccino",
+        "it": "Cappuccino",
+        "sv": "Cappuccino",
+        "no": "Cappuccino",
+        "es": "Cappuccino",
+        "da": "Cappuccino",
+        "ru": "Cappuccino",
+        "pl": "Cappuccino",
+        "ko": "Cappuccino",
+        "ar": "Cappuccino"
+      }
+    },
+    {
+      "id": "15",
+      "title": {
+        "en": "Flat White",
+        "tr": "Flat White",
+        "nl": "Flat White",
+        "de": "Flat White",
+        "fr": "Flat White",
+        "it": "Flat White",
+        "sv": "Flat White",
+        "no": "Flat White",
+        "es": "Flat White",
+        "da": "Flat White",
+        "ru": "Flat White",
+        "pl": "Flat White",
+        "ko": "Flat White",
+        "ar": "Flat White"
+      }
+    },
+    {
+      "id": "16",
+      "title": {
+        "en": "Caffè Latte",
+        "tr": "Caffè Latte",
+        "nl": "Caffè Latte",
+        "de": "Caffè Latte",
+        "fr": "Caffè Latte",
+        "it": "Caffè Latte",
+        "sv": "Caffè Latte",
+        "no": "Caffè Latte",
+        "es": "Caffè Latte",
+        "da": "Caffè Latte",
+        "ru": "Caffè Latte",
+        "pl": "Caffè Latte",
+        "ko": "Caffè Latte",
+        "ar": "Caffè Latte"
+      }
+    },
+    {
+      "id": "17",
+      "title": {
+        "en": "Café au Lait",
+        "tr": "Café au Lait",
+        "nl": "Café au Lait",
+        "de": "Café au Lait",
+        "fr": "Café au Lait",
+        "it": "Café au Lait",
+        "sv": "Café au Lait",
+        "no": "Café au Lait",
+        "es": "Café au Lait",
+        "da": "Café au Lait",
+        "ru": "Café au Lait",
+        "pl": "Café au Lait",
+        "ko": "Café au Lait",
+        "ar": "Café au Lait"
+      }
+    },
+    {
+      "id": "19",
+      "title": {
+        "en": "Latte Macchiato",
+        "tr": "Latte Macchiato",
+        "nl": "Latte Macchiato",
+        "de": "Latte Macchiato",
+        "fr": "Latte Macchiato",
+        "it": "Latte Macchiato",
+        "sv": "Latte Macchiato",
+        "no": "Latte Macchiato",
+        "es": "Latte Macchiato",
+        "da": "Latte Macchiato",
+        "ru": "Latte Macchiato",
+        "pl": "Latte Macchiato",
+        "ko": "Latte Macchiato",
+        "ar": "Latte Macchiato"
+      }
+    },
+    {
+      "id": "20",
+      "title": {
+        "en": "Froth Milk",
+        "tr": "Süt Köpüğü",
+        "nl": "Schuimmelk",
+        "de": "Schaummilch",
+        "fr": "Lait mousseux",
+        "it": "Latte schiumato",
+        "sv": "Skummad mjölk",
+        "no": "Skummelk",
+        "es": "Leche espumosa",
+        "da": "Skummælk",
+        "ru": "Пенное молоко",
+        "pl": "Spienione mleko",
+        "ko": "거품 우유",
+        "ar": "حليب الرغوة"
+      }
+    },
+    {
+      "id": "23",
+      "title": {
+        "en": "Galão",
+        "tr": "Galão",
+        "nl": "Galão",
+        "de": "Galão",
+        "fr": "Galão",
+        "it": "Galão",
+        "sv": "Galão",
+        "no": "Galão",
+        "es": "Galão",
+        "da": "Galão",
+        "ru": "Galão",
+        "pl": "Galão",
+        "ko": "Galão",
+        "ar": "Galão"
+      }
+    },
+    {
+      "id": "24",
+      "title": {
+        "en": "Italian Cappuccino",
+        "tr": "İtalyan Cappuccino",
+        "nl": "Italiaanse cappuccino",
+        "de": "Italienischer Cappuccino",
+        "fr": "Cappuccino italien",
+        "it": "Cappuccino Italiano",
+        "sv": "Italiensk cappuccino",
+        "no": "Italiensk cappuccino",
+        "es": "Capuchino italiano",
+        "da": "Italiensk cappuccino",
+        "ru": "Итальянский капучино",
+        "pl": "Włoskie cappuccino",
+        "ko": "이탈리안 카푸치노",
+        "ar": "كابتشينو إيطالي"
+      }
+    },
+    {
+      "id": "35",
+      "title": {
+        "en": "Long Black",
+        "tr": "Long Black",
+        "nl": "Long Black",
+        "de": "Long Black",
+        "fr": "Long Black",
+        "it": "Long Black",
+        "sv": "Long Black",
+        "no": "Long Black",
+        "es": "Long Black",
+        "da": "Long Black",
+        "ru": "Long Black",
+        "pl": "Long Black",
+        "ko": "Long Black",
+        "ar": "Long Black"
+      }
+    },
+    {
+      "id": "38",
+      "title": {
+        "en": "Cut",
+        "tr": "Cut",
+        "nl": "Knippen",
+        "de": "Ausschneiden",
+        "fr": "Couper",
+        "it": "Taglia",
+        "sv": "Klipp ut",
+        "no": "Klipp ut",
+        "es": "Corte",
+        "da": "Klip",
+        "ru": "Вырезать",
+        "pl": "Wytnij",
+        "ko": "잘라내기",
+        "ar": "قص"
+      }
+    },
+    {
+      "id": "39",
+      "title": {
+        "en": "Red Eye",
+        "tr": "Red Eye",
+        "nl": "Rode ogen",
+        "de": "Rote Augen",
+        "fr": "Œil rouge",
+        "it": "Occhi rossi",
+        "sv": "Röda ögon",
+        "no": "\"RODT OYE\"",
+        "es": "Ojos rojos",
+        "da": "Røde øjne",
+        "ru": "Красные глаза",
+        "pl": "Czerwone oko",
+        "ko": "레드 아이",
+        "ar": "العين الحمراء"
+      }
+    },
+    {
+      "id": "40",
+      "title": {
+        "en": "Black Eye",
+        "tr": "Black Eye",
+        "nl": "Zwart oog",
+        "de": "Blaues Auge",
+        "fr": "Oeil noir",
+        "it": "Occhio nero",
+        "sv": "Black Eye",
+        "no": "Svart øye",
+        "es": "Ojo negro",
+        "da": "Black Eye",
+        "ru": "Черный глаз",
+        "pl": "Podbite oko",
+        "ko": "블랙 아이",
+        "ar": "العين السوداء"
+      }
+    },
+    {
+      "id": "41",
+      "title": {
+        "en": "Dripped Eye",
+        "tr": "Dripped Eye",
+        "nl": "Druppeloog",
+        "de": "Augentropfen",
+        "fr": "Oeil goutte à goutte",
+        "it": "Occhio gocciolato",
+        "sv": "Droppat öga",
+        "no": "Dryppet øye",
+        "es": "Ojo goteado",
+        "da": "Dryppet øje",
+        "ru": "Капающий глаз",
+        "pl": "Ociekające oko",
+        "ko": "드리프드 아이 (Dripped Eye",
+        "ar": "العين المتساقطة"
+      }
+    },
+    {
+      "id": "42",
+      "title": {
+        "en": "Piccolo Latte",
+        "tr": "Piccolo Latte",
+        "nl": "Piccolo Latte",
+        "de": "Piccolo Latte",
+        "fr": "Piccolo Latte",
+        "it": "Piccolo Latte",
+        "sv": "Piccolo Latte",
+        "no": "Piccolo Latte",
+        "es": "Piccolo Latte",
+        "da": "Piccolo Latte",
+        "ru": "Piccolo Latte",
+        "pl": "Piccolo Latte",
+        "ko": "Piccolo Latte",
+        "ar": "Piccolo Latte"
+      }
+    },
+    {
+      "id": "43",
+      "title": {
+        "en": "Magic",
+        "tr": "Magic",
+        "nl": "Magie",
+        "de": "Magie",
+        "fr": "Magique",
+        "it": "Magia",
+        "sv": "Magi",
+        "no": "Magi",
+        "es": "Magia",
+        "da": "Magi",
+        "ru": "Магия",
+        "pl": "Magia",
+        "ko": "마법",
+        "ar": "السحر"
+      }
+    },
+    {
+      "id": "54",
+      "title": {
+        "en": "Babyccino",
+        "tr": "Babyccino",
+        "nl": "Babyccino",
+        "de": "Babyccino",
+        "fr": "Babyccino",
+        "it": "Babyccino",
+        "sv": "Babyccino",
+        "no": "Babyccino",
+        "es": "Babyccino",
+        "da": "Babyccino",
+        "ru": "Babyccino",
+        "pl": "Babyccino",
+        "ko": "Babyccino",
+        "ar": "Babyccino"
+      }
+    },
+    {
+      "id": "61",
+      "title": {
+        "en": "Cappuccino XL",
+        "tr": "Cappuccino XL",
+        "nl": "Cappuccino XL",
+        "de": "Cappuccino XL",
+        "fr": "Cappuccino XL",
+        "it": "Cappuccino XL",
+        "sv": "Cappuccino XL",
+        "no": "Cappuccino XL",
+        "es": "Cappuccino XL",
+        "da": "Cappuccino XL",
+        "ru": "Cappuccino XL",
+        "pl": "Cappuccino XL",
+        "ko": "Cappuccino XL",
+        "ar": "Cappuccino XL"
+      }
+    }
+  ]
+}

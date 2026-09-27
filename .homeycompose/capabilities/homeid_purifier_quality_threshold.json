@@ -1,0 +1,28 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Air quality threshold",
+    "tr": "Hava kalitesi eşiği",
+    "nl": "Luchtkwaliteitsdrempel",
+    "de": "Luftqualitätsschwelle",
+    "fr": "Seuil de qualité de l'air",
+    "it": "Soglia di qualità dell'aria",
+    "sv": "Luftkvalitetströskel",
+    "no": "Terskel for luftkvalitet",
+    "es": "Umbral de calidad del aire",
+    "da": "Luftkvalitetstærskel",
+    "ru": "Порог качества воздуха",
+    "pl": "Próg jakości powietrza",
+    "ko": "공기 품질 임계값",
+    "ar": "عتبة جودة الهواء"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "slider",
+  "decimals": 0,
+  "min": 1,
+  "max": 4,
+  "step": 1
+}

@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Right basket status",
+    "tr": "Sağ hazne durumu",
+    "nl": "Status rechtermandje",
+    "de": "Rechter Warenkorb-Status",
+    "fr": "État du panier droit",
+    "it": "Stato del carrello destro",
+    "sv": "Status för höger varukorg",
+    "no": "Status for høyre kurv",
+    "es": "Estado de la cesta derecha",
+    "da": "Status for højre kurv",
+    "ru": "Статус правой корзины",
+    "pl": "Status prawego koszyka",
+    "ko": "오른쪽 장바구니 상태",
+    "ar": "حالة السلة اليمنى"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

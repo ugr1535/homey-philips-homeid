@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { box-sizing: border-box; margin: 0; padding: 1rem; }
+    .pair-page { max-width: 32rem; margin: 0 auto; }
+    .pair-error { display: none; color: #c62828; margin-top: 1rem; white-space: pre-wrap; }
+    .pair-gap { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="homey-form pair-page">
+    <h1 id="title" class="homey-title"></h1>
+    <div id="discovery" class="homey-form-group" hidden>
+      <label id="discovered-label" class="homey-form-label" for="discovered"></label>
+      <select id="discovered" class="homey-form-select"></select>
+    </div>
+    <div class="homey-form-group">
+      <label id="name-label" class="homey-form-label" for="name"></label>
+      <input class="homey-form-input" id="name" type="text">
+    </div>
+    <div class="homey-form-group">
+      <label id="host-label" class="homey-form-label" for="host"></label>
+      <input class="homey-form-input" id="host" type="text" inputmode="url" placeholder="192.168.1.50">
+    </div>
+    <div class="homey-form-group">
+      <label id="model-label" class="homey-form-label" for="model"></label>
+      <input class="homey-form-input" id="model" type="text" placeholder="HD9280">
+    </div>
+    <div class="homey-form-group">
+      <label id="client-id-label" class="homey-form-label" for="clientId"></label>
+      <input class="homey-form-input" id="clientId" type="text" autocomplete="off">
+    </div>
+    <div class="homey-form-group">
+      <label id="client-secret-label" class="homey-form-label" for="clientSecret"></label>
+      <input class="homey-form-input" id="clientSecret" type="password" autocomplete="off">
+    </div>
+    <div class="homey-form-group">
+      <label id="encryption-key-label" class="homey-form-label" for="encryptionKey"></label>
+      <input class="homey-form-input" id="encryptionKey" type="password" autocomplete="off">
+    </div>
+    <div class="homey-form-group">
+      <label class="homey-form-checkbox">
+        <input id="useHttp" type="checkbox">
+        <span id="use-http-label"></span>
+      </label>
+    </div>
+    <button id="submit" class="homey-button-primary-full"></button>
+    <p id="error" class="pair-error"></p>
+  </main>
+  <script>
+    'use strict';
+
+    function showError(error) {
+      const node = document.getElementById('error');
+      node.textContent = error && error.message ? error.message : String(error);
+      node.style.display = 'block';
+    }
+
+    function translate(key, fallback) {
+      try {
+        const value = typeof Homey.__ === 'function' ? Homey.__(key) : '';
+        return value && value !== key ? value : fallback;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    function setBusy(button, value) {
+      button.disabled = value;
+      button.classList.toggle('is-loading', value);
+    }
+
+    const button = document.getElementById('submit');
+    const discoveredSelect = document.getElementById('discovered');
+    let discoveredDevices = [];
+
+    document.getElementById('title').textContent = translate('pair.manual', 'Set up manually');
+    document.getElementById('discovered-label').textContent = translate('pair.discovered', 'Discovered appliance');
+    document.getElementById('name-label').textContent = translate('pair.name', 'Device name');
+    document.getElementById('host-label').textContent = translate('pair.host', 'IP address');
+    document.getElementById('model-label').textContent = translate('pair.model', 'Model');
+    document.getElementById('client-id-label').textContent = translate('pair.client_id', 'Client ID');
+    document.getElementById('client-secret-label').textContent = translate('pair.client_secret', 'Client secret');
+    document.getElementById('encryption-key-label').textContent = translate('pair.encryption_key', 'Encryption key (optional)');
+    document.getElementById('use-http-label').textContent = translate('pair.use_http', 'Use HTTP');
+    button.textContent = translate('pair.add', 'Add appliance');
+
+    discoveredSelect.addEventListener('change', () => {
+      if (discoveredSelect.value === '') return;
+      const device = discoveredDevices[Number(discoveredSelect.value)];
+      if (!device) return;
+      document.getElementById('host').value = device.host || '';
+      document.getElementById('model').value = device.model || '';
+      document.getElementById('name').value = device.name || '';
+      document.getElementById('useHttp').checked = Boolean(device.useHttp);
+    });
+
+    Homey.emit('get_discovered_devices')
+      .then((devices) => {
+        if (!Array.isArray(devices) || devices.length === 0) return;
+        discoveredDevices = devices;
+        const placeholder = document.createElement('option');
+        placeholder.value = '';
+        placeholder.textContent = translate('pair.select_discovered', 'Choose a discovered appliance');
+        discoveredSelect.appendChild(placeholder);
+        devices.forEach((device, index) => {
+          const option = document.createElement('option');
+          option.value = String(index);
+          option.textContent = `${device.name} (${device.host})`;
+          discoveredSelect.appendChild(option);
+        });
+        document.getElementById('discovery').hidden = false;
+      })
+      .catch(() => undefined);
+
+    button.addEventListener('click', async () => {
+      try {
+        setBusy(button, true);
+        const device = await Homey.emit('manual_setup', {
+          name: document.getElementById('name').value.trim(),
+          host: document.getElementById('host').value.trim(),
+          model: document.getElementById('model').value.trim(),
+          clientId: document.getElementById('clientId').value.trim(),
+          clientSecret: document.getElementById('clientSecret').value,
+          encryptionKey: document.getElementById('encryptionKey').value,
+          useHttp: document.getElementById('useHttp').checked,
+        });
+        await Homey.createDevice(device);
+        Homey.done();
+      } catch (error) {
+        showError(error);
+        setBusy(button, false);
+      }
+    });
+
+    Homey.ready();
+  </script>
+</body>
+</html>

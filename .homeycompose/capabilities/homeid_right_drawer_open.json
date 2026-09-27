@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Right drawer open",
+    "tr": "Sağ çekmece açık",
+    "nl": "Rechter lade open",
+    "de": "Rechte Schublade offen",
+    "fr": "Tiroir droit ouvert",
+    "it": "Cassetto destro aperto",
+    "sv": "Höger låda öppen",
+    "no": "Høyre skuff",
+    "es": "Cajón derecho abierto",
+    "da": "Højre skuffe åben",
+    "ru": "Правый ящик открыт",
+    "pl": "Prawa szuflada otwarta",
+    "ko": "오른쪽 서랍 열림",
+    "ar": "الدرج الأيمن مفتوح"
+  },
+  "icon": "/assets/icons/alert.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

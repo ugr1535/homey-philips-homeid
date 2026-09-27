@@ -1,0 +1,47 @@
+{
+  "title": {
+    "en": "Machine state changed",
+    "tr": "Makine durumu değişti",
+    "nl": "Machinestatus gewijzigd",
+    "de": "Maschinenzustand geändert",
+    "fr": "État de la machine modifié",
+    "it": "Lo stato della macchina è cambiato",
+    "sv": "Maskinens tillstånd har ändrats",
+    "no": "Maskinens tilstand endret",
+    "es": "Estado de la máquina cambiado",
+    "da": "Maskintilstand ændret",
+    "ru": "Состояние машины изменено",
+    "pl": "Zmieniono stan maszyny",
+    "ko": "기기 상태 변경됨",
+    "ar": "تم تغيير حالة الجهاز"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    }
+  ],
+  "tokens": [
+    {
+      "type": "string",
+      "name": "value",
+      "title": {
+        "en": "State",
+        "tr": "Durum",
+        "nl": "Staat/provincie",
+        "de": "Bundesland",
+        "fr": "État",
+        "it": "Stato",
+        "sv": "Stat",
+        "no": "Tilstand",
+        "es": "Estado",
+        "da": "Stat",
+        "ru": "Штат",
+        "pl": "Stan",
+        "ko": "주",
+        "ar": "الولاية"
+      }
+    }
+  ]
+}

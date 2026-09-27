@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Allergen index",
+    "tr": "Alerjen indeksi",
+    "nl": "Allergenenindex",
+    "de": "Allergen-Index",
+    "fr": "Indice d'allergène",
+    "it": "Indice allergeni",
+    "sv": "Allergenindex",
+    "no": "Allergenindeks",
+    "es": "Índice de alérgenos",
+    "da": "Allergenindeks",
+    "ru": "Индекс аллергенов",
+    "pl": "Indeks alergenów",
+    "ko": "알레르기 지수",
+    "ar": "مؤشر مسببات الحساسية"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

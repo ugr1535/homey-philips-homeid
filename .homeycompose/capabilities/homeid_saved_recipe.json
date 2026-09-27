@@ -1,0 +1,197 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Saved recipe",
+    "tr": "Kayıtlı tarif",
+    "nl": "Opgeslagen recept",
+    "de": "Gespeichertes Rezept",
+    "fr": "Recette enregistrée",
+    "it": "Ricetta salvata",
+    "sv": "Sparat recept",
+    "no": "Lagret oppskrift",
+    "es": "Receta guardada",
+    "da": "Gemt opskrift",
+    "ru": "Сохраненный рецепт",
+    "pl": "Zapisana receptura",
+    "ko": "저장된 레시피",
+    "ar": "الوصفة المحفوظة"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "none",
+      "title": {
+        "en": "No saved recipes",
+        "tr": "Kayıtlı tarif yok",
+        "nl": "Geen opgeslagen recepten",
+        "de": "Keine gespeicherten Rezepte",
+        "fr": "Aucune recette enregistrée",
+        "it": "Nessuna ricetta salvata",
+        "sv": "Inga sparade recept",
+        "no": "Ingen lagrede oppskrifter",
+        "es": "No hay recetas guardadas",
+        "da": "Ingen gemte opskrifter",
+        "ru": "Нет сохраненных рецептов",
+        "pl": "Brak zapisanych przepisów",
+        "ko": "저장된 레시피 없음",
+        "ar": "لا توجد وصفات محفوظة"
+      }
+    },
+    {
+      "id": "0",
+      "title": {
+        "en": "Recipe 1",
+        "tr": "Tarif 1",
+        "nl": "Recept 1",
+        "de": "Rezept 1",
+        "fr": "Recette 1",
+        "it": "Ricetta 1",
+        "sv": "Recept 1",
+        "no": "Oppskrift 1",
+        "es": "Receta 1",
+        "da": "Opskrift 1",
+        "ru": "Рецепт 1",
+        "pl": "Receptura 1",
+        "ko": "레시피 1",
+        "ar": "الوصفة 1"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Recipe 2",
+        "tr": "Tarif 2",
+        "nl": "Recept 2",
+        "de": "Rezept 2",
+        "fr": "Recette 2",
+        "it": "Ricetta 2",
+        "sv": "Recept 2",
+        "no": "Oppskrift 2",
+        "es": "Receta 2",
+        "da": "Opskrift 2",
+        "ru": "Рецепт 2",
+        "pl": "Receptura 2",
+        "ko": "레시피 2",
+        "ar": "الوصفة 2"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "Recipe 3",
+        "tr": "Tarif 3",
+        "nl": "Recept 3",
+        "de": "Rezept 3",
+        "fr": "Recette 3",
+        "it": "Ricetta 3",
+        "sv": "Recept 3",
+        "no": "Oppskrift 3",
+        "es": "Receta 3",
+        "da": "Opskrift 3",
+        "ru": "Рецепт 3",
+        "pl": "Receptura 3",
+        "ko": "레시피 3",
+        "ar": "الوصفة 3"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Recipe 4",
+        "tr": "Tarif 4",
+        "nl": "Recept 4",
+        "de": "Rezept 4",
+        "fr": "Recette 4",
+        "it": "Ricetta 4",
+        "sv": "Recept 4",
+        "no": "Oppskrift 4",
+        "es": "Receta 4",
+        "da": "Opskrift 4",
+        "ru": "Рецепт 4",
+        "pl": "Receptura 4",
+        "ko": "레시피 4",
+        "ar": "الوصفة 4"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Recipe 5",
+        "tr": "Tarif 5",
+        "nl": "Recept 5",
+        "de": "Rezept 5",
+        "fr": "Recette 5",
+        "it": "Ricetta 5",
+        "sv": "Recept 5",
+        "no": "Oppskrift 5",
+        "es": "Receta 5",
+        "da": "Opskrift 5",
+        "ru": "Рецепт 5",
+        "pl": "Receptura 5",
+        "ko": "레시피 5",
+        "ar": "الوصفة 5"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "Recipe 6",
+        "tr": "Tarif 6",
+        "nl": "Recept 6",
+        "de": "Rezept 6",
+        "fr": "Recette 6",
+        "it": "Ricetta 6",
+        "sv": "Recept 6",
+        "no": "Oppskrift 6",
+        "es": "Receta 6",
+        "da": "Opskrift 6",
+        "ru": "Рецепт 6",
+        "pl": "Receptura 6",
+        "ko": "레시피 6",
+        "ar": "الوصفة 6"
+      }
+    },
+    {
+      "id": "6",
+      "title": {
+        "en": "Recipe 7",
+        "tr": "Tarif 7",
+        "nl": "Recept 7",
+        "de": "Rezept 7",
+        "fr": "Recette 7",
+        "it": "Ricetta 7",
+        "sv": "Recept 7",
+        "no": "Oppskrift 7",
+        "es": "Receta 7",
+        "da": "Opskrift 7",
+        "ru": "Рецепт 7",
+        "pl": "Receptura 7",
+        "ko": "레시피 7",
+        "ar": "الوصفة 7"
+      }
+    },
+    {
+      "id": "7",
+      "title": {
+        "en": "Recipe 8",
+        "tr": "Tarif 8",
+        "nl": "Recept 8",
+        "de": "Rezept 8",
+        "fr": "Recette 8",
+        "it": "Ricetta 8",
+        "sv": "Recept 8",
+        "no": "Oppskrift 8",
+        "es": "Receta 8",
+        "da": "Opskrift 8",
+        "ru": "Рецепт 8",
+        "pl": "Receptura 8",
+        "ko": "레시피 8",
+        "ar": "الوصفة 8"
+      }
+    }
+  ]
+}

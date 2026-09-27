@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Runtime",
+    "tr": "Çalışma süresi",
+    "nl": "Looptijd",
+    "de": "Laufzeit",
+    "fr": "Durée d'exécution",
+    "it": "Runtime",
+    "sv": "Runtime",
+    "no": "Kjøretid",
+    "es": "Tiempo de ejecución",
+    "da": "Køretid",
+    "ru": "Время выполнения",
+    "pl": "Czas pracy",
+    "ko": "런타임",
+    "ar": "وقت التشغيل"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "s",
+    "tr": "s",
+    "nl": "s",
+    "de": "s",
+    "fr": "s",
+    "it": "s",
+    "sv": "s",
+    "no": "s",
+    "es": "s",
+    "da": "s",
+    "ru": "s",
+    "pl": "s",
+    "ko": "s",
+    "ar": "s"
+  },
+  "decimals": 0
+}

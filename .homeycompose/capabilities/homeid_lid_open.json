@@ -1,0 +1,23 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Lid open",
+    "tr": "Kapak açık",
+    "nl": "Deksel open",
+    "de": "Deckel offen",
+    "fr": "Couvercle ouvert",
+    "it": "Coperchio aperto",
+    "sv": "Lock öppet",
+    "no": "Lokk åpent",
+    "es": "Tapa abierta",
+    "da": "Låg åbent",
+    "ru": "Крышка открыта",
+    "pl": "Pokrywa otwarta",
+    "ko": "뚜껑 열림",
+    "ar": "الغطاء مفتوح"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor"
+}

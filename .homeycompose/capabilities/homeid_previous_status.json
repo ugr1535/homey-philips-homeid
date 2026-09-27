@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Previous cooking status",
+    "tr": "Önceki pişirme durumu",
+    "nl": "Vorige kookstatus",
+    "de": "Vorheriger Kochstatus",
+    "fr": "Statut de cuisson précédent",
+    "it": "Stato cottura precedente",
+    "sv": "Tidigare tillagningsstatus",
+    "no": "Tidligere matlagingsstatus",
+    "es": "Estado de cocción anterior",
+    "da": "Tidligere tilberedningsstatus",
+    "ru": "Предыдущий статус приготовления",
+    "pl": "Poprzedni status gotowania",
+    "ko": "이전 요리 상태",
+    "ar": "حالة الطهي السابقة"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor"
+}

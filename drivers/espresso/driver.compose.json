@@ -1,0 +1,264 @@
+{
+  "name": {
+    "en": "Espresso Machine",
+    "tr": "Espresso Makinesi",
+    "nl": "Espressomachine",
+    "de": "Espressomaschine",
+    "fr": "Machine à expresso",
+    "it": "Macchina per caffè espresso",
+    "sv": "Espressomaskin",
+    "no": "Espressomaskin",
+    "es": "Máquina de café espresso",
+    "da": "Espressomaskine",
+    "ru": "Эспрессо-машина",
+    "pl": "Ekspres do kawy",
+    "ko": "에스프레소 머신",
+    "ar": "ماكينة إسبرسو"
+  },
+  "images": {
+    "small": "/drivers/espresso/assets/images/small.jpg",
+    "large": "/drivers/espresso/assets/images/large.jpg"
+  },
+  "class": "other",
+  "connectivity": [
+    "lan",
+    "cloud"
+  ],
+  "capabilities": [
+    "onoff",
+    "homeid_machine_state",
+    "homeid_brew_progress",
+    "homeid_water_level",
+    "homeid_bean_level",
+    "homeid_machine_status",
+    "homeid_machine_alert",
+    "homeid_control_status",
+    "homeid_bean_type",
+    "homeid_roast_level",
+    "homeid_aquaclean_filter_number",
+    "homeid_aquaclean_autonomy",
+    "homeid_descale_autonomy",
+    "homeid_coffee_autonomy",
+    "homeid_brew_group_autonomy",
+    "homeid_brew_profile",
+    "homeid_saved_recipe",
+    "homeid_builtin_drink",
+    "homeid_bean_selection",
+    "homeid_roast_selection",
+    "homeid_brew_builtin",
+    "homeid_brew_saved",
+    "homeid_brew_hot_water",
+    "homeid_abort_brew",
+    "homeid_resume_brew",
+    "homeid_skip_step"
+  ],
+  "settings": [
+    {
+      "id": "host",
+      "type": "text",
+      "label": {
+        "en": "IP address",
+        "tr": "IP adresi",
+        "nl": "IP-adres",
+        "de": "IP-Adresse",
+        "fr": "Adresse IP",
+        "it": "Indirizzo IP",
+        "sv": "IP-adress",
+        "no": "IP-adresse",
+        "es": "Dirección IP",
+        "da": "IP-adresse",
+        "ru": "IP-адрес",
+        "pl": "Adres IP",
+        "ko": "IP 주소",
+        "ar": "عنوان بروتوكول الإنترنت (IP)"
+      },
+      "value": ""
+    },
+    {
+      "id": "model",
+      "type": "label",
+      "label": {
+        "en": "Model",
+        "tr": "Model",
+        "nl": "Model",
+        "de": "Modell",
+        "fr": "Modèle",
+        "it": "Modello",
+        "sv": "Modell",
+        "no": "Modell",
+        "es": "Modelo",
+        "da": "Model",
+        "ru": "Модель",
+        "pl": "Model",
+        "ko": "모델",
+        "ar": "الطراز"
+      },
+      "value": ""
+    },
+    {
+      "id": "connection",
+      "type": "label",
+      "label": {
+        "en": "Connection",
+        "tr": "Bağlantı",
+        "nl": "Verbinding",
+        "de": "Verbindung",
+        "fr": "Connexion",
+        "it": "Connessione",
+        "sv": "Anslutning",
+        "no": "Tilkobling",
+        "es": "Conexión",
+        "da": "Forbindelse",
+        "ru": "Соединение",
+        "pl": "Połączenie",
+        "ko": "연결",
+        "ar": "الاتصال"
+      },
+      "value": "local"
+    },
+    {
+      "id": "firmware",
+      "type": "label",
+      "label": {
+        "en": "Firmware",
+        "tr": "Yazılım",
+        "nl": "Firmware",
+        "de": "Firmware",
+        "fr": "Firmware",
+        "it": "Firmware",
+        "sv": "Firmware",
+        "no": "Fastvare",
+        "es": "Firmware",
+        "da": "Firmware",
+        "ru": "Прошивка",
+        "pl": "Oprogramowanie sprzętowe",
+        "ko": "펌웨어",
+        "ar": "البرنامج الثابت"
+      },
+      "value": "-"
+    },
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Idle poll interval",
+        "tr": "Boştayken sorgulama aralığı",
+        "nl": "Inactieve poll-interval",
+        "de": "Leerlaufabfrageintervall",
+        "fr": "Intervalle d'interrogation au ralenti",
+        "it": "Intervallo di polling inattivo",
+        "sv": "Tomgångsintervall för omröstning",
+        "no": "Inaktiv avstemningsintervall",
+        "es": "Intervalo de sondeo inactivo",
+        "da": "Interval for tomgangsundersøgelse",
+        "ru": "Интервал опроса бездействия",
+        "pl": "Interwał odpytywania bezczynności",
+        "ko": "유휴 폴링 간격",
+        "ar": "الفاصل الزمني للاستطلاع الخامل"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 60,
+      "min": 15,
+      "max": 3600
+    },
+    {
+      "id": "active_poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Brewing poll interval",
+        "tr": "Hazırlarken sorgulama aralığı",
+        "nl": "Brouwpoll-interval",
+        "de": "Brauabfrageintervall",
+        "fr": "Intervalle du sondage d'infusion",
+        "it": "Intervallo di aggiornamento durante la preparazione",
+        "sv": "Bryggningsundersökningsintervall",
+        "no": "Intervall for statusavlesning under brygging",
+        "es": "Intervalo de consulta durante la preparación",
+        "da": "Interval for statusopdatering under brygning",
+        "ru": "Интервал опроса при приготовлении кофе",
+        "pl": "Interwał odczytu stanu podczas parzenia",
+        "ko": "추출 중 상태 확인 간격",
+        "ar": "الفاصل الزمني للتحقق من الحالة أثناء تحضير القهوة"
+      },
+      "hint": {
+        "en": "Seconds",
+        "tr": "Saniye",
+        "nl": "Seconden",
+        "de": "Sekunden",
+        "fr": "Secondes",
+        "it": "Secondi",
+        "sv": "Sekunder",
+        "no": "Sekunder",
+        "es": "Segundos",
+        "da": "Sekunder",
+        "ru": "Секунды",
+        "pl": "Sekundy",
+        "ko": "초",
+        "ar": "ثواني"
+      },
+      "value": 10,
+      "min": 5,
+      "max": 300
+    }
+  ],
+  "pair": [
+    {
+      "id": "choose_method_v5"
+    },
+    {
+      "id": "manual"
+    },
+    {
+      "id": "cloud_login_v5"
+    },
+    {
+      "id": "pincode",
+      "template": "pincode",
+      "options": {
+        "title": {
+          "en": "Verification code",
+          "tr": "Doğrulama kodu",
+          "nl": "Verificatiecode",
+          "de": "Verifizierungscode",
+          "fr": "Code de vérification",
+          "it": "Codice di verifica",
+          "sv": "Verifieringskod",
+          "no": "Bekreftelseskode",
+          "es": "Código de verificación",
+          "da": "Bekræftelseskode",
+          "ru": "Код подтверждения",
+          "pl": "Kod weryfikacyjny",
+          "ko": "인증 코드",
+          "ar": "رمز التحقق"
+        },
+        "type": "number",
+        "length": 6
+      },
+      "navigation": {
+        "prev": "cloud_login_v5",
+        "next": "cloud_select_v1"
+      }
+    },
+    {
+      "id": "cloud_select_v1",
+      "navigation": {
+        "prev": "pincode"
+      }
+    }
+  ]
+}

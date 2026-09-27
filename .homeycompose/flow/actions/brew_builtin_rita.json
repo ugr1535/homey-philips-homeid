@@ -1,0 +1,81 @@
+{
+  "title": {
+    "en": "Brew a built-in espresso drink",
+    "tr": "Hazır espresso içeceği hazırla",
+    "nl": "Maak een ingebouwde espressodrank",
+    "de": "Brauen Sie ein eingebautes Espresso-Getränk",
+    "fr": "Préparez une boisson espresso intégrée",
+    "it": "Prepara una bevanda espresso incorporata",
+    "sv": "Brygg en inbyggd espressodryck",
+    "no": "Brygg en innebygd espressodrikk",
+    "es": "Prepara una bebida espresso incorporada",
+    "da": "Bryg en indbygget espressodrik",
+    "ru": "Приготовьте встроенный эспрессо",
+    "pl": "Zaparz wbudowany napój espresso",
+    "ko": "빌트인 에스프레소 음료 만들기",
+    "ar": "تحضير مشروب إسبرسو مدمج"
+  },
+  "titleFormatted": {
+    "en": "Brew [[drink]] with [[profile]]",
+    "tr": "[[profile]] ile [[drink]] hazırla",
+    "nl": "Brouw [[drink]] met [[profile]]",
+    "de": "[[drink]] mit [[profile]] brauen",
+    "fr": "Brasser [[drink]] avec [[profile]]",
+    "it": "Prepara [[drink]] con [[profile]]",
+    "sv": "Brygg [[drink]] med [[profile]]",
+    "no": "Brygg [[drink]] med [[profile]]",
+    "es": "Prepara [[drink]] con [[profile]]",
+    "da": "Bryg [[drink]] med [[profile]]",
+    "ru": "Заварить [[drink]] с [[profile]]",
+    "pl": "Parzenie [[drink]] Z [[profile]]",
+    "ko": "[[profile]]로 [[drink]] 추출",
+    "ar": "مشروب [[drink]] مع [[profile]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    },
+    {
+      "type": "autocomplete",
+      "name": "profile",
+      "title": {
+        "en": "Profile",
+        "tr": "Profil",
+        "nl": "Profiel",
+        "de": "Profil",
+        "fr": "Profil",
+        "it": "Profilo",
+        "sv": "Profil",
+        "no": "Profil",
+        "es": "Perfil",
+        "da": "Profil",
+        "ru": "Профиль",
+        "pl": "Profil",
+        "ko": "프로필",
+        "ar": "الملف الشخصي"
+      }
+    },
+    {
+      "type": "autocomplete",
+      "name": "drink",
+      "title": {
+        "en": "Drink",
+        "tr": "İçecek",
+        "nl": "Drinken",
+        "de": "Getränk",
+        "fr": "Boisson",
+        "it": "Bevi",
+        "sv": "Dryck",
+        "no": "Alkohol",
+        "es": "Bebida",
+        "da": "Drik",
+        "ru": "Напиток",
+        "pl": "Napoje",
+        "ko": "음료",
+        "ar": "مشروب"
+      }
+    }
+  ]
+}

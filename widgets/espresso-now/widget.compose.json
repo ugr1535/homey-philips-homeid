@@ -1,0 +1,45 @@
+{
+  "name": {
+    "en": "Espresso Now",
+    "tr": "Espresso Şimdi",
+    "nl": "Espresso nu",
+    "de": "Espresso jetzt",
+    "fr": "Expresso maintenant",
+    "it": "Espresso adesso",
+    "sv": "Espresso nu",
+    "no": "Espresso nå",
+    "es": "Espresso Now",
+    "da": "Espresso Now",
+    "ru": "Espresso Now",
+    "pl": "Espresso teraz",
+    "ko": "Espresso Now",
+    "ar": "إسبرسو الآن"
+  },
+  "height": 320,
+  "transparent": true,
+  "devices": {
+    "type": "app",
+    "singular": true,
+    "filter": {
+      "capabilities": "homeid_machine_state"
+    }
+  },
+  "api": {
+    "getStatus": {
+      "method": "GET",
+      "path": "/status/:deviceId"
+    },
+    "getBrewMenu": {
+      "method": "GET",
+      "path": "/brew-menu/:deviceId"
+    },
+    "setPower": {
+      "method": "POST",
+      "path": "/power/:deviceId"
+    },
+    "brewSaved": {
+      "method": "POST",
+      "path": "/brew-saved/:deviceId"
+    }
+  }
+}

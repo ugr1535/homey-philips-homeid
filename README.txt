@@ -1,0 +1,3 @@
+Bring compatible coffee machines, air fryers, multicookers and air purifiers into your daily routines. See appliance status, use supported controls and automate actions with Flows. The espresso dashboard widget shows brewing activity and maintenance information, with a button to turn the machine on or off.
+
+Set up each appliance in the official Philips HomeID app first. Sign in with your Philips account for cloud-connected models; supported local models can communicate over your home network. Available features depend on the model, and cloud-connected devices need internet access. This independent app is not affiliated with Philips or Versuni.

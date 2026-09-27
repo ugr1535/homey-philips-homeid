@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Display brightness",
+    "tr": "Ekran parlaklığı",
+    "nl": "Helderheid van het scherm",
+    "de": "Display-Helligkeit",
+    "fr": "Luminosité de l'écran",
+    "it": "Luminosità del display",
+    "sv": "Displayens ljusstyrka",
+    "no": "Lysstyrke på skjerm",
+    "es": "Brillo de la pantalla",
+    "da": "Skærmens lysstyrke",
+    "ru": "Яркость дисплея",
+    "pl": "Jasność wyświetlacza",
+    "ko": "밝기 표시",
+    "ar": "سطوع الشاشة"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

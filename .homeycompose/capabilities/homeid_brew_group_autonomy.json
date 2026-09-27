@@ -1,0 +1,43 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Brew group remaining",
+    "tr": "Demleme grubu bakım kalan",
+    "nl": "Resterende zetgroep",
+    "de": "Verbleibende Brühgruppen-Kapazität",
+    "fr": "Groupe d'infusion restant",
+    "it": "Manutenzione gruppo infusore residua",
+    "sv": "Bryggrupp återstår",
+    "no": "Gjenværende kapasitet for bryggeenhet",
+    "es": "Vida útil restante del grupo de preparación",
+    "da": "Bryggruppe tilbage",
+    "ru": "Остаточный ресурс заварочного блока",
+    "pl": "Pozostały czas eksploatacji zaparzacza",
+    "ko": "추출 그룹 잔여 수명",
+    "ar": "العمر المتبقي لوحدة تحضير القهوة"
+  },
+  "icon": "/assets/icons/coffee.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%",
+    "tr": "%",
+    "nl": "%",
+    "de": "%",
+    "fr": "%",
+    "it": "%",
+    "sv": "%",
+    "no": "%",
+    "es": "%",
+    "da": "%",
+    "ru": "%",
+    "pl": "%",
+    "ko": "%",
+    "ar": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100
+}

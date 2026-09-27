@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "PM10",
+    "tr": "PM10",
+    "nl": "PM10",
+    "de": "PM10",
+    "fr": "PM10",
+    "it": "PM10",
+    "sv": "PM10",
+    "no": "PM10",
+    "es": "PM10",
+    "da": "PM10",
+    "ru": "PM10",
+    "pl": "PM10",
+    "ko": "PM10",
+    "ar": "PM10"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "µg/m³",
+    "tr": "µg/m³",
+    "nl": "µg/m³",
+    "de": "µg/m³",
+    "fr": "µg/m³",
+    "it": "µg/m³",
+    "sv": "µg/m³",
+    "no": "µg/m³",
+    "es": "µg/m³",
+    "da": "µg/m³",
+    "ru": "µg/m³",
+    "pl": "µg/m³",
+    "ko": "µg/m³",
+    "ar": "µg/m³"
+  },
+  "decimals": 0
+}

@@ -1,0 +1,3 @@
+Få kompatible kaffemaskiner, airfryere, multikokere og luftrensere inn i dine daglige rutiner. Se apparatstatus, bruk støttede kontroller og automatiser handlinger med Flows. Espresso-dashbordwidgeten viser bryggeaktivitet og vedlikeholdsinformasjon, med en knapp for å slå maskinen av eller på.
+
+Konfigurer hvert apparat i den offisielle Philips HomeID-appen først. Logg på med Philips-kontoen din for skytilkoblede modeller. Støttede lokale modeller kan kommunisere over hjemmenettverket ditt. Tilgjengelige funksjoner avhenger av modellen, og skytilkoblede enheter trenger internettilgang. Denne uavhengige appen er ikke tilknyttet Philips eller Versuni.

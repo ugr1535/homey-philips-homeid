@@ -1,0 +1,41 @@
+{
+  "type": "number",
+  "title": {
+    "en": "PM1",
+    "tr": "PM1",
+    "nl": "PM1",
+    "de": "PM1",
+    "fr": "PM1",
+    "it": "PM1",
+    "sv": "PM1",
+    "no": "PM1",
+    "es": "PM1",
+    "da": "PM1",
+    "ru": "PM1",
+    "pl": "PM1",
+    "ko": "PM1",
+    "ar": "PM1"
+  },
+  "icon": "/assets/icons/filter.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "µg/m³",
+    "tr": "µg/m³",
+    "nl": "µg/m³",
+    "de": "µg/m³",
+    "fr": "µg/m³",
+    "it": "µg/m³",
+    "sv": "µg/m³",
+    "no": "µg/m³",
+    "es": "µg/m³",
+    "da": "µg/m³",
+    "ru": "µg/m³",
+    "pl": "µg/m³",
+    "ko": "µg/m³",
+    "ar": "µg/m³"
+  },
+  "decimals": 0
+}

@@ -1,0 +1,120 @@
+{
+  "title": {
+    "en": "Set espresso roast level",
+    "tr": "Espresso kavurma düzeyini ayarla",
+    "nl": "Stel het niveau van het espressobrandsel in",
+    "de": "Stellen Sie die Espressoröststufe ein",
+    "fr": "Définir le niveau de torréfaction de l'expresso",
+    "it": "Imposta il livello di tostatura dell'espresso",
+    "sv": "Ställ in nivå för espressostek",
+    "no": "Angi espresso-brennenivå",
+    "es": "Establecer nivel de tueste de espresso",
+    "da": "Indstil espressobønnernes ristningsgrad",
+    "ru": "Установите уровень обжарки эспрессо",
+    "pl": "Ustaw poziom palenia espresso",
+    "ko": "에스프레소 로스트 레벨 설정",
+    "ar": "ضبط مستوى تحميص الإسبريسو"
+  },
+  "titleFormatted": {
+    "en": "Set roast level to [[roast]]",
+    "tr": "Kavurma düzeyini [[roast]] olarak ayarla",
+    "nl": "Stel het braadniveau in op [[roast]]",
+    "de": "Bratebene auf [[roast]] setzen",
+    "fr": "Réglez le niveau de torréfaction sur [[roast]]",
+    "it": "Imposta il livello di tostatura a [[roast]]",
+    "sv": "Ställ in rostningsnivån till [[roast]]",
+    "no": "Sett brenningsgrad til [[roast]]",
+    "es": "Establecer el nivel de tostado en [[roast]]",
+    "da": "Indstil ristningsgrad til [[roast]]",
+    "ru": "Установите уровень обжарки на [[roast]]",
+    "pl": "Ustaw poziom palenia na [[roast]]",
+    "ko": "로스트 레벨을 [[roast]]로 설정",
+    "ar": "اضبط مستوى التحميص على [[roast]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=espresso"
+    },
+    {
+      "type": "dropdown",
+      "name": "roast",
+      "title": {
+        "en": "Roast level",
+        "tr": "Kavurma düzeyi",
+        "nl": "Roosterniveau",
+        "de": "Röststufe",
+        "fr": "Niveau de rôti",
+        "it": "Livello di tostatura",
+        "sv": "Steknivå",
+        "no": "Brenningsgrad",
+        "es": "Nivel de tostado",
+        "da": "Ristningsgrad",
+        "ru": "Уровень обжарки",
+        "pl": "Poziom palenia",
+        "ko": "로스트 레벨",
+        "ar": "مستوى التحميص"
+      },
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Light",
+            "tr": "Açık",
+            "nl": "Licht",
+            "de": "Licht",
+            "fr": "Lumière",
+            "it": "Luce",
+            "sv": "Ljus",
+            "no": "Belysning",
+            "es": "Luz",
+            "da": "Let",
+            "ru": "Светлый",
+            "pl": "Światło",
+            "ko": "밝은",
+            "ar": "الضوء"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Medium",
+            "tr": "Orta",
+            "nl": "Gemiddeld",
+            "de": "Mittel",
+            "fr": "Moyen",
+            "it": "Media",
+            "sv": "Medium",
+            "no": "Medium",
+            "es": "Media",
+            "da": "Medium",
+            "ru": "Средний",
+            "pl": "Średni",
+            "ko": "중간",
+            "ar": "متوسط"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Dark",
+            "tr": "Koyu",
+            "nl": "Donker",
+            "de": "Dunkel",
+            "fr": "Sombre",
+            "it": "Scuro",
+            "sv": "Mörk",
+            "no": "Mørkt",
+            "es": "Oscuro",
+            "da": "Mørk",
+            "ru": "Темный",
+            "pl": "Ciemny",
+            "ko": "어두운",
+            "ar": "داكن"
+          }
+        }
+      ]
+    }
+  ]
+}

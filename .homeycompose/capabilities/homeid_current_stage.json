@@ -1,0 +1,25 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Current stage",
+    "tr": "Geçerli aşama",
+    "nl": "Huidige fase",
+    "de": "Aktuelle Phase",
+    "fr": "Stade actuel",
+    "it": "Fase attuale",
+    "sv": "Aktuellt skede",
+    "no": "Nåværende fase",
+    "es": "Etapa actual",
+    "da": "Aktuel fase",
+    "ru": "Текущий этап",
+    "pl": "Bieżący etap",
+    "ko": "현재 단계",
+    "ar": "المرحلة الحالية"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": false,
+  "insights": false,
+  "uiComponent": "sensor",
+  "decimals": 0
+}

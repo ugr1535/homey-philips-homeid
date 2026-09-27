@@ -1,0 +1,24 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Monitor in standby",
+    "tr": "Beklemede izleme",
+    "nl": "Monitor in stand-by",
+    "de": "Monitor im Standby",
+    "fr": "Moniteur en veille",
+    "it": "Monitor in standby",
+    "sv": "Monitor i vänteläge",
+    "no": "Skjerm i standby",
+    "es": "Monitor en modo de espera",
+    "da": "Skærm i standby",
+    "ru": "Монитор в режиме ожидания",
+    "pl": "Monitor w trybie gotowości",
+    "ko": "대기 상태 모니터링",
+    "ar": "الشاشة في وضع الاستعداد"
+  },
+  "icon": "/assets/icons/progress.svg",
+  "getable": true,
+  "setable": true,
+  "insights": false,
+  "uiComponent": "toggle"
+}
